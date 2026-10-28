@@ -2,7 +2,7 @@
 
 [Repository](https://github.com/u39kun/ads-two-shell-chaos) · [Zenodo archive, v1.0](https://doi.org/10.5281/zenodo.23724493) · [MIT license](LICENSE) · [Citation metadata](CITATION.cff)
 
-Code and results for **"Interacting shells in anti-de Sitter space revisited: an invariant measure, regular orbits, and chaos"** (Yusaku Sako). The paper re-examines the two-shell model of Brito, Cardoso, and Rocha (BCR), [“Interacting shells in AdS spacetime and chaos”](https://doi.org/10.1103/PhysRevD.94.024003), *Phys. Rev. D* **94**, 024003 (2016) ([arXiv:1602.03535](https://arxiv.org/abs/1602.03535)).
+Code and results for **["Interacting shells in anti-de Sitter space revisited: an invariant measure, regular orbits, and chaos"](https://doi.org/10.5281/zenodo.23726358)** (Yusaku Sako). The paper re-examines the two-shell model of Brito, Cardoso, and Rocha (BCR), [“Interacting shells in AdS spacetime and chaos”](https://doi.org/10.1103/PhysRevD.94.024003), *Phys. Rev. D* **94**, 024003 (2016) ([arXiv:1602.03535](https://arxiv.org/abs/1602.03535)).
 
 ## Interactive demo
 
