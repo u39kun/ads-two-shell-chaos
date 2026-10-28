@@ -4,6 +4,13 @@ type: software
 version: v1.0
 doi: 10.5281/zenodo.23724493
 date-released: 2026-10-28
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23724493
+    description: "Version v1.0, the version archived for the paper"
+  - type: doi
+    value: 10.5281/zenodo.23724492
+    description: "All versions; resolves to the latest"
 title: "ads-two-shell-chaos: code and data for \"Interacting shells in anti-de Sitter space revisited: an invariant measure, regular orbits, and chaos\""
 authors:
   - family-names: Sako
