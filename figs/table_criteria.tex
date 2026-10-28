@@ -1,0 +1,19 @@
+\begin{table}[!tbp]
+\centering\small
+\caption{Orbit-classification criteria and supporting checks.
+Exponents and rates come from the variational tangent, with the Euclidean norm in $(R, 3\Mmid/\delta)$;
+time windows use middle-region Schwarzschild time.
+Linear growth: reference value for a tangent norm growing linearly over the stated window.}
+\label{tab:criteria}
+\begin{tabular}{>{\raggedright}p{0.24\textwidth}>{\raggedright}p{0.29\textwidth}>{\raggedright}p{0.17\textwidth}>{\raggedright\arraybackslash}p{0.16\textwidth}}
+\toprule
+Use & Quantity and window & Criterion & Linear growth \\
+\midrule
+Radial cuts, strongly chaotic (Secs.~\ref{sec:layer},~\ref{sec:layerdelta}) & exponent per return, returns 2000--6000 & $> 3\times10^{-3}$ & $2.7\times10^{-4}$ \\
+Radial cuts, regular-like (Sec.~\ref{sec:layerdelta}) & exponent per return, returns 2000--6000 & $|\lambda| < 10^{-3}$ & $2.7\times10^{-4}$ \\
+Survey, flagged (Sec.~\ref{sec:survey}) & rate per unit time, $[5000, 2\times10^4]$ & $> 10^{-3}$ & $9.2\times10^{-5}$ \\
+Fine grids at the ends, strongly chaotic (Sec.~\ref{sec:survey}) & rate per unit time, $[500, 2000]$ & $> 10^{-2}$ & $9.2\times10^{-4}$ \\
+Table~\ref{tab:edge}, chaotic starts & rate per unit time, four successive 5000-unit blocks, default and tighter settings & positive in every block at both settings (observed $\ge 3.6\times10^{-3}$) & $(0.6$--$1.4)\times10^{-4}$ (blocks 2--4) \\
+\bottomrule
+\end{tabular}
+\end{table}

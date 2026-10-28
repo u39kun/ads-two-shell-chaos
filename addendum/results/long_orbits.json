@@ -1,0 +1,322 @@
+{
+ "params": {
+  "tmax": 200000.0,
+  "saddle": [
+   0.8252287054716384,
+   0.015118871254747887
+  ],
+  "zones": [
+   0.4,
+   2.0
+  ]
+ },
+ "runs": [
+  {
+   "label": "end orbit (Fig. 7)",
+   "start": [
+    0.19,
+    0.01575
+   ],
+   "status": "time_limit",
+   "crossings": 128432,
+   "crossing_table": {
+    "R<0.4 | A inside | head-on": 11346,
+    "R<0.4 | A inside | overtaking": 21827,
+    "R<0.4 | B inside | head-on": 11132,
+    "R<0.4 | B inside | overtaking": 22248,
+    "0.4-2.0 | A inside | head-on": 0,
+    "0.4-2.0 | A inside | overtaking": 20293,
+    "0.4-2.0 | B inside | head-on": 0,
+    "0.4-2.0 | B inside | overtaking": 20102,
+    "R>2.0 | A inside | head-on": 2377,
+    "R>2.0 | A inside | overtaking": 8373,
+    "R>2.0 | B inside | head-on": 2385,
+    "R>2.0 | B inside | overtaking": 8349
+   },
+   "section_crossings": 13723,
+   "section_by_zone": {
+    "R<0.4": 11346,
+    "0.4-2.0": 0,
+    "R>2.0": 2377
+   },
+   "section_R_range": [
+    0.1794622097061142,
+    2.4294436115507287
+   ],
+   "seconds": 18.495339155197144
+  },
+  {
+   "label": "saddle R+1e-09",
+   "start": [
+    0.8252287064716384,
+    0.015118871254747887
+   ],
+   "status": "time_limit",
+   "crossings": 92736,
+   "crossing_table": {
+    "R<0.4 | A inside | head-on": 0,
+    "R<0.4 | A inside | overtaking": 0,
+    "R<0.4 | B inside | head-on": 0,
+    "R<0.4 | B inside | overtaking": 0,
+    "0.4-2.0 | A inside | head-on": 44185,
+    "0.4-2.0 | A inside | overtaking": 2183,
+    "0.4-2.0 | B inside | head-on": 44159,
+    "0.4-2.0 | B inside | overtaking": 2209,
+    "R>2.0 | A inside | head-on": 0,
+    "R>2.0 | A inside | overtaking": 0,
+    "R>2.0 | B inside | head-on": 0,
+    "R>2.0 | B inside | overtaking": 0
+   },
+   "section_crossings": 44185,
+   "section_by_zone": {
+    "R<0.4": 0,
+    "0.4-2.0": 44185,
+    "R>2.0": 0
+   },
+   "section_R_range": [
+    0.4617691149996337,
+    1.3021654282747572
+   ],
+   "seconds": 17.890494346618652
+  },
+  {
+   "label": "saddle R-1e-09",
+   "start": [
+    0.8252287044716384,
+    0.015118871254747887
+   ],
+   "status": "time_limit",
+   "crossings": 92730,
+   "crossing_table": {
+    "R<0.4 | A inside | head-on": 0,
+    "R<0.4 | A inside | overtaking": 0,
+    "R<0.4 | B inside | head-on": 0,
+    "R<0.4 | B inside | overtaking": 0,
+    "0.4-2.0 | A inside | head-on": 44217,
+    "0.4-2.0 | A inside | overtaking": 2148,
+    "0.4-2.0 | B inside | head-on": 44190,
+    "0.4-2.0 | B inside | overtaking": 2175,
+    "R>2.0 | A inside | head-on": 0,
+    "R>2.0 | A inside | overtaking": 0,
+    "R>2.0 | B inside | head-on": 0,
+    "R>2.0 | B inside | overtaking": 0
+   },
+   "section_crossings": 44217,
+   "section_by_zone": {
+    "R<0.4": 0,
+    "0.4-2.0": 44217,
+    "R>2.0": 0
+   },
+   "section_R_range": [
+    0.4617647714348509,
+    1.30217500523689
+   ],
+   "seconds": 17.996724605560303
+  },
+  {
+   "label": "saddle R+1e-05",
+   "start": [
+    0.8252387054716384,
+    0.015118871254747887
+   ],
+   "status": "time_limit",
+   "crossings": 92731,
+   "crossing_table": {
+    "R<0.4 | A inside | head-on": 0,
+    "R<0.4 | A inside | overtaking": 0,
+    "R<0.4 | B inside | head-on": 0,
+    "R<0.4 | B inside | overtaking": 0,
+    "0.4-2.0 | A inside | head-on": 44221,
+    "0.4-2.0 | A inside | overtaking": 2144,
+    "0.4-2.0 | B inside | head-on": 44220,
+    "0.4-2.0 | B inside | overtaking": 2146,
+    "R>2.0 | A inside | head-on": 0,
+    "R>2.0 | A inside | overtaking": 0,
+    "R>2.0 | B inside | head-on": 0,
+    "R>2.0 | B inside | overtaking": 0
+   },
+   "section_crossings": 44221,
+   "section_by_zone": {
+    "R<0.4": 0,
+    "0.4-2.0": 44221,
+    "R>2.0": 0
+   },
+   "section_R_range": [
+    0.46176566779667355,
+    1.3021780877379463
+   ],
+   "seconds": 17.89208674430847
+  },
+  {
+   "label": "saddle R-1e-05",
+   "start": [
+    0.8252187054716384,
+    0.015118871254747887
+   ],
+   "status": "time_limit",
+   "crossings": 92718,
+   "crossing_table": {
+    "R<0.4 | A inside | head-on": 0,
+    "R<0.4 | A inside | overtaking": 0,
+    "R<0.4 | B inside | head-on": 0,
+    "R<0.4 | B inside | overtaking": 0,
+    "0.4-2.0 | A inside | head-on": 44311,
+    "0.4-2.0 | A inside | overtaking": 2048,
+    "0.4-2.0 | B inside | head-on": 44313,
+    "0.4-2.0 | B inside | overtaking": 2046,
+    "R>2.0 | A inside | head-on": 0,
+    "R>2.0 | A inside | overtaking": 0,
+    "R>2.0 | B inside | head-on": 0,
+    "R>2.0 | B inside | overtaking": 0
+   },
+   "section_crossings": 44311,
+   "section_by_zone": {
+    "R<0.4": 0,
+    "0.4-2.0": 44311,
+    "R>2.0": 0
+   },
+   "section_R_range": [
+    0.4617659515157527,
+    1.3021703459501888
+   ],
+   "seconds": 17.889614582061768
+  },
+  {
+   "label": "saddle R+0.001",
+   "start": [
+    0.8262287054716384,
+    0.015118871254747887
+   ],
+   "status": "time_limit",
+   "crossings": 92752,
+   "crossing_table": {
+    "R<0.4 | A inside | head-on": 0,
+    "R<0.4 | A inside | overtaking": 0,
+    "R<0.4 | B inside | head-on": 0,
+    "R<0.4 | B inside | overtaking": 0,
+    "0.4-2.0 | A inside | head-on": 44065,
+    "0.4-2.0 | A inside | overtaking": 2311,
+    "0.4-2.0 | B inside | head-on": 44058,
+    "0.4-2.0 | B inside | overtaking": 2318,
+    "R>2.0 | A inside | head-on": 0,
+    "R>2.0 | A inside | overtaking": 0,
+    "R>2.0 | B inside | head-on": 0,
+    "R>2.0 | B inside | overtaking": 0
+   },
+   "section_crossings": 44065,
+   "section_by_zone": {
+    "R<0.4": 0,
+    "0.4-2.0": 44065,
+    "R>2.0": 0
+   },
+   "section_R_range": [
+    0.46175404936746356,
+    1.3022006204592502
+   ],
+   "seconds": 24.93477964401245
+  },
+  {
+   "label": "saddle R-0.001",
+   "start": [
+    0.8242287054716384,
+    0.015118871254747887
+   ],
+   "status": "time_limit",
+   "crossings": 92755,
+   "crossing_table": {
+    "R<0.4 | A inside | head-on": 0,
+    "R<0.4 | A inside | overtaking": 0,
+    "R<0.4 | B inside | head-on": 0,
+    "R<0.4 | B inside | overtaking": 0,
+    "0.4-2.0 | A inside | head-on": 43923,
+    "0.4-2.0 | A inside | overtaking": 2454,
+    "0.4-2.0 | B inside | head-on": 44054,
+    "0.4-2.0 | B inside | overtaking": 2324,
+    "R>2.0 | A inside | head-on": 0,
+    "R>2.0 | A inside | overtaking": 0,
+    "R>2.0 | B inside | head-on": 0,
+    "R>2.0 | B inside | overtaking": 0
+   },
+   "section_crossings": 43923,
+   "section_by_zone": {
+    "R<0.4": 0,
+    "0.4-2.0": 43923,
+    "R>2.0": 0
+   },
+   "section_R_range": [
+    0.4617733134685396,
+    1.3021598659877163
+   ],
+   "seconds": 17.890251636505127
+  },
+  {
+   "label": "saddle 100M+1e-3",
+   "start": [
+    0.8252287054716384,
+    0.015128871254747886
+   ],
+   "status": "time_limit",
+   "crossings": 92735,
+   "crossing_table": {
+    "R<0.4 | A inside | head-on": 0,
+    "R<0.4 | A inside | overtaking": 0,
+    "R<0.4 | B inside | head-on": 0,
+    "R<0.4 | B inside | overtaking": 0,
+    "0.4-2.0 | A inside | head-on": 44142,
+    "0.4-2.0 | A inside | overtaking": 2225,
+    "0.4-2.0 | B inside | head-on": 44205,
+    "0.4-2.0 | B inside | overtaking": 2163,
+    "R>2.0 | A inside | head-on": 0,
+    "R>2.0 | A inside | overtaking": 0,
+    "R>2.0 | B inside | head-on": 0,
+    "R>2.0 | B inside | overtaking": 0
+   },
+   "section_crossings": 44142,
+   "section_by_zone": {
+    "R<0.4": 0,
+    "0.4-2.0": 44142,
+    "R>2.0": 0
+   },
+   "section_R_range": [
+    0.46176740015314305,
+    1.3021604883381985
+   ],
+   "seconds": 18.068445444107056
+  },
+  {
+   "label": "saddle 100M-1e-3",
+   "start": [
+    0.8252287054716384,
+    0.015108871254747887
+   ],
+   "status": "time_limit",
+   "crossings": 92738,
+   "crossing_table": {
+    "R<0.4 | A inside | head-on": 0,
+    "R<0.4 | A inside | overtaking": 0,
+    "R<0.4 | B inside | head-on": 0,
+    "R<0.4 | B inside | overtaking": 0,
+    "0.4-2.0 | A inside | head-on": 44181,
+    "0.4-2.0 | A inside | overtaking": 2188,
+    "0.4-2.0 | B inside | head-on": 44109,
+    "0.4-2.0 | B inside | overtaking": 2260,
+    "R>2.0 | A inside | head-on": 0,
+    "R>2.0 | A inside | overtaking": 0,
+    "R>2.0 | B inside | head-on": 0,
+    "R>2.0 | B inside | overtaking": 0
+   },
+   "section_crossings": 44181,
+   "section_by_zone": {
+    "R<0.4": 0,
+    "0.4-2.0": 44181,
+    "R>2.0": 0
+   },
+   "section_R_range": [
+    0.4617708165872021,
+    1.3021610023680397
+   ],
+   "seconds": 17.889405012130737
+  }
+ ],
+ "seconds": 24.976053476333618
+}

@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+# per-run caches written by the resumable scans; the summaries in results/ are kept
+results/**/*_parts/
+# outputs of run_all.sh and compare_results.py
+results_reference/
+results-reference/
+figs_rerun/
+figs_compare/
+*.log
+!results/**/*.log
+!reruns/**/*.log
+.venv

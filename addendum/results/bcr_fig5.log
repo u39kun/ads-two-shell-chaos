@@ -1,0 +1,9 @@
+Python 3.13.17, numpy 2.5.3, scipy 1.18.1, matplotlib 3.11.2
+masses [0.0, 0.015, 0.03], m = 0.00815, w = 0.2, R_i = 1, inner shell contracting, outer expanding
+rtol 1e-12, atol 1e-14, max_step 0.02, middle-region time to 1000, sampled every 0.02
+status time_limit, t_end 1000, crossings 465, samples 50001
+R1 (outermost)      0.4517 .. 3.6471
+R2 (innermost)      0.0992 .. 1.3284
+dR1/dt (outermost) -4.3112 .. +4.3124
+dR2/dt (innermost) -1.9935 .. +2.0072
+wrote fig10.pdf; integration 12 s, total 13 s

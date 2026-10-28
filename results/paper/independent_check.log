@@ -1,0 +1,21 @@
+Fig. 5 example: second implementation, rtol 1e-13 vs 3e-14: {'rtol': [1e-13, 3e-14], 'crossings': [139, 139], 'max_dt': 1.203261490445584e-08, 'max_dR': np.float64(1.4945105708541462e-08), 'max_dM': np.float64(1.9213170984744288e-11)}
+Fig. 5 example: n_shells rtol 1e-12: crossings 139 / 139, same sequence True, max |dt| 1.5e-08, |dR| 1.8e-08, |dM_mid| 2.3e-11
+Fig. 5 example: n_shells rtol 1e-13: crossings 139 / 139, same sequence True, max |dt| 1.5e-08, |dR| 1.8e-08, |dM_mid| 2.3e-11
+Fig. 5 example: fastshells rtol 1e-12: crossings 139 / 139, same sequence True, max |dt| 1.5e-08, |dR| 1.8e-08, |dM_mid| 2.3e-11
+Fig. 5 example: fastshells rtol 1e-13: crossings 139 / 139, same sequence True, max |dt| 1.5e-08, |dR| 1.8e-08, |dM_mid| 2.3e-11
+type (ii), delta = 0.006: second implementation, rtol 1e-13 vs 3e-14: {'rtol': [1e-13, 3e-14], 'crossings': [146, 146], 'max_dt': 7.277468228039652e-07, 'max_dR': np.float64(9.059740584405063e-07), 'max_dM': np.float64(2.830368057982202e-11)}
+type (ii), delta = 0.006: n_shells rtol 1e-12: crossings 146 / 146, same sequence True, max |dt| 6.8e-07, |dR| 8.5e-07, |dM_mid| 2.7e-11
+type (ii), delta = 0.006: n_shells rtol 1e-13: crossings 146 / 146, same sequence True, max |dt| 6.8e-07, |dR| 8.5e-07, |dM_mid| 2.7e-11
+type (ii), delta = 0.006: fastshells rtol 1e-12: crossings 146 / 146, same sequence True, max |dt| 6.8e-07, |dR| 8.5e-07, |dM_mid| 2.7e-11
+type (ii), delta = 0.006: fastshells rtol 1e-13: crossings 146 / 146, same sequence True, max |dt| 6.8e-07, |dR| 8.5e-07, |dM_mid| 2.7e-11
+type (ii), delta = 0.03: second implementation, rtol 1e-13 vs 3e-14: {'rtol': [1e-13, 3e-14], 'crossings': [141, 141], 'max_dt': 2.7199575924896635e-10, 'max_dR': np.float64(4.250950702555656e-10), 'max_dM': np.float64(5.266828639882704e-13)}
+type (ii), delta = 0.03: n_shells rtol 1e-12: crossings 141 / 141, same sequence True, max |dt| 3.7e-09, |dR| 4.5e-09, |dM_mid| 6.3e-12
+type (ii), delta = 0.03: n_shells rtol 1e-13: crossings 141 / 141, same sequence True, max |dt| 3.7e-09, |dR| 4.5e-09, |dM_mid| 6.3e-12
+type (ii), delta = 0.03: fastshells rtol 1e-12: crossings 141 / 141, same sequence True, max |dt| 3.7e-09, |dR| 4.5e-09, |dM_mid| 6.3e-12
+type (ii), delta = 0.03: fastshells rtol 1e-13: crossings 141 / 141, same sequence True, max |dt| 3.7e-09, |dR| 4.5e-09, |dM_mid| 6.3e-12
+type (ii), delta = 0.037: second implementation, rtol 1e-13 vs 3e-14: {'rtol': [1e-13, 3e-14], 'crossings': [134, 134], 'max_dt': 2.0369839148770552e-09, 'max_dR': np.float64(3.1271918388142694e-10), 'max_dM': np.float64(1.3344915450463901e-12)}
+type (ii), delta = 0.037: n_shells rtol 1e-12: crossings 134 / 134, same sequence True, max |dt| 2.5e-09, |dR| 7.1e-10, |dM_mid| 2.8e-12
+type (ii), delta = 0.037: n_shells rtol 1e-13: crossings 134 / 134, same sequence True, max |dt| 2.4e-09, |dR| 7.3e-10, |dM_mid| 2.9e-12
+type (ii), delta = 0.037: fastshells rtol 1e-12: crossings 134 / 134, same sequence True, max |dt| 2.5e-09, |dR| 7.1e-10, |dM_mid| 2.8e-12
+type (ii), delta = 0.037: fastshells rtol 1e-13: crossings 134 / 134, same sequence True, max |dt| 2.5e-09, |dR| 7.2e-10, |dM_mid| 2.8e-12
+done

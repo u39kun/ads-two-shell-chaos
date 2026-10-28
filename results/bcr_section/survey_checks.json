@@ -1,0 +1,519 @@
+{
+ "rows": [
+  {
+   "delta": 0.01,
+   "R": 0.219212,
+   "md": 0.505,
+   "label": "small R",
+   "control": false,
+   "tangent": {
+    "default": {
+     "setting": "default",
+     "rtol": 1e-12,
+     "max_step": 0.02,
+     "status": "ok",
+     "time": 20000.083443879907,
+     "returns": 511,
+     "crossings_per_return": 24.371819960861057,
+     "blocks": [
+      0.03221034709306195,
+      0.05087096554516296,
+      0.09117746701945602,
+      0.05475780475699426
+     ]
+    },
+    "tight": {
+     "setting": "tight",
+     "rtol": 1e-13,
+     "max_step": 0.005,
+     "status": "ok",
+     "time": 20009.07085957189,
+     "returns": 453,
+     "crossings_per_return": 28.87858719646799,
+     "blocks": [
+      0.021807052443634276,
+      0.024658251631050395,
+      0.04080189432462496,
+      0.08375700246665113
+     ]
+    }
+   },
+   "crossings": {
+    "status": "time_limit",
+    "a_inside": 6181,
+    "overtaking_share": 0.9032519009868953,
+    "section_R": [
+     0.21800000000000003,
+     2.428
+    ],
+    "headon": 598,
+    "headon_R": [
+     0.2176274927812184,
+     2.428644618847539
+    ],
+    "near_small_end": 458,
+    "middle": 0,
+    "near_large_end": 140,
+    "end_switches": 278
+   }
+  },
+  {
+   "delta": 0.014,
+   "R": 0.215763,
+   "md": 0.505,
+   "label": "small R",
+   "control": false,
+   "tangent": {
+    "default": {
+     "setting": "default",
+     "rtol": 1e-12,
+     "max_step": 0.02,
+     "status": "ok",
+     "time": 20038.240618610864,
+     "returns": 583,
+     "crossings_per_return": 23.197255574614065,
+     "blocks": [
+      0.08735188550125364,
+      0.09245333767684194,
+      0.10784038023878506,
+      0.07636466528070149
+     ]
+    },
+    "tight": {
+     "setting": "tight",
+     "rtol": 1e-13,
+     "max_step": 0.005,
+     "status": "ok",
+     "time": 20024.13899161406,
+     "returns": 576,
+     "crossings_per_return": 22.28472222222222,
+     "blocks": [
+      0.051827885075172136,
+      0.027319524799351392,
+      0.0279998432374961,
+      0.11958696070661973
+     ]
+    }
+   },
+   "crossings": {
+    "status": "time_limit",
+    "a_inside": 6215,
+    "overtaking_share": 0.8862429605792438,
+    "section_R": [
+     0.21200000000000002,
+     2.428
+    ],
+    "headon": 707,
+    "headon_R": [
+     0.21117857112983265,
+     2.4292422778664373
+    ],
+    "near_small_end": 591,
+    "middle": 0,
+    "near_large_end": 116,
+    "end_switches": 220
+   }
+  },
+  {
+   "delta": 0.017,
+   "R": 0.215763,
+   "md": 0.505,
+   "label": "small R",
+   "control": false,
+   "tangent": {
+    "default": {
+     "setting": "default",
+     "rtol": 1e-12,
+     "max_step": 0.02,
+     "status": "ok",
+     "time": 20000.747690311604,
+     "returns": 1676,
+     "crossings_per_return": 6.479713603818616,
+     "blocks": [
+      0.015551065575688312,
+      0.010984267162933775,
+      0.006238519863201654,
+      0.00868507938563667
+     ]
+    },
+    "tight": {
+     "setting": "tight",
+     "rtol": 1e-13,
+     "max_step": 0.005,
+     "status": "ok",
+     "time": 20005.683759707405,
+     "returns": 1570,
+     "crossings_per_return": 6.987261146496815,
+     "blocks": [
+      0.012173715463663663,
+      0.01224520441697099,
+      0.013138847002843708,
+      0.019973181585245206
+     ]
+    }
+   },
+   "crossings": {
+    "status": "time_limit",
+    "a_inside": 5540,
+    "overtaking_share": 0.7447653429602888,
+    "section_R": [
+     0.20700000000000002,
+     2.428
+    ],
+    "headon": 1414,
+    "headon_R": [
+     0.2122219462771448,
+     2.4081842192942897
+    ],
+    "near_small_end": 943,
+    "middle": 0,
+    "near_large_end": 471,
+    "end_switches": 941
+   }
+  },
+  {
+   "delta": 0.02,
+   "R": 0.206064,
+   "md": 0.515,
+   "label": "small R",
+   "control": false,
+   "tangent": {
+    "default": {
+     "setting": "default",
+     "rtol": 1e-12,
+     "max_step": 0.02,
+     "status": "ok",
+     "time": 20003.190245091104,
+     "returns": 900,
+     "crossings_per_return": 14.357777777777779,
+     "blocks": [
+      0.07681098277810076,
+      0.04764669700565896,
+      0.05418827223719409,
+      0.0892931940517065
+     ]
+    },
+    "tight": {
+     "setting": "tight",
+     "rtol": 1e-13,
+     "max_step": 0.005,
+     "status": "ok",
+     "time": 20023.16842554883,
+     "returns": 1032,
+     "crossings_per_return": 11.689922480620154,
+     "blocks": [
+      0.07467598486828504,
+      0.014781979481510872,
+      0.0036247912282141507,
+      0.06473908931251368
+     ]
+    }
+   },
+   "crossings": {
+    "status": "time_limit",
+    "a_inside": 6038,
+    "overtaking_share": 0.8287512421331567,
+    "section_R": [
+     0.201,
+     2.4290000000000003
+    ],
+    "headon": 1034,
+    "headon_R": [
+     0.20101707330008875,
+     2.428496337279713
+    ],
+    "near_small_end": 854,
+    "middle": 0,
+    "near_large_end": 180,
+    "end_switches": 359
+   }
+  },
+  {
+   "delta": 0.02,
+   "R": 2.36394,
+   "md": 0.505,
+   "label": "large R",
+   "control": false,
+   "tangent": {
+    "default": {
+     "setting": "default",
+     "rtol": 1e-12,
+     "max_step": 0.02,
+     "status": "ok",
+     "time": 20012.165155986953,
+     "returns": 1650,
+     "crossings_per_return": 6.626666666666667,
+     "blocks": [
+      0.012531317477415696,
+      0.01254403628389565,
+      0.012209501320671856,
+      0.010509437690192462
+     ]
+    },
+    "tight": {
+     "setting": "tight",
+     "rtol": 1e-13,
+     "max_step": 0.005,
+     "status": "ok",
+     "time": 20001.957541114283,
+     "returns": 1851,
+     "crossings_per_return": 5.84656942193409,
+     "blocks": [
+      0.011840043979857245,
+      0.012929103370830529,
+      0.016592549181103235,
+      0.019832498835084048
+     ]
+    }
+   },
+   "crossings": {
+    "status": "time_limit",
+    "a_inside": 5391,
+    "overtaking_share": 0.6783528102392877,
+    "section_R": [
+     0.201,
+     2.4290000000000003
+    ],
+    "headon": 1734,
+    "headon_R": [
+     0.2118740576860512,
+     2.3828579061160897
+    ],
+    "near_small_end": 1131,
+    "middle": 0,
+    "near_large_end": 603,
+    "end_switches": 1205
+   }
+  },
+  {
+   "delta": 0.03,
+   "R": 0.182,
+   "md": 0.525,
+   "label": "small R",
+   "control": false,
+   "tangent": {
+    "default": {
+     "setting": "default",
+     "rtol": 1e-12,
+     "max_step": 0.02,
+     "status": "ok",
+     "time": 20008.16698023286,
+     "returns": 1463,
+     "crossings_per_return": 8.183185235816815,
+     "blocks": [
+      0.09738548293605796,
+      0.014502528081985077,
+      0.05341523690610887,
+      0.0802918769686572
+     ]
+    },
+    "tight": {
+     "setting": "tight",
+     "rtol": 1e-13,
+     "max_step": 0.005,
+     "status": "ok",
+     "time": 20007.935528944516,
+     "returns": 1787,
+     "crossings_per_return": 6.113038612199216,
+     "blocks": [
+      0.048867474070511556,
+      0.019927139415678172,
+      0.012369766269862718,
+      0.014469813378537179
+     ]
+    }
+   },
+   "crossings": {
+    "status": "time_limit",
+    "a_inside": 6202,
+    "overtaking_share": 0.7741051273782651,
+    "section_R": [
+     0.18,
+     2.4290000000000003
+    ],
+    "headon": 1401,
+    "headon_R": [
+     0.1795134430322318,
+     2.4289235738076416
+    ],
+    "near_small_end": 1180,
+    "middle": 0,
+    "near_large_end": 221,
+    "end_switches": 441
+   }
+  },
+  {
+   "delta": 0.03,
+   "R": 2.308,
+   "md": 0.508,
+   "label": "large R",
+   "control": false,
+   "tangent": {
+    "default": {
+     "setting": "default",
+     "rtol": 1e-12,
+     "max_step": 0.02,
+     "status": "ok",
+     "time": 20003.381701743743,
+     "returns": 2100,
+     "crossings_per_return": 4.98952380952381,
+     "blocks": [
+      0.015939984401266236,
+      0.011262877254974747,
+      0.01761645297534681,
+      0.017350405120742117
+     ]
+    },
+    "tight": {
+     "setting": "tight",
+     "rtol": 1e-13,
+     "max_step": 0.005,
+     "status": "ok",
+     "time": 20009.074285261857,
+     "returns": 2087,
+     "crossings_per_return": 5.034978437949209,
+     "blocks": [
+      0.01902607468112099,
+      0.014944184780034299,
+      0.02034936091312859,
+      0.018430257326904405
+     ]
+    }
+   },
+   "crossings": {
+    "status": "time_limit",
+    "a_inside": 5297,
+    "overtaking_share": 0.6294128752123843,
+    "section_R": [
+     0.18,
+     2.4290000000000003
+    ],
+    "headon": 1963,
+    "headon_R": [
+     0.2069730351547244,
+     2.331400946714626
+    ],
+    "near_small_end": 1314,
+    "middle": 0,
+    "near_large_end": 649,
+    "end_switches": 1294
+   }
+  },
+  {
+   "delta": 0.03,
+   "R": 0.944,
+   "md": 0.492,
+   "label": "control (central)",
+   "control": true,
+   "tangent": {
+    "default": {
+     "setting": "default",
+     "rtol": 1e-12,
+     "max_step": 0.02,
+     "status": "ok",
+     "time": 20002.42929950517,
+     "returns": 4165,
+     "crossings_per_return": 2.2343337334933975,
+     "blocks": [
+      0.0011203111259893601,
+      0.00011082256345574719,
+      4.929224405950044e-05,
+      -0.00010075859360356795
+     ]
+    },
+    "tight": {
+     "setting": "tight",
+     "rtol": 1e-13,
+     "max_step": 0.005,
+     "status": "ok",
+     "time": 20002.429299504493,
+     "returns": 4165,
+     "crossings_per_return": 2.2343337334933975,
+     "blocks": [
+      0.0011203105720592385,
+      0.00011082250236089833,
+      4.9291799862560164e-05,
+      -0.0001007589627509556
+     ]
+    }
+   },
+   "crossings": {
+    "status": "time_limit",
+    "a_inside": 4652,
+    "overtaking_share": 0.10490111779879621,
+    "section_R": [
+     0.18,
+     2.4290000000000003
+    ],
+    "headon": 4164,
+    "headon_R": [
+     0.45766645077796625,
+     1.312274040055258
+    ],
+    "near_small_end": 949,
+    "middle": 3215,
+    "near_large_end": 0,
+    "end_switches": 0
+   }
+  },
+  {
+   "delta": 0.03,
+   "R": 0.246,
+   "md": 0.543,
+   "label": "control (near small-R end)",
+   "control": true,
+   "tangent": {
+    "default": {
+     "setting": "default",
+     "rtol": 1e-12,
+     "max_step": 0.02,
+     "status": "ok",
+     "time": 20003.30875483275,
+     "returns": 2556,
+     "crossings_per_return": 3.9139280125195617,
+     "blocks": [
+      0.0013719256824721452,
+      0.00014773620204811737,
+      7.523076258416351e-05,
+      6.90578385562932e-05
+     ]
+    },
+    "tight": {
+     "setting": "tight",
+     "rtol": 1e-13,
+     "max_step": 0.005,
+     "status": "ok",
+     "time": 20003.308754828846,
+     "returns": 2556,
+     "crossings_per_return": 3.9139280125195617,
+     "blocks": [
+      0.0013719256838774932,
+      0.00014773555976733282,
+      7.523009250671045e-05,
+      6.905739244035181e-05
+     ]
+    }
+   },
+   "crossings": {
+    "status": "time_limit",
+    "a_inside": 5001,
+    "overtaking_share": 0.4891021795640872,
+    "section_R": [
+     0.18,
+     2.4290000000000003
+    ],
+    "headon": 2555,
+    "headon_R": [
+     0.24400328994805995,
+     2.159630454811616
+    ],
+    "near_small_end": 1458,
+    "middle": 0,
+    "near_large_end": 1097,
+    "end_switches": 1016
+   }
+  }
+ ],
+ "T": 20000.0,
+ "seconds": 60.96950936317444
+}

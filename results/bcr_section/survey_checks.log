@@ -1,0 +1,10 @@
+delta 0.01 small R                     (0.219212, 0.505): overtaking 90.3%, head-on near ends 458/0/140; default [0.0322, 0.0509, 0.0912, 0.0548]; tight [0.0218, 0.0247, 0.0408, 0.0838]
+delta 0.014 small R                     (0.215763, 0.505): overtaking 88.6%, head-on near ends 591/0/116; default [0.0874, 0.0925, 0.1078, 0.0764]; tight [0.0518, 0.0273, 0.028, 0.1196]
+delta 0.017 small R                     (0.215763, 0.505): overtaking 74.5%, head-on near ends 943/0/471; default [0.0156, 0.011, 0.0062, 0.0087]; tight [0.0122, 0.0122, 0.0131, 0.02]
+delta 0.02 small R                     (0.206064, 0.515): overtaking 82.9%, head-on near ends 854/0/180; default [0.0768, 0.0476, 0.0542, 0.0893]; tight [0.0747, 0.0148, 0.0036, 0.0647]
+delta 0.02 large R                     (2.36394, 0.505): overtaking 67.8%, head-on near ends 1131/0/603; default [0.0125, 0.0125, 0.0122, 0.0105]; tight [0.0118, 0.0129, 0.0166, 0.0198]
+delta 0.03 small R                     (0.182, 0.525): overtaking 77.4%, head-on near ends 1180/0/221; default [0.0974, 0.0145, 0.0534, 0.0803]; tight [0.0489, 0.0199, 0.0124, 0.0145]
+delta 0.03 large R                     (2.308, 0.508): overtaking 62.9%, head-on near ends 1314/0/649; default [0.0159, 0.0113, 0.0176, 0.0174]; tight [0.019, 0.0149, 0.0203, 0.0184]
+delta 0.03 control (central)           (0.944, 0.492): overtaking 10.5%, head-on near ends 949/3215/0; default [0.0011, 0.0001, 0.0, -0.0001]; tight [0.0011, 0.0001, 0.0, -0.0001]
+delta 0.03 control (near small-R end)  (0.246, 0.543): overtaking 48.9%, head-on near ends 1458/0/1097; default [0.0014, 0.0001, 0.0001, 0.0001]; tight [0.0014, 0.0001, 0.0001, 0.0001]
+wrote results/bcr_section/survey_checks.json; 61 s

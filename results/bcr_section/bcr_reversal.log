@@ -1,0 +1,9 @@
+Fig. 5 example  T = 300: crossings 139 / 135, order kept True, max |state difference| 1.6e-11, max |mass difference| 3.5e-14
+Fig. 5 example  T = 3000: crossings 1397 / 1393, order kept True, max |state difference| 3.3e-09, max |mass difference| 8.8e-12
+Fig. 5 example  T = 20000: crossings 9320 / 9316, order kept True, max |state difference| 2.4e-07, max |mass difference| 8.2e-10
+type (ii), delta = 0.006  T = 3000: crossings 1466 / 1462, order kept True, max |state difference| 4.1e-10, max |mass difference| 1.3e-13
+type (ii), delta = 0.006  T = 20000: crossings 9779 / 9775, order kept True, max |state difference| 3.3e-07, max |mass difference| 1.2e-10
+type (ii), delta = 0.02  T = 3000: crossings 1451 / 1447, order kept True, max |state difference| 9.0e-10, max |mass difference| 4.8e-13
+type (ii), delta = 0.02  T = 20000: crossings 9672 / 9668, order kept True, max |state difference| 6.3e-07, max |mass difference| 1.6e-09
+type (ii), delta = 0.037  T = 3000: crossings 1342 / 1338, order kept True, max |state difference| 1.8e-07, max |mass difference| 5.0e-11
+type (ii), delta = 0.037  T = 20000: crossings 8949 / 8945, order kept True, max |state difference| 4.1e-06, max |mass difference| 6.0e-09

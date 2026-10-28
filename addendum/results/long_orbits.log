@@ -1,0 +1,12 @@
+end orbit (Fig. 7)   time_limit  crossings 128432  section  13723 {'R<0.4': 11346, '0.4-2.0': 0, 'R>2.0': 2377}  R 0.1795-2.4294  (18 s)
+saddle R+1e-09       time_limit  crossings  92736  section  44185 {'R<0.4': 0, '0.4-2.0': 44185, 'R>2.0': 0}  R 0.4618-1.3022  (18 s)
+saddle R-1e-09       time_limit  crossings  92730  section  44217 {'R<0.4': 0, '0.4-2.0': 44217, 'R>2.0': 0}  R 0.4618-1.3022  (18 s)
+saddle R+1e-05       time_limit  crossings  92731  section  44221 {'R<0.4': 0, '0.4-2.0': 44221, 'R>2.0': 0}  R 0.4618-1.3022  (18 s)
+saddle R-1e-05       time_limit  crossings  92718  section  44311 {'R<0.4': 0, '0.4-2.0': 44311, 'R>2.0': 0}  R 0.4618-1.3022  (18 s)
+saddle R+0.001       time_limit  crossings  92752  section  44065 {'R<0.4': 0, '0.4-2.0': 44065, 'R>2.0': 0}  R 0.4618-1.3022  (25 s)
+saddle R-0.001       time_limit  crossings  92755  section  43923 {'R<0.4': 0, '0.4-2.0': 43923, 'R>2.0': 0}  R 0.4618-1.3022  (18 s)
+saddle 100M+1e-3     time_limit  crossings  92735  section  44142 {'R<0.4': 0, '0.4-2.0': 44142, 'R>2.0': 0}  R 0.4618-1.3022  (18 s)
+saddle 100M-1e-3     time_limit  crossings  92738  section  44181 {'R<0.4': 0, '0.4-2.0': 44181, 'R>2.0': 0}  R 0.4618-1.3022  (18 s)
+end orbit at 0.4 < R < 2.0: {'0.4-2.0 | A inside | head-on': 0, '0.4-2.0 | A inside | overtaking': 20293, '0.4-2.0 | B inside | head-on': 0, '0.4-2.0 | B inside | overtaking': 20102} (total 40395)
+saddle starts: section crossings 43923-44311, R 0.4618-1.3022
+done in 25s

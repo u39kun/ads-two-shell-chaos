@@ -1,0 +1,16 @@
+BCR-5 delta 0.03: R_h 0.05979 (lowest component starts there: True); R [0.05987, 0.06250] M_mid [0.019887, 0.023764]; R [0.17949, 2.42712] M_mid [0.011372, 0.018807]; survey-test-only cells 72937 (R <= 0.06211931001240458)
+type (ii) delta 0.006: R_h 0.01200 (lowest component starts there: False); R [0.22407, 2.42340] M_mid [0.002282, 0.003726]; survey-test-only cells 74489 (R <= 0.013186659093126269)
+type (ii) delta 0.012: R_h 0.02399 (lowest component starts there: False); R [0.21484, 2.42309] M_mid [0.004557, 0.007467]; survey-test-only cells 37362 (R <= 0.025858661961171796)
+type (ii) delta 0.02: R_h 0.03994 (lowest component starts there: True); R [0.03994, 0.03994] M_mid [0.014857, 0.014897]; R [0.20129, 2.42644] M_mid [0.007595, 0.012485]; survey-test-only cells 46688 (R <= 0.042065349079147316)
+type (ii) delta 0.03: R_h 0.05979 (lowest component starts there: True); R [0.05987, 0.06260] M_mid [0.019867, 0.023764]; R [0.17922, 2.43085] M_mid [0.011372, 0.018807]; survey-test-only cells 73043 (R <= 0.06211931001240458)
+type (ii) delta 0.037: R_h 0.07360 (lowest component starts there: True); R [0.07368, 0.08494] M_mid [0.022777, 0.030517]; R [0.15766, 2.43276] M_mid [0.014001, 0.023270]; survey-test-only cells 92155 (R <= 0.07609724187399451)
+near-horizon component appears between delta = 0.019 and 0.0195
+survey grid delta 0.006: 700 starts, 0 fail the full test
+survey grid delta 0.012: 710 starts, 0 fail the full test
+survey grid delta 0.02: 718 starts, 0 fail the full test
+survey grid delta 0.03: 694 starts, 0 fail the full test
+survey grid delta 0.037: 700 starts, 0 fail the full test
+fate delta 0.02: 144 starts, {'horizon_approach': 144}, t <= 0.001529296654073395, crossings after the start <= 0
+fate delta 0.03: 50 starts, {'horizon_approach': 50}, t <= 0.05963747496428888, crossings after the start <= 0
+fate delta 0.037: 40 starts, {'horizon_approach': 40}, t <= 0.13934134618838495, crossings after the start <= 0
+wrote results/bcr_section/section_domain.json; 6 s

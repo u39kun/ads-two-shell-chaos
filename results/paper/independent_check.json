@@ -1,0 +1,294 @@
+{
+ "tmax": 300.0,
+ "independent_rtol": 1e-13,
+ "cases": [
+  {
+   "case": "Fig. 5 example",
+   "m": 0.00815,
+   "total": 0.03,
+   "R_i": 1.0,
+   "tmax": 300.0,
+   "rows": [
+    {
+     "solver": "n_shells",
+     "rtol": 1e-12,
+     "crossings": [
+      139,
+      139
+     ],
+     "same_sequence": true,
+     "max_dt": 1.4715169527335092e-08,
+     "max_dR": 1.8242478416752306e-08,
+     "max_dM": 2.3389812656149367e-11
+    },
+    {
+     "solver": "n_shells",
+     "rtol": 1e-13,
+     "crossings": [
+      139,
+      139
+     ],
+     "same_sequence": true,
+     "max_dt": 1.4740010101377266e-08,
+     "max_dR": 1.827458495640144e-08,
+     "max_dM": 2.3432507670340108e-11
+    },
+    {
+     "solver": "fastshells",
+     "rtol": 1e-12,
+     "crossings": [
+      139,
+      139
+     ],
+     "same_sequence": true,
+     "max_dt": 1.4676572845928604e-08,
+     "max_dR": 1.8256835709884456e-08,
+     "max_dM": 2.3410546071134242e-11
+    },
+    {
+     "solver": "fastshells",
+     "rtol": 1e-13,
+     "crossings": [
+      139,
+      139
+     ],
+     "same_sequence": true,
+     "max_dt": 1.4677254966954933e-08,
+     "max_dR": 1.8256262057647632e-08,
+     "max_dM": 2.3408771449018317e-11
+    }
+   ],
+   "independent_self": {
+    "rtol": [
+     1e-13,
+     3e-14
+    ],
+    "crossings": [
+     139,
+     139
+    ],
+    "max_dt": 1.203261490445584e-08,
+    "max_dR": 1.4945105708541462e-08,
+    "max_dM": 1.9213170984744288e-11
+   },
+   "independent_seconds": 3.8747572898864746,
+   "junction_check": 6.892264536872972e-13
+  },
+  {
+   "case": "type (ii), delta = 0.006",
+   "m": 0.001629227610867194,
+   "total": 0.006,
+   "R_i": 1.5,
+   "tmax": 300.0,
+   "rows": [
+    {
+     "solver": "n_shells",
+     "rtol": 1e-12,
+     "crossings": [
+      146,
+      146
+     ],
+     "same_sequence": true,
+     "max_dt": 6.837304908913211e-07,
+     "max_dR": 8.509098077258415e-07,
+     "max_dM": 2.685693594600691e-11
+    },
+    {
+     "solver": "n_shells",
+     "rtol": 1e-13,
+     "crossings": [
+      146,
+      146
+     ],
+     "same_sequence": true,
+     "max_dt": 6.837008470483852e-07,
+     "max_dR": 8.508728677192323e-07,
+     "max_dM": 2.6855395945241112e-11
+    },
+    {
+     "solver": "fastshells",
+     "rtol": 1e-12,
+     "crossings": [
+      146,
+      146
+     ],
+     "same_sequence": true,
+     "max_dt": 6.836566512902209e-07,
+     "max_dR": 8.508887641145435e-07,
+     "max_dM": 2.6856020445692463e-11
+    },
+    {
+     "solver": "fastshells",
+     "rtol": 1e-13,
+     "crossings": [
+      146,
+      146
+     ],
+     "same_sequence": true,
+     "max_dt": 6.836639556695445e-07,
+     "max_dR": 8.508977096255421e-07,
+     "max_dM": 2.6856372594558087e-11
+    }
+   ],
+   "independent_self": {
+    "rtol": [
+     1e-13,
+     3e-14
+    ],
+    "crossings": [
+     146,
+     146
+    ],
+    "max_dt": 7.277468228039652e-07,
+    "max_dR": 9.059740584405063e-07,
+    "max_dM": 2.830368057982202e-11
+   },
+   "independent_seconds": 4.2017717361450195,
+   "junction_check": 1.6260326418660043e-12
+  },
+  {
+   "case": "type (ii), delta = 0.03",
+   "m": 0.00814613805433597,
+   "total": 0.03,
+   "R_i": 1.5,
+   "tmax": 300.0,
+   "rows": [
+    {
+     "solver": "n_shells",
+     "rtol": 1e-12,
+     "crossings": [
+      141,
+      141
+     ],
+     "same_sequence": true,
+     "max_dt": 3.7147174225538038e-09,
+     "max_dR": 4.508474926723238e-09,
+     "max_dM": 6.304156849323839e-12
+    },
+    {
+     "solver": "n_shells",
+     "rtol": 1e-13,
+     "crossings": [
+      141,
+      141
+     ],
+     "same_sequence": true,
+     "max_dt": 3.7178438105911482e-09,
+     "max_dR": 4.514134843702777e-09,
+     "max_dM": 6.316426548469423e-12
+    },
+    {
+     "solver": "fastshells",
+     "rtol": 1e-12,
+     "crossings": [
+      141,
+      141
+     ],
+     "same_sequence": true,
+     "max_dt": 3.6754386201209854e-09,
+     "max_dR": 4.510213980069011e-09,
+     "max_dM": 6.308776417940365e-12
+    },
+    {
+     "solver": "fastshells",
+     "rtol": 1e-13,
+     "crossings": [
+      141,
+      141
+     ],
+     "same_sequence": true,
+     "max_dt": 3.6800997804675717e-09,
+     "max_dR": 4.51630266518066e-09,
+     "max_dM": 6.3161316454785066e-12
+    }
+   ],
+   "independent_self": {
+    "rtol": [
+     1e-13,
+     3e-14
+    ],
+    "crossings": [
+     141,
+     141
+    ],
+    "max_dt": 2.7199575924896635e-10,
+    "max_dR": 4.250950702555656e-10,
+    "max_dM": 5.266828639882704e-13
+   },
+   "independent_seconds": 4.052508354187012,
+   "junction_check": 1.6191492591133283e-12
+  },
+  {
+   "case": "type (ii), delta = 0.037",
+   "m": 0.010046903600347696,
+   "total": 0.037,
+   "R_i": 1.5,
+   "tmax": 300.0,
+   "rows": [
+    {
+     "solver": "n_shells",
+     "rtol": 1e-12,
+     "crossings": [
+      134,
+      134
+     ],
+     "same_sequence": true,
+     "max_dt": 2.4933797249104828e-09,
+     "max_dR": 7.095064535889151e-10,
+     "max_dM": 2.8006069685559964e-12
+    },
+    {
+     "solver": "n_shells",
+     "rtol": 1e-13,
+     "crossings": [
+      134,
+      134
+     ],
+     "same_sequence": true,
+     "max_dt": 2.4100472728605382e-09,
+     "max_dR": 7.34664329371526e-10,
+     "max_dM": 2.9155809710967873e-12
+    },
+    {
+     "solver": "fastshells",
+     "rtol": 1e-12,
+     "crossings": [
+      134,
+      134
+     ],
+     "same_sequence": true,
+     "max_dt": 2.482977379258955e-09,
+     "max_dR": 7.148721614669284e-10,
+     "max_dM": 2.8251394279532605e-12
+    },
+    {
+     "solver": "fastshells",
+     "rtol": 1e-13,
+     "crossings": [
+      134,
+      134
+     ],
+     "same_sequence": true,
+     "max_dt": 2.5111717150139157e-09,
+     "max_dR": 7.196216955662749e-10,
+     "max_dM": 2.8477914471025656e-12
+    }
+   ],
+   "independent_self": {
+    "rtol": [
+     1e-13,
+     3e-14
+    ],
+    "crossings": [
+     134,
+     134
+    ],
+    "max_dt": 2.0369839148770552e-09,
+    "max_dR": 3.1271918388142694e-10,
+    "max_dM": 1.3344915450463901e-12
+   },
+   "independent_seconds": 4.072546720504761,
+   "junction_check": 6.836753385641714e-13
+  }
+ ]
+}

@@ -1,0 +1,123 @@
+{
+ "clock": "static time between the shells (anchor 1)",
+ "rtol": 1e-12,
+ "cases": [
+  {
+   "case": "Fig. 5 example",
+   "m": 0.00815,
+   "total_mass": 0.03,
+   "R_i": 1.0,
+   "t0": 10.0,
+   "runs": [
+    {
+     "T": 300.0,
+     "crossings_forward": 139,
+     "crossings_back": 135,
+     "same_order": true,
+     "max_state_difference": 1.5577761303120496e-11,
+     "max_mass_difference": 3.4871411314085776e-14,
+     "seconds": 0.05271434783935547
+    },
+    {
+     "T": 3000.0,
+     "crossings_forward": 1397,
+     "crossings_back": 1393,
+     "same_order": true,
+     "max_state_difference": 3.2610723010861875e-09,
+     "max_mass_difference": 8.84618246710378e-12,
+     "seconds": 0.5256669521331787
+    },
+    {
+     "T": 20000.0,
+     "crossings_forward": 9320,
+     "crossings_back": 9316,
+     "same_order": true,
+     "max_state_difference": 2.3926480650915405e-07,
+     "max_mass_difference": 8.218276146415571e-10,
+     "seconds": 3.5974502563476562
+    }
+   ]
+  },
+  {
+   "case": "type (ii), delta = 0.006",
+   "m": 0.001629227610867194,
+   "total_mass": 0.006,
+   "R_i": 1.5,
+   "t0": 10.0,
+   "runs": [
+    {
+     "T": 3000.0,
+     "crossings_forward": 1466,
+     "crossings_back": 1462,
+     "same_order": true,
+     "max_state_difference": 4.1315162402355554e-10,
+     "max_mass_difference": 1.3086623798508334e-13,
+     "seconds": 0.5381803512573242
+    },
+    {
+     "T": 20000.0,
+     "crossings_forward": 9779,
+     "crossings_back": 9775,
+     "same_order": true,
+     "max_state_difference": 3.267125770478607e-07,
+     "max_mass_difference": 1.243446127313641e-10,
+     "seconds": 3.6052966117858887
+    }
+   ]
+  },
+  {
+   "case": "type (ii), delta = 0.02",
+   "m": 0.005430758702890647,
+   "total_mass": 0.02,
+   "R_i": 1.5,
+   "t0": 10.0,
+   "runs": [
+    {
+     "T": 3000.0,
+     "crossings_forward": 1451,
+     "crossings_back": 1447,
+     "same_order": true,
+     "max_state_difference": 9.006886347862064e-10,
+     "max_mass_difference": 4.763672095675631e-13,
+     "seconds": 0.5364196300506592
+    },
+    {
+     "T": 20000.0,
+     "crossings_forward": 9672,
+     "crossings_back": 9668,
+     "same_order": true,
+     "max_state_difference": 6.301184707624419e-07,
+     "max_mass_difference": 1.6432800068605369e-09,
+     "seconds": 3.5901432037353516
+    }
+   ]
+  },
+  {
+   "case": "type (ii), delta = 0.037",
+   "m": 0.010046903600347696,
+   "total_mass": 0.037,
+   "R_i": 1.5,
+   "t0": 10.0,
+   "runs": [
+    {
+     "T": 3000.0,
+     "crossings_forward": 1342,
+     "crossings_back": 1338,
+     "same_order": true,
+     "max_state_difference": 1.751590013032711e-07,
+     "max_mass_difference": 5.0231891562946274e-11,
+     "seconds": 0.5546205043792725
+    },
+    {
+     "T": 20000.0,
+     "crossings_forward": 8949,
+     "crossings_back": 8945,
+     "same_order": true,
+     "max_state_difference": 4.139620440435365e-06,
+     "max_mass_difference": 5.961987393360291e-09,
+     "seconds": 3.5754518508911133
+    }
+   ]
+  }
+ ]
+}

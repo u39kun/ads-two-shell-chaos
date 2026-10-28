@@ -1,0 +1,7 @@
+Addendum results: addendum/run_addendum.sh, run on 2026-10-26.
+
+Machine:   Intel Core i9-14900K (24 cores, 32 threads; AVX2, no AVX-512), the reference machine of results/
+OS:        Ubuntu 24.04.5 LTS
+Python:    3.13.17, in code/.venv with the package versions of requirements.txt and results/ENVIRONMENT.txt
+
+These runs were not repeated on the Xeon or AMD EPYC machines.

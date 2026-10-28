@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+message: "If you use this code or its results, please cite it as below."
+type: software
+version: v1.0
+doi: 10.5281/zenodo.23724493
+date-released: 2026-10-28
+title: "ads-two-shell-chaos: code and data for \"Interacting shells in anti-de Sitter space revisited: an invariant measure, regular orbits, and chaos\""
+authors:
+  - family-names: Sako
+    given-names: Yusaku
+    affiliation: Independent Researcher
+    orcid: "https://orcid.org/0009-0005-1455-3356"
+repository-code: "https://github.com/u39kun/ads-two-shell-chaos"
+license: MIT
+url: "https://github.com/u39kun/ads-two-shell-chaos"
+abstract: >-
+  Simulation, analysis, and figure code, with the saved results, for a study of
+  two concentric thin shells that interact through gravity and pass through each
+  other in anti-de Sitter space. It computes the return map of the shells to a
+  section of their crossings, its invariant measure, a variational tangent and
+  finite-time exponents, scans of chaotic orbits near the saddle and across the
+  type (ii) family of initial data of Brito, Cardoso, and Rocha, and a validation
+  against their results.
+keywords:
+  - anti-de Sitter
+  - thin shells
+  - general relativity
+  - Poincaré section
+  - area-preserving map
+  - finite-time Lyapunov exponents
+  - chaos
+references:
+  - type: article
+    authors:
+      - family-names: Brito
+        given-names: Richard
+      - family-names: Cardoso
+        given-names: Vitor
+      - family-names: Rocha
+        given-names: Jorge V.
+    title: "Interacting shells in AdS spacetime and chaos"
+    journal: "Physical Review D"
+    volume: 94
+    issue: 2
+    start: "024003"
+    year: 2016
+    doi: "10.1103/PhysRevD.94.024003"

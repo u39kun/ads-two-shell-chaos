@@ -1,0 +1,6 @@
+whole: delta 0.006: 700 starts; rate > 1e-3: 13, > 1e-2: 0; collapse: 0; other stops: 0
+whole: delta 0.012: 710 starts; rate > 1e-3: 19, > 1e-2: 2; collapse: 0; other stops: 0
+whole: delta 0.02: 718 starts; rate > 1e-3: 4, > 1e-2: 1; collapse: 0; other stops: 0
+whole: delta 0.03: 694 starts; rate > 1e-3: 7, > 1e-2: 5; collapse: 0; other stops: 0
+whole: delta 0.037: 700 starts; rate > 1e-3: 8, > 1e-2: 7; collapse: 217; other stops: 0
+wrote results/bcr_section/survey.json; 3522 starts, 1479 s

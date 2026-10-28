@@ -1,0 +1,35 @@
+\begin{table}[!tbp]
+\centering\small
+\caption{Late-block exponents $\lambda_{[2000,6000]}$ in units of $10^{-3}$ per return, at BCR-5 parameters.
+Columns give the start direction and distance from the saddle, or the BCR-5 orbit.
+The first row uses the variational tangent; subsequent rows vary one two-orbit setting from the scan baseline:
+$d_0 = 10^{-10}$ in $(R,100\,\Mmid)$, renormalization every 10 returns, rtol $=10^{-12}$, maximum step 0.02, and
+initial separation along $(1,1)$; --: not run.
+Changing $d_0$ preserves the reference trajectory, allowing direct comparison.
+Other settings and the variational method follow different numerical chaotic trajectories after a few hundred
+returns, sampling different finite-time exponents.}
+\label{tab:convergence}
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+setting & R+, $10^{-4}$ & M$-$, $10^{-4}$ & R+, $10^{-2}$ & R$-$, 0.02 & R+, 0.07 & BCR-5 \\
+\midrule
+variational tangent & 30 & 34 & $-$0.23 & $-$0.29 & 0.27 & 0.33 \\
+\midrule
+$d_0 = 10^{-6}$ & 34 & 21 & 1.2 & 1.9 & 2.5 & 1.9 \\
+$d_0 = 10^{-7}$ & 32 & 19 & 1.0 & 0.25 & 0.67 & 0.77 \\
+$d_0 = 10^{-8}$ & 32 & 20 & 0.14 & $-$0.52 & 0.13 & 0.44 \\
+$d_0 = 10^{-9}$ & 33 & 20 & 1.3 & 0.17 & 0.49 & 0.33 \\
+$d_0 = 10^{-10}$ (scans) & 42 & 30 & 4.8 & 2.5 & 0.80 & 1.1 \\
+$d_0 = 10^{-11}$ & 68 & 61 & 35 & 11 & 5.5 & 2.6 \\
+$d_0 = 10^{-12}$ & 109 & 93 & 79 & 56 & 21 & 7.5 \\
+\midrule
+renormalized every return & 21 & 33 & 3.9 & 3.1 & 0.68 & 1.4 \\
+every 50 returns & 36 & 27 & 7.8 & 3.2 & 0.76 & 0.31 \\
+rtol $= 10^{-11}$ & 41 & 34 & 3.8 & 0.70 & 0.63 & 0.28 \\
+rtol $= 10^{-13}$ & 20 & 22 & 6.4 & 1.00 & 0.91 & 0.28 \\
+max step 0.01 & 39 & 32 & 6.3 & 2.4 & 0.72 & 0.93 \\
+separation along $(1, -1)$ & 42 & 30 & 5.7 & 1.6 & 1.8 & 0.97 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,2 @@
+# keep the logs of the addendum runs (code/.gitignore ignores *.log outside results/)
+!results/*.log

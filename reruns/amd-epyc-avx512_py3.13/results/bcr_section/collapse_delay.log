@@ -1,0 +1,2 @@
+{'starts': 2000, 'spacing': 1.2506253126431943e-06, 'collapsed': 1872, 'alive_at': {'3000': 819, '5000': 507, '10000': 253, '15000': 153, '20000': 128}, 'switches_by_3000': 507, 'switches_by_tmax': 211, 'collapse_time_quantiles': [412.059840528552, 1251.2408794532305, 2278.3459048088666, 4157.476966426547, 19976.630065747304]}
+wrote results/bcr_section/collapse_delay.json; 33 s

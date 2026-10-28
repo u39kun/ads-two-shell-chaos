@@ -1,0 +1,2799 @@
+{
+ "scan": [
+  {
+   "delta": 0.03,
+   "status": "time_limit",
+   "crossings": 467,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.030199999999999998,
+   "status": "time_limit",
+   "crossings": 467,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.0304,
+   "status": "time_limit",
+   "crossings": 467,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.0306,
+   "status": "time_limit",
+   "crossings": 466,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.030799999999999998,
+   "status": "time_limit",
+   "crossings": 466,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.031,
+   "status": "time_limit",
+   "crossings": 466,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.0312,
+   "status": "time_limit",
+   "crossings": 465,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.0314,
+   "status": "time_limit",
+   "crossings": 465,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.031599999999999996,
+   "status": "time_limit",
+   "crossings": 465,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.0318,
+   "status": "time_limit",
+   "crossings": 464,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.032,
+   "status": "time_limit",
+   "crossings": 464,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.0322,
+   "status": "time_limit",
+   "crossings": 463,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.0324,
+   "status": "time_limit",
+   "crossings": 463,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.0326,
+   "status": "time_limit",
+   "crossings": 462,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.032799999999999996,
+   "status": "time_limit",
+   "crossings": 462,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.033,
+   "status": "time_limit",
+   "crossings": 462,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.0332,
+   "status": "time_limit",
+   "crossings": 461,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.0334,
+   "status": "time_limit",
+   "crossings": 461,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.0336,
+   "status": "time_limit",
+   "crossings": 460,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.0338,
+   "status": "time_limit",
+   "crossings": 460,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.034,
+   "status": "time_limit",
+   "crossings": 459,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.0342,
+   "status": "time_limit",
+   "crossings": 458,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.0344,
+   "status": "time_limit",
+   "crossings": 458,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.0346,
+   "status": "time_limit",
+   "crossings": 457,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.0348,
+   "status": "time_limit",
+   "crossings": 456,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.034999999999999996,
+   "status": "time_limit",
+   "crossings": 456,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.035199999999999995,
+   "status": "time_limit",
+   "crossings": 455,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.0354,
+   "status": "time_limit",
+   "crossings": 454,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.0356,
+   "status": "time_limit",
+   "crossings": 453,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.0358,
+   "status": "time_limit",
+   "crossings": 452,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.036,
+   "status": "time_limit",
+   "crossings": 451,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.036199999999999996,
+   "status": "time_limit",
+   "crossings": 450,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.0364,
+   "status": "time_limit",
+   "crossings": 449,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.0366,
+   "status": "time_limit",
+   "crossings": 447,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.0368,
+   "status": "time_limit",
+   "crossings": 445,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.037,
+   "status": "time_limit",
+   "crossings": 441,
+   "t_end": 1000.0
+  },
+  {
+   "delta": 0.0372,
+   "status": "horizon_approach",
+   "crossings": 13,
+   "t_end": 31.729081971333528,
+   "M_BH": 0.023263068840649322,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.037399999999999996,
+   "status": "horizon_approach",
+   "crossings": 13,
+   "t_end": 31.85492921922417,
+   "M_BH": 0.023477904076900064,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.037599999999999995,
+   "status": "horizon_approach",
+   "crossings": 11,
+   "t_end": 26.85837956480822,
+   "M_BH": 0.0234595605165716,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0378,
+   "status": "horizon_approach",
+   "crossings": 11,
+   "t_end": 26.804360227082466,
+   "M_BH": 0.023609674550558686,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.038,
+   "status": "horizon_approach",
+   "crossings": 11,
+   "t_end": 26.8236621626759,
+   "M_BH": 0.023759087078406717,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0382,
+   "status": "horizon_approach",
+   "crossings": 11,
+   "t_end": 26.895844973339255,
+   "M_BH": 0.02390578529613445,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0384,
+   "status": "horizon_approach",
+   "crossings": 11,
+   "t_end": 27.081648798311868,
+   "M_BH": 0.024038112775368898,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.038599999999999995,
+   "status": "horizon_approach",
+   "crossings": 9,
+   "t_end": 22.40872137557219,
+   "M_BH": 0.023877794945435304,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0388,
+   "status": "horizon_approach",
+   "crossings": 9,
+   "t_end": 22.260717000311214,
+   "M_BH": 0.024014924951206135,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.039,
+   "status": "horizon_approach",
+   "crossings": 9,
+   "t_end": 22.217209143729065,
+   "M_BH": 0.024151228627309656,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0392,
+   "status": "horizon_approach",
+   "crossings": 9,
+   "t_end": 22.206315741469897,
+   "M_BH": 0.02428643178214912,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0394,
+   "status": "horizon_approach",
+   "crossings": 9,
+   "t_end": 22.213555694362178,
+   "M_BH": 0.02442015319157346,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.039599999999999996,
+   "status": "horizon_approach",
+   "crossings": 9,
+   "t_end": 22.23420539600362,
+   "M_BH": 0.024551837956878673,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0398,
+   "status": "horizon_approach",
+   "crossings": 9,
+   "t_end": 22.26716768589195,
+   "M_BH": 0.024680625790196607,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.039999999999999994,
+   "status": "horizon_approach",
+   "crossings": 9,
+   "t_end": 22.3138781983283,
+   "M_BH": 0.02480505746424855,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0402,
+   "status": "horizon_approach",
+   "crossings": 9,
+   "t_end": 22.379355228820252,
+   "M_BH": 0.024922298217339246,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0404,
+   "status": "horizon_approach",
+   "crossings": 9,
+   "t_end": 22.477758122492705,
+   "M_BH": 0.025025436267462658,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0406,
+   "status": "horizon_approach",
+   "crossings": 9,
+   "t_end": 22.66788495970596,
+   "M_BH": 0.025087028103677005,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.040799999999999996,
+   "status": "horizon_approach",
+   "crossings": 7,
+   "t_end": 18.118121673281788,
+   "M_BH": 0.024837542025031762,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.040999999999999995,
+   "status": "horizon_approach",
+   "crossings": 7,
+   "t_end": 17.88956031689434,
+   "M_BH": 0.02497013588159878,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0412,
+   "status": "horizon_approach",
+   "crossings": 7,
+   "t_end": 17.819664754596687,
+   "M_BH": 0.02510200216330467,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0414,
+   "status": "horizon_approach",
+   "crossings": 7,
+   "t_end": 17.787424277856495,
+   "M_BH": 0.02523302056172932,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0416,
+   "status": "horizon_approach",
+   "crossings": 7,
+   "t_end": 17.773240592897686,
+   "M_BH": 0.025363045332052588,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0418,
+   "status": "horizon_approach",
+   "crossings": 7,
+   "t_end": 17.77023542039861,
+   "M_BH": 0.025491897415750777,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.041999999999999996,
+   "status": "horizon_approach",
+   "crossings": 7,
+   "t_end": 17.775310201662514,
+   "M_BH": 0.025619353116391533,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0422,
+   "status": "horizon_approach",
+   "crossings": 7,
+   "t_end": 17.786942535015175,
+   "M_BH": 0.02574512729519344,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0424,
+   "status": "horizon_approach",
+   "crossings": 7,
+   "t_end": 17.804442381718275,
+   "M_BH": 0.02586884748597317,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0426,
+   "status": "horizon_approach",
+   "crossings": 7,
+   "t_end": 17.82767648857349,
+   "M_BH": 0.025990012205379713,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0428,
+   "status": "horizon_approach",
+   "crossings": 7,
+   "t_end": 17.85700322116844,
+   "M_BH": 0.026107920063672803,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.043,
+   "status": "horizon_approach",
+   "crossings": 7,
+   "t_end": 17.893362979233913,
+   "M_BH": 0.026221540772217094,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.043199999999999995,
+   "status": "horizon_approach",
+   "crossings": 7,
+   "t_end": 17.938584233014982,
+   "M_BH": 0.026329258964531106,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.043399999999999994,
+   "status": "horizon_approach",
+   "crossings": 7,
+   "t_end": 17.99616232132673,
+   "M_BH": 0.026428301575705207,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0436,
+   "status": "horizon_approach",
+   "crossings": 7,
+   "t_end": 18.073437994433935,
+   "M_BH": 0.026513219177813983,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0438,
+   "status": "horizon_approach",
+   "crossings": 7,
+   "t_end": 18.189576362296236,
+   "M_BH": 0.026570569502476323,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.044,
+   "status": "horizon_approach",
+   "crossings": 7,
+   "t_end": 18.430540772709566,
+   "M_BH": 0.0265454567761919,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.044199999999999996,
+   "status": "horizon_approach",
+   "crossings": 5,
+   "t_end": 13.75125468772203,
+   "M_BH": 0.026312035801605075,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.044399999999999995,
+   "status": "horizon_approach",
+   "crossings": 5,
+   "t_end": 13.527505295071661,
+   "M_BH": 0.026443686383878406,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0446,
+   "status": "horizon_approach",
+   "crossings": 5,
+   "t_end": 13.447231774716744,
+   "M_BH": 0.026574824869123933,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0448,
+   "status": "horizon_approach",
+   "crossings": 5,
+   "t_end": 13.40381803793151,
+   "M_BH": 0.026705385526442044,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.045,
+   "status": "horizon_approach",
+   "crossings": 5,
+   "t_end": 13.378015164895384,
+   "M_BH": 0.02683529307832222,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0452,
+   "status": "horizon_approach",
+   "crossings": 5,
+   "t_end": 13.362792111969927,
+   "M_BH": 0.02696446070036482,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.045399999999999996,
+   "status": "horizon_approach",
+   "crossings": 5,
+   "t_end": 13.35481887691562,
+   "M_BH": 0.027092787459564116,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0456,
+   "status": "horizon_approach",
+   "crossings": 5,
+   "t_end": 13.35228707510108,
+   "M_BH": 0.027220154988133793,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.045799999999999993,
+   "status": "horizon_approach",
+   "crossings": 5,
+   "t_end": 13.354138750026499,
+   "M_BH": 0.027346423098029427,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.046,
+   "status": "horizon_approach",
+   "crossings": 5,
+   "t_end": 13.359738328704035,
+   "M_BH": 0.027471423898577704,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0462,
+   "status": "horizon_approach",
+   "crossings": 5,
+   "t_end": 13.368716874205443,
+   "M_BH": 0.027594953751742302,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0464,
+   "status": "horizon_approach",
+   "crossings": 5,
+   "t_end": 13.380894797367302,
+   "M_BH": 0.027716762024741767,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0466,
+   "status": "horizon_approach",
+   "crossings": 5,
+   "t_end": 13.396246199286098,
+   "M_BH": 0.027836534961805486,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.046799999999999994,
+   "status": "horizon_approach",
+   "crossings": 5,
+   "t_end": 13.414890182403981,
+   "M_BH": 0.0279538718676913,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.047,
+   "status": "horizon_approach",
+   "crossings": 5,
+   "t_end": 13.437105382369907,
+   "M_BH": 0.028068248703394486,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0472,
+   "status": "horizon_approach",
+   "crossings": 5,
+   "t_end": 13.463372171372608,
+   "M_BH": 0.028178960102998935,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0474,
+   "status": "horizon_approach",
+   "crossings": 5,
+   "t_end": 13.4944577945618,
+   "M_BH": 0.028285022283484177,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.047599999999999996,
+   "status": "horizon_approach",
+   "crossings": 5,
+   "t_end": 13.531581067522271,
+   "M_BH": 0.028385000031214403,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.047799999999999995,
+   "status": "horizon_approach",
+   "crossings": 5,
+   "t_end": 13.576745888481799,
+   "M_BH": 0.028476672770710833,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.048,
+   "status": "horizon_approach",
+   "crossings": 5,
+   "t_end": 13.633486200710994,
+   "M_BH": 0.028556317469003455,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.04819999999999999,
+   "status": "horizon_approach",
+   "crossings": 5,
+   "t_end": 13.708811228734666,
+   "M_BH": 0.0286169170104025,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0484,
+   "status": "horizon_approach",
+   "crossings": 5,
+   "t_end": 13.81976529663086,
+   "M_BH": 0.028642488982867732,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0486,
+   "status": "horizon_approach",
+   "crossings": 5,
+   "t_end": 14.030434307030335,
+   "M_BH": 0.0285799242394645,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.048799999999999996,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 9.68197519245729,
+   "M_BH": 0.028241962860378955,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.049,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 9.169597145862154,
+   "M_BH": 0.028374819290062917,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.049199999999999994,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 9.052740430568647,
+   "M_BH": 0.028507554193229104,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0494,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 8.988229215498896,
+   "M_BH": 0.028640142963261343,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0496,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 8.94594592414524,
+   "M_BH": 0.02877255861274648,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0498,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 8.916104508739158,
+   "M_BH": 0.028904771466851484,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.049999999999999996,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 8.894284280766655,
+   "M_BH": 0.029036748805739154,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.050199999999999995,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 8.87811462589718,
+   "M_BH": 0.029168454445549597,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0504,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 8.866181397184379,
+   "M_BH": 0.02929984824487532,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.05059999999999999,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 8.857578131563379,
+   "M_BH": 0.02943088552029898,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0508,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 8.85169380083122,
+   "M_BH": 0.029561516350174788,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.051,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 8.848101840491823,
+   "M_BH": 0.02969168474005522,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.051199999999999996,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 8.846497665672619,
+   "M_BH": 0.029821327615474753,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0514,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 8.846661480593095,
+   "M_BH": 0.029950373597454723,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.05159999999999999,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 8.848435232842112,
+   "M_BH": 0.030078741502015605,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0518,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 8.851707972059552,
+   "M_BH": 0.030206338485578417,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.052,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 8.856406497535755,
+   "M_BH": 0.030333057731028484,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.052199999999999996,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 8.862489548565215,
+   "M_BH": 0.03045877553077438,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.052399999999999995,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 8.86994455438188,
+   "M_BH": 0.030583347567721065,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.052599999999999994,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 8.878786424601078,
+   "M_BH": 0.030706604113764684,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0528,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 8.889058178555924,
+   "M_BH": 0.03082834374369538,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.053,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 8.900833476570652,
+   "M_BH": 0.030948324976146847,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0532,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 8.914221388860819,
+   "M_BH": 0.031066254961134313,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.053399999999999996,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 8.929374094155058,
+   "M_BH": 0.03118177386277598,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.053599999999999995,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 8.946498736284338,
+   "M_BH": 0.03129443280226819,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0538,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 8.965875564201477,
+   "M_BH": 0.03140366187492431,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.05399999999999999,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 8.987886089490774,
+   "M_BH": 0.03150872232586951,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0542,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 9.01305806666649,
+   "M_BH": 0.031608632384106605,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0544,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 9.042140352871748,
+   "M_BH": 0.03170204708592542,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.054599999999999996,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 9.076234432364947,
+   "M_BH": 0.03178705275257121,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0548,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 9.117042419743141,
+   "M_BH": 0.03186079077706992,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.05499999999999999,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 9.167380755968999,
+   "M_BH": 0.03191870507863477,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0552,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 9.232392314742913,
+   "M_BH": 0.0319528427018895,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0554,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 9.323020569908651,
+   "M_BH": 0.031947268801495295,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0556,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 9.469907815368154,
+   "M_BH": 0.031861444321987606,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.055799999999999995,
+   "status": "horizon_approach",
+   "crossings": 3,
+   "t_end": 9.85313355899011,
+   "M_BH": 0.03151316774099522,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.055999999999999994,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.876609716750965,
+   "M_BH": 0.031209737686948145,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0562,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.6347026449665165,
+   "M_BH": 0.03134425758989852,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.05639999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.52739745676815,
+   "M_BH": 0.03147914135318802,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0566,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.458955802750538,
+   "M_BH": 0.03161439445806508,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.056799999999999996,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.409329436382995,
+   "M_BH": 0.031750022517670284,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.056999999999999995,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.370837996355471,
+   "M_BH": 0.03188603128134415,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0572,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.339714023006705,
+   "M_BH": 0.032022426639111375,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.05739999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.313827762086949,
+   "M_BH": 0.03215921462635095,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0576,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.291857409917362,
+   "M_BH": 0.03229640142866041,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0578,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.272926179871846,
+   "M_BH": 0.032433993386924764,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.057999999999999996,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.256422698762378,
+   "M_BH": 0.03257199700260036,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.058199999999999995,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.241903744335986,
+   "M_BH": 0.032710418943223935,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.058399999999999994,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.229037810642049,
+   "M_BH": 0.03284926604815939,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0586,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.217570520915255,
+   "M_BH": 0.03298854533459395,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0588,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.2073024661797245,
+   "M_BH": 0.0331282640037967,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.059,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.198074470882669,
+   "M_BH": 0.0332684294476539,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.059199999999999996,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.189757485483465,
+   "M_BH": 0.0334090492554952,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.059399999999999994,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.182245466655582,
+   "M_BH": 0.033550131221226166,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0596,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.175450243023592,
+   "M_BH": 0.033691683350784866,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.05979999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.169297738559656,
+   "M_BH": 0.033833713869938206,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.06,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.1637251436843705,
+   "M_BH": 0.033976231232438744,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0602,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.158678762806728,
+   "M_BH": 0.03411924412856035,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.060399999999999995,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.154112353336489,
+   "M_BH": 0.03426276149403476,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0606,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.1499858265633485,
+   "M_BH": 0.03440679251941153,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.06079999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.146264221145683,
+   "M_BH": 0.03455134665986507,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.061,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.142916882509937,
+   "M_BH": 0.034696433645475075,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0612,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.139916800514256,
+   "M_BH": 0.034842063492007,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.061399999999999996,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.137240070986084,
+   "M_BH": 0.03498824651222306,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.061599999999999995,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.13486545333075,
+   "M_BH": 0.035134993327753244,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.061799999999999994,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.13277400565706,
+   "M_BH": 0.03528231488156176,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.062,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.130948780272078,
+   "M_BH": 0.03543022245104298,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0622,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.129374569397326,
+   "M_BH": 0.03557872766178673,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0624,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.12803769084973,
+   "M_BH": 0.03572784250205212,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.06259999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.1269258063141345,
+   "M_BH": 0.0358775793379959,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0628,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.126027766968016,
+   "M_BH": 0.03602795092970048,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.063,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.125333481487708,
+   "M_BH": 0.03617897044805402,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0632,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.124833802828036,
+   "M_BH": 0.0363306514925349,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0634,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.12452043036311,
+   "M_BH": 0.036483008109961454,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.06359999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.124385825882323,
+   "M_BH": 0.03663605481426674,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0638,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.124423140232051,
+   "M_BH": 0.03678980660736885,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.064,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.1246261496507675,
+   "M_BH": 0.03694427900120675,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0642,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.124989200677015,
+   "M_BH": 0.03709948804102243,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0644,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.1255071617706705,
+   "M_BH": 0.03725545032997222,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.06459999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.126175381003766,
+   "M_BH": 0.037412183055158935,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0648,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.126989649316997,
+   "M_BH": 0.0375697040151842,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.065,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.127946168439109,
+   "M_BH": 0.0377280316493261,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0652,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.129041522668587,
+   "M_BH": 0.0378871850684589,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.06539999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.130272654419808,
+   "M_BH": 0.03804718408783825,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.06559999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.131636843330704,
+   "M_BH": 0.03820804926188902,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0658,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.13313168762971,
+   "M_BH": 0.038369801921140055,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.066,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.134755088954534,
+   "M_BH": 0.038532464211468186,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0662,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.136505238837378,
+   "M_BH": 0.03869605913582217,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.06639999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.138380608114681,
+   "M_BH": 0.03886061059861645,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.06659999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.140379937931154,
+   "M_BH": 0.03902614345299961,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0668,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.142502233197029,
+   "M_BH": 0.03919268355122073,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.067,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.14474675743576,
+   "M_BH": 0.039360257798338565,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0672,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.147113030044822,
+   "M_BH": 0.0395288942095388,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.06739999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.149600825031085,
+   "M_BH": 0.03969862197135206,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0676,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.152210171979749,
+   "M_BH": 0.03986947150709026,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0678,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.154941358533418,
+   "M_BH": 0.04004147454685198,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.068,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.1577949351791315,
+   "M_BH": 0.040214664202479135,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0682,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.1607717219913,
+   "M_BH": 0.04038907504788573,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.06839999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.163872817811264,
+   "M_BH": 0.040564743205223214,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0686,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.167099611696389,
+   "M_BH": 0.04074170643738912,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0688,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.1704537971496265,
+   "M_BH": 0.040920004247444186,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.069,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.1739373894120515,
+   "M_BH": 0.04109967798555292,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0692,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.177552746326907,
+   "M_BH": 0.04128077096413738,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.06939999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.181302592821183,
+   "M_BH": 0.041463328581999644,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0696,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.185190049993699,
+   "M_BH": 0.04164739845825287,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0698,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.1892186697210665,
+   "M_BH": 0.0418330305769923,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.06999999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.19339247489141,
+   "M_BH": 0.04202027744374516,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0702,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.197716007448347,
+   "M_BH": 0.0422091942548486,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.07039999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.202194384660761,
+   "M_BH": 0.04239983908104286,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0706,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.206833366044889,
+   "M_BH": 0.04259227306671378,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0708,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.211639432766515,
+   "M_BH": 0.042786560646390644,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.071,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.21661988260389,
+   "M_BH": 0.04298276978029511,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.07119999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.221782943818539,
+   "M_BH": 0.04318097221095964,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.07139999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.227137912626655,
+   "M_BH": 0.04338124374318429,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0716,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.232695320288755,
+   "M_BH": 0.04358366454988346,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0718,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.238467137806456,
+   "M_BH": 0.043788319506708355,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.072,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.244467029284478,
+   "M_BH": 0.04399529855870087,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.07219999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.250710666868121,
+   "M_BH": 0.04420469712267447,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.07239999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.257216128529636,
+   "M_BH": 0.04441661652951055,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0726,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.264004405373827,
+   "M_BH": 0.044631164511142934,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0728,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.271100055938034,
+   "M_BH": 0.04484845573766845,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.073,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.278532065171927,
+   "M_BH": 0.045068612410801644,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.07319999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.286334987386972,
+   "M_BH": 0.04529176492079334,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.07339999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.294550498324237,
+   "M_BH": 0.04551805257500148,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0736,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.303229544592836,
+   "M_BH": 0.045747624407531565,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0738,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.312435395031594,
+   "M_BH": 0.04598064008082822,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.074,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.322248092390766,
+   "M_BH": 0.046217270891817284,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.07419999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.332771162828497,
+   "M_BH": 0.04645770089722797,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0744,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.344142124807931,
+   "M_BH": 0.04670212817513151,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0746,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.356549728330696,
+   "M_BH": 0.046950766242613566,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.07479999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.370263886928461,
+   "M_BH": 0.047203845652911885,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.075,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.385691487085337,
+   "M_BH": 0.04746161579947494,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.07519999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.403490474445485,
+   "M_BH": 0.04772434695934187,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0754,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.424833678693529,
+   "M_BH": 0.047992332614233094,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.0756,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.452134890976123,
+   "M_BH": 0.04826589209501029,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.07579999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.4916577135343285,
+   "M_BH": 0.04854537360402441,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.076,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.56880697228771,
+   "M_BH": 0.04883115768073846,
+   "trapped_rank": 0
+  },
+  {
+   "delta": 0.07619999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 6.25599633441161,
+   "M_BH": 0.07619999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0764,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 6.053515265526907,
+   "M_BH": 0.0764,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0766,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 5.8995564345015685,
+   "M_BH": 0.0766,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0768,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 5.776226267248518,
+   "M_BH": 0.0768,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.07699999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 5.673896266203237,
+   "M_BH": 0.07699999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.07719999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 5.586802439321145,
+   "M_BH": 0.07719999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0774,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 5.511226393686912,
+   "M_BH": 0.0774,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0776,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 5.444631914863167,
+   "M_BH": 0.0776,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0778,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 5.385212290776593,
+   "M_BH": 0.0778,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.07799999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 5.331634400656667,
+   "M_BH": 0.07799999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.07819999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 5.2828851540428285,
+   "M_BH": 0.07819999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0784,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 5.238174730697836,
+   "M_BH": 0.0784,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0786,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 5.196873021759162,
+   "M_BH": 0.0786,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0788,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 5.158466297404866,
+   "M_BH": 0.0788,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.07899999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 5.122526594129427,
+   "M_BH": 0.07899999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.07919999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 5.088689266011689,
+   "M_BH": 0.07919999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0794,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 5.056635789416176,
+   "M_BH": 0.0794,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0796,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 5.026079837915436,
+   "M_BH": 0.0796,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0798,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.996755142363911,
+   "M_BH": 0.0798,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.07999999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.9684038495643765,
+   "M_BH": 0.07999999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0802,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.940764033295633,
+   "M_BH": 0.0802,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0804,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.913554637598106,
+   "M_BH": 0.0804,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.08059999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.88645526878481,
+   "M_BH": 0.08059999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0808,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.859076480801564,
+   "M_BH": 0.0808,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.08099999999999999,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.83091254245506,
+   "M_BH": 0.08099999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0812,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.801260790658852,
+   "M_BH": 0.0812,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0814,
+   "status": "horizon_approach",
+   "crossings": 1,
+   "t_end": 4.769073390226854,
+   "M_BH": 0.0814,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.08159999999999999,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.74936403103477,
+   "M_BH": 0.08159999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0818,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.752348299741617,
+   "M_BH": 0.0818,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.08199999999999999,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.755329164227225,
+   "M_BH": 0.08199999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0822,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.758306603166822,
+   "M_BH": 0.0822,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0824,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.761280595574953,
+   "M_BH": 0.0824,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.08259999999999999,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.764251120784602,
+   "M_BH": 0.08259999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.08279999999999998,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.767218158573482,
+   "M_BH": 0.08279999999999998,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.08299999999999999,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.770181688783558,
+   "M_BH": 0.08299999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0832,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.773141691760751,
+   "M_BH": 0.0832,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0834,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.776098148061385,
+   "M_BH": 0.0834,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0836,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.779051038655991,
+   "M_BH": 0.0836,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.08379999999999999,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.782000344570663,
+   "M_BH": 0.08379999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.08399999999999999,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.784946047413022,
+   "M_BH": 0.08399999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0842,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.787888128857705,
+   "M_BH": 0.0842,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0844,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.790826570960947,
+   "M_BH": 0.0844,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0846,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.793761355991821,
+   "M_BH": 0.0846,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.08479999999999999,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.796692466615423,
+   "M_BH": 0.08479999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.08499999999999999,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.7996198854944385,
+   "M_BH": 0.08499999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0852,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.802543595939159,
+   "M_BH": 0.0852,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0854,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.805463581227164,
+   "M_BH": 0.0854,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0856,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.80837982508687,
+   "M_BH": 0.0856,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.08579999999999999,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.811292311292709,
+   "M_BH": 0.08579999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.086,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.81420102402858,
+   "M_BH": 0.086,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0862,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.8171059477221565,
+   "M_BH": 0.0862,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.08639999999999999,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.820007066989439,
+   "M_BH": 0.08639999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0866,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.822904366590904,
+   "M_BH": 0.0866,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.08679999999999999,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.825797831779682,
+   "M_BH": 0.08679999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.087,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.828687447873284,
+   "M_BH": 0.087,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0872,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.831573200294736,
+   "M_BH": 0.0872,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.08739999999999999,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.8344550750078,
+   "M_BH": 0.08739999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0876,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.837333058102218,
+   "M_BH": 0.0876,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.08779999999999999,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.8402071356029825,
+   "M_BH": 0.08779999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.088,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.843077294136756,
+   "M_BH": 0.088,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0882,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.845943520316072,
+   "M_BH": 0.0882,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.08839999999999999,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.848805801117897,
+   "M_BH": 0.08839999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.08859999999999998,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.851664123567516,
+   "M_BH": 0.08859999999999998,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.08879999999999999,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.85451847500157,
+   "M_BH": 0.08879999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.089,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.857368842929186,
+   "M_BH": 0.089,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0892,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.860215215122025,
+   "M_BH": 0.0892,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.0894,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.863057579562395,
+   "M_BH": 0.0894,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.08959999999999999,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.865895924176749,
+   "M_BH": 0.08959999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.08979999999999999,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.868730237350754,
+   "M_BH": 0.08979999999999999,
+   "trapped_rank": 1
+  },
+  {
+   "delta": 0.09,
+   "status": "horizon_approach",
+   "crossings": 0,
+   "t_end": 4.871560507748138,
+   "M_BH": 0.09,
+   "trapped_rank": 1
+  }
+ ],
+ "threshold": [
+  0.037095886117964966,
+  0.03709588611815123
+ ],
+ "delta_star_bracket": [
+  0.05590472681514839,
+  0.055904726815148395
+ ],
+ "ladder": {
+  "13": [
+   0.0372,
+   0.037399999999999996
+  ],
+  "11": [
+   0.037599999999999995,
+   0.0378,
+   0.038,
+   0.0382,
+   0.0384
+  ],
+  "9": [
+   0.038599999999999995,
+   0.0388,
+   0.039,
+   0.0392,
+   0.0394,
+   0.039599999999999996,
+   0.0398,
+   0.039999999999999994,
+   0.0402,
+   0.0404,
+   0.0406
+  ],
+  "7": [
+   0.040799999999999996,
+   0.040999999999999995,
+   0.0412,
+   0.0414,
+   0.0416,
+   0.0418,
+   0.041999999999999996,
+   0.0422,
+   0.0424,
+   0.0426,
+   0.0428,
+   0.043,
+   0.043199999999999995,
+   0.043399999999999994,
+   0.0436,
+   0.0438,
+   0.044
+  ],
+  "5": [
+   0.044199999999999996,
+   0.044399999999999995,
+   0.0446,
+   0.0448,
+   0.045,
+   0.0452,
+   0.045399999999999996,
+   0.0456,
+   0.045799999999999993,
+   0.046,
+   0.0462,
+   0.0464,
+   0.0466,
+   0.046799999999999994,
+   0.047,
+   0.0472,
+   0.0474,
+   0.047599999999999996,
+   0.047799999999999995,
+   0.048,
+   0.04819999999999999,
+   0.0484,
+   0.0486
+  ],
+  "3": [
+   0.048799999999999996,
+   0.049,
+   0.049199999999999994,
+   0.0494,
+   0.0496,
+   0.0498,
+   0.049999999999999996,
+   0.050199999999999995,
+   0.0504,
+   0.05059999999999999,
+   0.0508,
+   0.051,
+   0.051199999999999996,
+   0.0514,
+   0.05159999999999999,
+   0.0518,
+   0.052,
+   0.052199999999999996,
+   0.052399999999999995,
+   0.052599999999999994,
+   0.0528,
+   0.053,
+   0.0532,
+   0.053399999999999996,
+   0.053599999999999995,
+   0.0538,
+   0.05399999999999999,
+   0.0542,
+   0.0544,
+   0.054599999999999996,
+   0.0548,
+   0.05499999999999999,
+   0.0552,
+   0.0554,
+   0.0556,
+   0.055799999999999995
+  ],
+  "1": [
+   0.055999999999999994,
+   0.0562,
+   0.05639999999999999,
+   0.0566,
+   0.056799999999999996,
+   0.056999999999999995,
+   0.0572,
+   0.05739999999999999,
+   0.0576,
+   0.0578,
+   0.057999999999999996,
+   0.058199999999999995,
+   0.058399999999999994,
+   0.0586,
+   0.0588,
+   0.059,
+   0.059199999999999996,
+   0.059399999999999994,
+   0.0596,
+   0.05979999999999999,
+   0.06,
+   0.0602,
+   0.060399999999999995,
+   0.0606,
+   0.06079999999999999,
+   0.061,
+   0.0612,
+   0.061399999999999996,
+   0.061599999999999995,
+   0.061799999999999994,
+   0.062,
+   0.0622,
+   0.0624,
+   0.06259999999999999,
+   0.0628,
+   0.063,
+   0.0632,
+   0.0634,
+   0.06359999999999999,
+   0.0638,
+   0.064,
+   0.0642,
+   0.0644,
+   0.06459999999999999,
+   0.0648,
+   0.065,
+   0.0652,
+   0.06539999999999999,
+   0.06559999999999999,
+   0.0658,
+   0.066,
+   0.0662,
+   0.06639999999999999,
+   0.06659999999999999,
+   0.0668,
+   0.067,
+   0.0672,
+   0.06739999999999999,
+   0.0676,
+   0.0678,
+   0.068,
+   0.0682,
+   0.06839999999999999,
+   0.0686,
+   0.0688,
+   0.069,
+   0.0692,
+   0.06939999999999999,
+   0.0696,
+   0.0698,
+   0.06999999999999999,
+   0.0702,
+   0.07039999999999999,
+   0.0706,
+   0.0708,
+   0.071,
+   0.07119999999999999,
+   0.07139999999999999,
+   0.0716,
+   0.0718,
+   0.072,
+   0.07219999999999999,
+   0.07239999999999999,
+   0.0726,
+   0.0728,
+   0.073,
+   0.07319999999999999,
+   0.07339999999999999,
+   0.0736,
+   0.0738,
+   0.074,
+   0.07419999999999999,
+   0.0744,
+   0.0746,
+   0.07479999999999999,
+   0.075,
+   0.07519999999999999,
+   0.0754,
+   0.0756,
+   0.07579999999999999,
+   0.076,
+   0.07619999999999999,
+   0.0764,
+   0.0766,
+   0.0768,
+   0.07699999999999999,
+   0.07719999999999999,
+   0.0774,
+   0.0776,
+   0.0778,
+   0.07799999999999999,
+   0.07819999999999999,
+   0.0784,
+   0.0786,
+   0.0788,
+   0.07899999999999999,
+   0.07919999999999999,
+   0.0794,
+   0.0796,
+   0.0798,
+   0.07999999999999999,
+   0.0802,
+   0.0804,
+   0.08059999999999999,
+   0.0808,
+   0.08099999999999999,
+   0.0812,
+   0.0814
+  ],
+  "0": [
+   0.08159999999999999,
+   0.0818,
+   0.08199999999999999,
+   0.0822,
+   0.0824,
+   0.08259999999999999,
+   0.08279999999999998,
+   0.08299999999999999,
+   0.0832,
+   0.0834,
+   0.0836,
+   0.08379999999999999,
+   0.08399999999999999,
+   0.0842,
+   0.0844,
+   0.0846,
+   0.08479999999999999,
+   0.08499999999999999,
+   0.0852,
+   0.0854,
+   0.0856,
+   0.08579999999999999,
+   0.086,
+   0.0862,
+   0.08639999999999999,
+   0.0866,
+   0.08679999999999999,
+   0.087,
+   0.0872,
+   0.08739999999999999,
+   0.0876,
+   0.08779999999999999,
+   0.088,
+   0.0882,
+   0.08839999999999999,
+   0.08859999999999998,
+   0.08879999999999999,
+   0.089,
+   0.0892,
+   0.0894,
+   0.08959999999999999,
+   0.08979999999999999,
+   0.09
+  ]
+ },
+ "delta_star": 0.055904726815148395,
+ "fits": {
+  "above (1 crossing)": {
+   "eps": [
+    1e-07,
+    1.2814478126855795e-07,
+    1.642108496636656e-07,
+    2.1042763412074484e-07,
+    2.696520314726299e-07,
+    3.4554500591682466e-07,
+    4.427978920165406e-07,
+    5.674223901863803e-07,
+    7.271221807731604e-07,
+    9.317691281069349e-07,
+    1.1940135111405813e-06,
+    1.5300660021681268e-06,
+    1.9606997317429153e-06,
+    2.5125343825751613e-06,
+    3.219681688848254e-06,
+    4.125854057718399e-06,
+    5.287066657723166e-06,
+    6.775100004062208e-06,
+    8.681937080931578e-06,
+    1.1125449282233595e-05,
+    1.4256682647862592e-05,
+    1.8269194795255973e-05,
+    2.341101970990754e-05,
+    3e-05
+   ],
+   "M_BH": [
+    0.031145850464939298,
+    0.03114586934583671,
+    0.03114589354073175,
+    0.031145924545243977,
+    0.0311459642759361,
+    0.031146015188790302,
+    0.031146080431030863,
+    0.0311461640356804,
+    0.0311462711708777,
+    0.031146408459373807,
+    0.03114658438796164,
+    0.031146809832160567,
+    0.031147098728605483,
+    0.03114746893673583,
+    0.0311479433430971,
+    0.03114855127659807,
+    0.031149330322339224,
+    0.031150328646349302,
+    0.031151607975289146,
+    0.031153247415894383,
+    0.03115534835121319,
+    0.031158040717871528,
+    0.0311614910549798,
+    0.03116591282647411
+   ],
+   "gamma": 0.0012791285688205868,
+   "M0": 0.029145850464939296,
+   "crossings": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  "below (3 crossings)": {
+   "eps": [
+    1e-07,
+    1.2814478126855795e-07,
+    1.642108496636656e-07,
+    2.1042763412074484e-07,
+    2.696520314726299e-07,
+    3.4554500591682466e-07,
+    4.427978920165406e-07,
+    5.674223901863803e-07,
+    7.271221807731604e-07,
+    9.317691281069349e-07,
+    1.1940135111405813e-06,
+    1.5300660021681268e-06,
+    1.9606997317429153e-06,
+    2.5125343825751613e-06,
+    3.219681688848254e-06,
+    4.125854057718399e-06,
+    5.287066657723166e-06,
+    6.775100004062208e-06,
+    8.681937080931578e-06,
+    1.1125449282233595e-05,
+    1.4256682647862592e-05,
+    1.8269194795255973e-05,
+    2.341101970990754e-05,
+    3e-05
+   ],
+   "M_BH": [
+    0.031688934400911875,
+    0.03139688348524485,
+    0.031752831472896856,
+    0.032373697342937637,
+    0.03231152620277759,
+    0.032138673582851045,
+    0.031919073049812036,
+    0.03167470646387784,
+    0.031416383504914644,
+    0.03115061325270437,
+    0.03155560916307117,
+    0.031572642517281986,
+    0.03145787981663252,
+    0.031293405570269904,
+    0.031238398351134226,
+    0.031395679120169835,
+    0.031160249136223735,
+    0.03116498997864458,
+    0.03174141630785934,
+    0.03140793034246639,
+    0.03237001197435684,
+    0.031229843325048044,
+    0.031219609344380693,
+    0.03144075168682546
+   ],
+   "gamma": -0.03694660001173793,
+   "M0": 0.02915061325270437,
+   "crossings": [
+    4,
+    4,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    8,
+    8,
+    8,
+    8,
+    31,
+    17,
+    10,
+    10,
+    15,
+    33,
+    24,
+    17,
+    10,
+    10
+   ]
+  }
+ },
+ "seconds": 3.1748619079589844
+}

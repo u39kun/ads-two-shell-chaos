@@ -1,0 +1,16 @@
+survey t      2.10: shifts [0.212, 0.212, 0.212], crossings [0], ['horizon_approach'], boundary/middle 1.0118; sequences: [(1, True, 0.0, 0.0), (2, True, 0.0, 0.0)]
+survey t     15.83: shifts [0.212, 0.212, 0.212], crossings [6], ['horizon_approach'], boundary/middle 1.0133; sequences: [(1, True, 0.0, 0.0), (2, True, 0.0, 0.0)]
+survey t     22.37: shifts [0.212, 0.212, 0.212], crossings [9], ['horizon_approach'], boundary/middle 1.0106; sequences: [(1, True, 0.0, 0.0), (2, True, 0.0, 0.0)]
+survey t     26.82: shifts [0.211, 0.211, 0.211], crossings [11], ['horizon_approach'], boundary/middle 1.0123; sequences: [(1, True, 0.0, 0.0), (2, True, 0.0, 0.0)]
+survey t     31.21: shifts [0.212, 0.212, 0.212], crossings [13], ['horizon_approach'], boundary/middle 1.0127; sequences: [(1, True, 0.0, 0.0), (2, True, 0.0, 0.0)]
+survey t     35.55: shifts [0.212, 0.212, 0.212], crossings [15], ['horizon_approach'], boundary/middle 1.0104; sequences: [(1, True, 0.0, 0.0), (2, True, 0.0, 0.0)]
+survey t     39.96: shifts [0.212, 0.212, 0.212], crossings [17], ['horizon_approach'], boundary/middle 1.0099; sequences: [(1, True, 0.0, 0.0), (2, True, 0.0, 0.0)]
+survey t     44.62: shifts [0.212, 0.212, 0.212], crossings [19], ['horizon_approach'], boundary/middle 1.0123; sequences: [(1, True, 0.0, 0.0), (2, True, 0.0, 0.0)]
+survey t     50.86: shifts [0.212, 0.212, 0.212], crossings [22], ['horizon_approach'], boundary/middle 1.0106; sequences: [(1, True, 0.0, 0.0), (2, True, 0.0, 0.0)]
+survey t     57.71: shifts [0.211, 0.211, 0.211], crossings [25], ['horizon_approach'], boundary/middle 1.0093; sequences: [(1, True, 0.0, 0.0), (2, True, 0.0, 0.0)]
+survey t    138.83: shifts [0.212, 0.212, 0.212], crossings [61], ['horizon_approach'], boundary/middle 1.0099; sequences: [(1, True, 0.0, 0.0), (2, True, 0.0, 0.0)]
+survey t   4231.48: shifts [0.211, 0.211, 0.211], crossings [1890], ['horizon_approach'], boundary/middle 1.0089; sequences: [(1, True, 0.0, 0.0), (2, True, 0.0, 0.0)]
+shift per factor 100 in the cutoff: 0.211-0.215; one crossing count per start: True
+threshold, anchor 2: 0.037095886118 .. 0.037095886118 (collapse at t = 953.5 after 407 crossings)
+threshold, anchor 1: 0.037095886118 .. 0.037095886118 (collapse at t = 940.9 after 407 crossings)
+wrote results/bcr_section/collapse_criterion.json; 4 s

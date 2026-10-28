@@ -1,0 +1,5 @@
+elliptic fixed point: |eigenvalues| = [1.00000022 1.00000022], rotation number 0.06705 per return
+energy split at the elliptic fixed point: E_A = 0.018639, E_B = 0.011361 (A carries 62.1%); transfer per crossing 1.939e-04
+x = (0.800, 0.018): det DF = 1.04237795, g(x)/g(F(x)) = 1.04237795, log residual +4.7e-10
+x = (0.850, 0.014): det DF = 0.96436328, g(x)/g(F(x)) = 0.96436328, log residual +5.7e-10
+island orbit, 60 returns: cumulative log det in [-0.3642, +0.1795], last +0.009634 vs log g(x0) - log g(x60) = +0.009634; per-return residual max 1.4e-09

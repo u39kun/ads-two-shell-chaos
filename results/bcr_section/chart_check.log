@@ -1,0 +1,13 @@
+delta 0.01 small R                      chart 0.03221 0.05087 0.09118 0.05476 | embedded 0.03206 0.05089 0.09120 0.05482 | max rate difference 1.5e-04, max |log distortion| 4.7
+delta 0.014 small R                      chart 0.08735 0.09245 0.10784 0.07636 | embedded 0.08698 0.09249 0.10812 0.07603 | max rate difference 3.7e-04, max |log distortion| 4.6
+delta 0.017 small R                      chart 0.01555 0.01098 0.00624 0.00869 | embedded 0.01528 0.01124 0.00608 0.00871 | max rate difference 2.7e-04, max |log distortion| 5.1
+delta 0.02 small R                      chart 0.07681 0.04765 0.05419 0.08929 | embedded 0.07693 0.04763 0.05397 0.08923 | max rate difference 2.1e-04, max |log distortion| 5.9
+delta 0.02 large R                      chart 0.01253 0.01254 0.01221 0.01051 | embedded 0.01233 0.01249 0.01219 0.01050 | max rate difference 2.0e-04, max |log distortion| 5.9
+delta 0.03 small R                      chart 0.09739 0.01450 0.05342 0.08029 | embedded 0.09712 0.01449 0.05348 0.08024 | max rate difference 2.7e-04, max |log distortion| 4.4
+delta 0.03 large R                      chart 0.01594 0.01126 0.01762 0.01735 | embedded 0.01593 0.01128 0.01736 0.01740 | max rate difference 2.6e-04, max |log distortion| 2.9
+delta 0.03 control (central)            chart 0.00112 0.00011 0.00005 -0.00010 | embedded 0.00109 0.00035 -0.00017 -0.00007 | max rate difference 2.4e-04, max |log distortion| 1.9
+delta 0.03 control (near small-R end)   chart 0.00137 0.00015 0.00008 0.00007 | embedded 0.00132 0.00015 0.00009 0.00005 | max rate difference 4.7e-05, max |log distortion| 2.2
+{'kind': 'elliptic', 'x': [0.789453034838267, 0.01863431912205782], 'return_time': 4.31991746424121, 'crossings': 2, 'rotation_number': 0.0671341629201053, 'period_returns': 14.895545822029169, 'period_time': 64.347528535989}
+{'kind': 'elliptic', 'x': [0.7894530348382667, 0.011559553298563875], 'return_time': 4.3199174642412155, 'crossings': 2, 'rotation_number': 0.06713416292010356, 'period_returns': 14.895545822029554, 'period_time': 64.34752853599075}
+{'kind': 'hyperbolic', 'x': [0.8252287054716384, 0.015118871254747887], 'return_time': 4.324914204173266, 'crossings': 2, 'multipliers': [0.8215590193721158, 1.217198005767449]}
+wrote results/bcr_section/chart_check.json; 15 s

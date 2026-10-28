@@ -1,0 +1,169 @@
+How to read this: processor-dependent compilation and numerical libraries can introduce small floating-point
+differences between machines or versions. Along regular orbits they stay small, so those values agree closely.
+Along orbits in the chaotic layer they grow until the runs follow different trajectories, so their exponents
+differ (layer_*, tangent_long, layer_convergence, noise_trace), and so do two-orbit estimates near their
+noise floor. Exponents of regular orbits are close to zero, so a small absolute change there can be a large
+relative one. Section 2 sorts the quoted numbers that differ by kind and labels each with where it appears in
+the paper. See App. C of the paper and the README.
+
+1. Result files (results vs reruns/amd-epyc-avx512_py3.13/results)
+  numbers: values compared (run times ignored); differ: how many differ; max rel. diff: |a - b|/max(|a|, |b|, 1e-12);
+  structure: "same", or how many entries (keys or list items) exist in only one of the two files, e.g. a
+  field that the current scripts add but an older shipped file lacks, or a different number of stored points.
+  only in: a result file present in one folder only, e.g. a check added after the rerun.
+  file                                             numbers   differ  max rel. diff  structure
+  bcr_section/bcr_benettin_long.json                    40       16       5.54e-01  same
+  bcr_section/bcr_checks.json                        61203       30       2.18e-02  same
+  bcr_section/bcr_fig7.json                        1468860        0       0.00e+00  same
+  bcr_section/bcr_fig7_t1000.json                    73485        0       0.00e+00  same
+  bcr_section/bcr_ftle.json                          18078    17951       1.36e-03  same
+  bcr_section/bcr_overtaking.json                     4800     3447       5.99e-01  1460 entries
+  bcr_section/bcr_reversal.json                         76        0       0.00e+00  same
+  bcr_section/bcr_section.json                      125988       20       1.22e-03  same; 2 text values differ
+  bcr_section/bcr_wba.json                            6298     3113       4.87e-01  same
+  bcr_section/boundary_rates.json                     1327      710       1.69e+00  83 entries; 35 text values differ
+  bcr_section/chart_check.json                         239      129       6.85e-10  same
+  bcr_section/collapse_criterion.json                 1095       72       1.10e-06  same
+  bcr_section/collapse_delay.json                     8020       56       4.31e-01  same; 1 text values differ
+  bcr_section/curve_smoothness.json                     29       21       9.46e-07  same
+  bcr_section/delta_scan.json                       271102      202       7.59e-01  same
+  bcr_section/delta_scan_C.json                     271170      204       1.64e+00  same
+  bcr_section/ends_followup.json                       598      350       6.75e-09  same
+  bcr_section/family_long.json                      180433   179486       2.22e-03  same
+  bcr_section/jacobian_check.json                    20435     2017       1.04e-10  same
+  bcr_section/layer_convergence.json                 94028    91961       1.94e+00  same
+  bcr_section/layer_delta.json                        1461      459       1.15e+00  same
+  bcr_section/layer_refine.json                     144821   144362       1.48e+00  same
+  bcr_section/layer_scan.json                       145157   144506       8.16e-01  same
+  bcr_section/layer_tangent_delta.json              326882   325164       8.43e-01  same
+  bcr_section/layer_tangent_example.json            177921   174022       8.03e-01  same
+  bcr_section/layer_tangent_extend.json              48130    48081       2.00e+00  12032 entries; 4 text values differ
+  bcr_section/layer_tangent_family.json              87410    13906       4.96e-09  same
+  bcr_section/noise_trace.json                         814      812       9.82e-01  same
+  bcr_section/section_domain.json                     1358        2       1.48e-15  same
+  bcr_section/section_overview.json                  10722       87       1.11e-14  same
+  bcr_section/survey.json                            52463    16220       3.32e-05  same
+  bcr_section/survey_checks.json                       352       76       4.18e-01  same
+  bcr_section/survey_ends.json                       49619    15434       1.32e-08  same
+  bcr_section/tangent_long.json                      40155    40070       6.03e-01  same
+  bcr_section/tangent_refinement.json                 7430     7241       5.07e-01  same
+  paper/bcr_critical.json                              329        3       1.86e-16  same
+  paper/bcr_crossings.json                            7159     6917       5.48e-03  same
+  paper/bcr_lyapunov.json                           120190    96040       2.04e-02  same
+  paper/bcr_lyapunov_C.json                         120190    96046       2.49e-02  same
+  paper/bcr_validation.json                           2152        6       6.36e-14  same
+  paper/independent_check.json                         182       64       9.86e-01  same
+  paper/two_shell_measure.json                          30       16       6.18e-01  same
+  42 result files in both; 0 only in results; 0 only in reruns/amd-epyc-avx512_py3.13/results.
+
+2. Numbers quoted with the figures and tables (figure_numbers.json; figures in figs_compare/reference and figs_compare/rerun)
+  section                 numbers identical     <1e-9     <1e-6     <1e-3     <1e-2    >=1e-2
+  fig_crossings                 6         2         4         0         0         0         0
+  fig_bcr_lyapunov            240        96        24       109        11         0         0
+  fig_bcr_section             124        96        26         0         0         0         2
+  fig_bcr_delta               256       189        27         0         1         7        32
+  fig_bcr_layer               363       173        12        25        62        13        78
+  fig_bcr_layer_delta         380       108        55        35        54        36        92
+  fig_bcr_overview             39        34         5         0         0         0         0
+  fig_bcr_survey              178       134        34         1         3         4         2
+  fig_bcr                       4         4         0         0         0         0         0
+  table_edge                  121        81        36         0         0         0         4
+  table_convergence            84         0         1         0         7         2        74
+  table_refinement             12         0         4         0         0         0         8
+  wba_numbers                 136        32        73        20         4         4         3
+  domain_clock_numbers        106        94         6         1         2         1         2
+  ends_followup_numbers        34        20        14         0         0         0         0
+  chart_check_numbers          27        18         9         0         0         0         0
+  family_long_numbers          13         5         6         2         0         0         0
+
+  What differs, by kind (quoted numbers differing by more than a relative 1e-6):
+    exponents, reach, and return times of chaotic orbits (expected to differ)      241  
+    two-orbit and finite-difference estimates on regular orbits (noise floor)       94  largest absolute difference 4.5e-03 per return
+    variational-tangent exponents of regular orbits (close to zero)                117  largest absolute difference 2.0e-05 per return
+    everything else (fixed points, nudge test, geometry, validation)                54  largest relative difference 4.2e-01
+  Starts classified differently (late-block exponent above or below 0.003 per return): 1
+    Fig. 6, delta = 0.012, start 0.1 on the outer side: 2.82e-03 in the reference, 3.17e-03 in the rerun
+
+  Largest relative differences (top 40). Relative difference: |reference - rerun| / max(|reference|,
+  |rerun|); values from the reference (the paper) and the rerun, with where each appears in the paper.
+  Exponents are per return; Tables 2 and 3 are shown in their printed units of 1e-3 per return.
+    1.84e+00  Table 3, row "d0 = 1e-9", column "R+, 0.07" (regular orbit, two-orbit estimate)
+              reference 0.488, rerun -0.409, difference 0.9 (units of 1e-3 per return, as printed)
+    1.47e+00  Table 3, row "d0 = 1e-8", column "R+, 0.07" (regular orbit, two-orbit estimate)
+              reference 0.126, rerun -0.266, difference 0.39 (units of 1e-3 per return, as printed)
+    8.55e-01  Table 3, row "d0 = 1e-9", column "R+, 0.01" (regular orbit, two-orbit estimate)
+              reference 1.31, rerun 0.191, difference 1.1 (units of 1e-3 per return, as printed)
+    7.66e-01  Table 3, row "d0 = 1e-10 (scans)", column "example" (regular orbit, two-orbit estimate)
+              reference 1.06, rerun 0.247, difference 0.81 (units of 1e-3 per return, as printed)
+    7.54e-01  Table 3, row "separation along (1, -1)", column "example" (regular orbit, two-orbit estimate)
+              reference 0.972, rerun 0.239, difference 0.73 (units of 1e-3 per return, as printed)
+    7.50e-01  Fig. 6a, delta = 0.02, start 0.03 from the saddle on the inner side: late-block exponent (chaotic orbit)
+              reference 0.00451, rerun 0.018, difference 0.014 (per return)
+    7.22e-01  Fig. 6a, delta = 0.006, start 0.07 from the saddle on the inner side: late-block exponent (chaotic orbit)
+              reference 0.0133, rerun 0.0037, difference 0.0096 (per return)
+    7.15e-01  Table 3, row "renormalized every return", column "R-, 0.02" (regular orbit, two-orbit estimate)
+              reference 3.11, rerun 0.887, difference 2.2 (units of 1e-3 per return, as printed)
+    7.10e-01  Fig. 3c, start M- 0.001 from the saddle: late-block exponent (chaotic orbit)
+              reference 0.0368, rerun 0.0107, difference 0.026 (per return)
+    7.07e-01  Table 3, row "separation along (1, -1)", column "R+, 0.07" (regular orbit, two-orbit estimate)
+              reference 1.77, rerun 0.517, difference 1.3 (units of 1e-3 per return, as printed)
+    6.98e-01  Table 3, row "rtol = 1e-11", column "example" (regular orbit, two-orbit estimate)
+              reference 0.282, rerun 0.934, difference 0.65 (units of 1e-3 per return, as printed)
+    6.81e-01  Fig. 3c, start R+ 1e-09 from the saddle: late-block exponent (chaotic orbit)
+              reference 0.0149, rerun 0.0467, difference 0.032 (per return)
+    6.61e-01  Table 3, row "d0 = 1e-9", column "R-, 0.02" (regular orbit, two-orbit estimate)
+              reference 0.175, rerun 0.514, difference 0.34 (units of 1e-3 per return, as printed)
+    6.55e-01  Fig. 3c, start R- 0.001 from the saddle: late-block exponent (chaotic orbit)
+              reference 0.0462, rerun 0.0159, difference 0.03 (per return)
+    6.18e-01  Fig. 6b, delta = 0.02, start 0.003 from the saddle on the outer side: late-block exponent (chaotic orbit)
+              reference 0.0461, rerun 0.0176, difference 0.028 (per return)
+    6.05e-01  Fig. 3c, start M+ 0.0001 from the saddle: late-block exponent (chaotic orbit)
+              reference 0.0404, rerun 0.0159, difference 0.024 (per return)
+    6.03e-01  Fig. 3d, long run of the start R+ 0.1: exponent over returns 10000-50000 (regular orbit, variational tangent)
+              reference 3.31e-05, rerun 1.31e-05, difference 2e-05 (per return)
+    5.98e-01  Fig. 3d, long run of the start M- 0.0001: exponent over returns 10000-50000 (chaotic orbit)
+              reference 0.0126, rerun 0.0313, difference 0.019 (per return)
+    5.78e-01  Table 3, row "rtol = 1e-11", column "R-, 0.02" (regular orbit, two-orbit estimate)
+              reference 0.698, rerun 1.65, difference 0.96 (units of 1e-3 per return, as printed)
+    5.70e-01  Table 3, row "max step 0.01", column "R+, 0.07" (regular orbit, two-orbit estimate)
+              reference 0.719, rerun 0.309, difference 0.41 (units of 1e-3 per return, as printed)
+    5.58e-01  Fig. 3c, start M- 0.001 from the saddle: exponent after 6000 returns (chaotic orbit)
+              reference 0.0383, rerun 0.0169, difference 0.021 (per return)
+    5.55e-01  Fig. 3c, start R+ 1e-09 from the saddle: exponent after 6000 returns (chaotic orbit)
+              reference 0.0217, rerun 0.0487, difference 0.027 (per return)
+    5.54e-01  Table 3, row "rtol = 1e-13", column "example" (regular orbit, two-orbit estimate)
+              reference 0.285, rerun 0.639, difference 0.35 (units of 1e-3 per return, as printed)
+    5.54e-01  Fig. 2c, BCR's example, long two-orbit run 2: final exponent (regular orbit, two-orbit estimate)
+              reference 0.000206, rerun 0.000461, difference 0.00026 (per return)
+    5.48e-01  Fig. 6a, delta = 0.02, start 0.001 from the saddle on the inner side: late-block exponent (chaotic orbit)
+              reference 0.0257, rerun 0.0569, difference 0.031 (per return)
+    5.45e-01  Table 3, row "every 50 returns", column "R+, 0.07" (regular orbit, two-orbit estimate)
+              reference 0.762, rerun 0.347, difference 0.42 (units of 1e-3 per return, as printed)
+    5.35e-01  Fig. 6b, delta = 0.02, start 0.02 from the saddle on the outer side: late-block exponent (chaotic orbit)
+              reference 0.0354, rerun 0.0165, difference 0.019 (per return)
+    5.34e-01  Fig. 3c, start M+ 0.0001 from the saddle: exponent after 6000 returns (chaotic orbit)
+              reference 0.0419, rerun 0.0195, difference 0.022 (per return)
+    5.12e-01  Fig. 3c, start R- 0.001 from the saddle: exponent after 6000 returns (chaotic orbit)
+              reference 0.043, rerun 0.021, difference 0.022 (per return)
+    5.09e-01  Fig. 6a, delta = 0.02, start 0.03 from the saddle on the inner side: exponent after 6000 returns (chaotic orbit)
+              reference 0.00821, rerun 0.0167, difference 0.0085 (per return)
+    4.98e-01  Fig. 3c, start M+ 1e-05 from the saddle: late-block exponent (chaotic orbit)
+              reference 0.0211, rerun 0.0419, difference 0.021 (per return)
+    4.90e-01  Fig. 6a, delta = 0.006, start 0.07 from the saddle on the inner side: exponent after 6000 returns (chaotic orbit)
+              reference 0.0131, rerun 0.00667, difference 0.0064 (per return)
+    4.89e-01  Fig. 3c, start M- 1e-05 from the saddle: late-block exponent (chaotic orbit)
+              reference 0.0399, rerun 0.0204, difference 0.02 (per return)
+    4.89e-01  Fig. 3c, start M+ 1e-07 from the saddle: late-block exponent (chaotic orbit)
+              reference 0.0468, rerun 0.024, difference 0.023 (per return)
+    4.87e-01  Table 3, row "d0 = 1e-8", column "R-, 0.02" (regular orbit, two-orbit estimate)
+              reference -0.522, rerun -0.268, difference 0.25 (units of 1e-3 per return, as printed)
+    4.77e-01  Fig. 5d, type (ii) at delta = 0.026: two-orbit exponent after 4000 returns (regular orbit, two-orbit estimate)
+              reference 0.000765, rerun 0.00146, difference 0.0007 (per return)
+    4.69e-01  Table 3, row "renormalized every return", column "M-, 0.0001" (chaotic orbit)
+              reference 33.3, rerun 17.6, difference 16 (units of 1e-3 per return, as printed)
+    4.62e-01  Fig. 6a, delta = 0.02, start 0.02 from the saddle on the inner side: late-block exponent (chaotic orbit)
+              reference 0.0489, rerun 0.0263, difference 0.023 (per return)
+    4.60e-01  Fig. 3d, long run of the start M- 0.0001: exponent after 50000 returns (chaotic orbit)
+              reference 0.0168, rerun 0.0311, difference 0.014 (per return)
+    4.59e-01  Table 3, row "d0 = 1e-8", column "R+, 0.01" (regular orbit, two-orbit estimate)
+              reference 0.135, rerun 0.25, difference 0.11 (units of 1e-3 per return, as printed)

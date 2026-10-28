@@ -1,0 +1,4 @@
+ends: small R [0.17936312580376404, 0.01573209170181971], large R [2.4298316702837606, 0.015006718053404066]
+chaotic, near the small-R end: x0 [0.19, 0.01575], 1431 head-on crossings, R [0.1795304731763373, 2.427300960110565], near ends 1184/0/247, switches 490, to the large-R end 0.0025; tangent rate 0.0917 per unit time
+stays at the small-R end: x0 [0.185, 0.0157], 2224 head-on crossings, R [0.18495793626799029, 0.18836231304027798], near ends 2224/0/0, switches 0, to the large-R end 2.2415; tangent rate 7.95e-05 per unit time
+wrote results/bcr_section/section_overview.json; 12 s

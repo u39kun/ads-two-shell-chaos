@@ -1,0 +1,52 @@
+delta 0.006 side -1 dist 0.001     rate 0.0037 (middle) 0.0037 (boundary), dt_bdry/dt_mid 1.0013; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.006 side -1 dist 0.003     rate 0.0076 (middle) 0.0076 (boundary), dt_bdry/dt_mid 1.0012; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.006 side -1 dist 0.01      rate 0.0078 (middle) 0.0078 (boundary), dt_bdry/dt_mid 1.0012; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.006 side -1 dist 0.02      rate 0.0091 (middle) 0.0091 (boundary), dt_bdry/dt_mid 1.0012; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.006 side -1 dist 0.03      rate 0.0053 (middle) 0.0053 (boundary), dt_bdry/dt_mid 1.0013; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.006 side -1 dist 0.05      rate 0.0044 (middle) 0.0044 (boundary), dt_bdry/dt_mid 1.0013; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.006 side +1 dist 0.001     rate 0.0066 (middle) 0.0065 (boundary), dt_bdry/dt_mid 1.0013; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.006 side +1 dist 0.003     rate 0.0088 (middle) 0.0088 (boundary), dt_bdry/dt_mid 1.0012; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.006 side +1 dist 0.01      rate 0.0078 (middle) 0.0078 (boundary), dt_bdry/dt_mid 1.0013; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.006 side +1 dist 0.02      rate 0.0073 (middle) 0.0072 (boundary), dt_bdry/dt_mid 1.0013; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.006 side +1 dist 0.03      rate 0.0078 (middle) 0.0077 (boundary), dt_bdry/dt_mid 1.0013; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.006 side +1 dist 0.05      rate 0.0074 (middle) 0.0074 (boundary), dt_bdry/dt_mid 1.0013; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.012 side -1 dist 0.001     rate 0.0110 (middle) 0.0109 (boundary), dt_bdry/dt_mid 1.0025; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.012 side -1 dist 0.003     rate 0.0100 (middle) 0.0100 (boundary), dt_bdry/dt_mid 1.0025; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.012 side -1 dist 0.01      rate 0.0060 (middle) 0.0060 (boundary), dt_bdry/dt_mid 1.0026; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.012 side -1 dist 0.02      rate 0.0065 (middle) 0.0065 (boundary), dt_bdry/dt_mid 1.0026; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.012 side -1 dist 0.03      rate 0.0067 (middle) 0.0066 (boundary), dt_bdry/dt_mid 1.0026; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.012 side -1 dist 0.05      rate 0.0041 (middle) 0.0041 (boundary), dt_bdry/dt_mid 1.0027; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.012 side -1 dist 0.07      rate 0.0024 (middle) 0.0024 (boundary), dt_bdry/dt_mid 1.0027; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.012 side +1 dist 0.001     rate 0.0085 (middle) 0.0085 (boundary), dt_bdry/dt_mid 1.0025; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.012 side +1 dist 0.003     rate 0.0079 (middle) 0.0079 (boundary), dt_bdry/dt_mid 1.0025; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.012 side +1 dist 0.01      rate 0.0082 (middle) 0.0082 (boundary), dt_bdry/dt_mid 1.0025; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.012 side +1 dist 0.02      rate 0.0113 (middle) 0.0112 (boundary), dt_bdry/dt_mid 1.0025; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.012 side +1 dist 0.03      rate 0.0054 (middle) 0.0054 (boundary), dt_bdry/dt_mid 1.0026; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.012 side +1 dist 0.05      rate 0.0039 (middle) 0.0039 (boundary), dt_bdry/dt_mid 1.0027; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.012 side +1 dist 0.07      rate 0.0029 (middle) 0.0029 (boundary), dt_bdry/dt_mid 1.0027; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.02 side -1 dist 0.001      rate 0.0128 (middle) 0.0127 (boundary), dt_bdry/dt_mid 1.0040; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.02 side -1 dist 0.003      rate 0.0089 (middle) 0.0088 (boundary), dt_bdry/dt_mid 1.0041; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.02 side -1 dist 0.01       rate 0.0034 (middle) 0.0033 (boundary), dt_bdry/dt_mid 1.0042; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.02 side -1 dist 0.02       rate 0.0058 (middle) 0.0058 (boundary), dt_bdry/dt_mid 1.0041; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.02 side -1 dist 0.03       rate 0.0040 (middle) 0.0040 (boundary), dt_bdry/dt_mid 1.0042; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.02 side +1 dist 0.001      rate 0.0063 (middle) 0.0063 (boundary), dt_bdry/dt_mid 1.0041; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.02 side +1 dist 0.003      rate 0.0039 (middle) 0.0039 (boundary), dt_bdry/dt_mid 1.0042; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.02 side +1 dist 0.01       rate 0.0065 (middle) 0.0065 (boundary), dt_bdry/dt_mid 1.0041; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.02 side +1 dist 0.02       rate 0.0037 (middle) 0.0036 (boundary), dt_bdry/dt_mid 1.0041; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.02 side +1 dist 0.03       rate 0.0037 (middle) 0.0037 (boundary), dt_bdry/dt_mid 1.0043; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.03 side -1 dist 0.001      rate 0.0064 (middle) 0.0063 (boundary), dt_bdry/dt_mid 1.0058; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.03 side -1 dist 0.003      rate 0.0034 (middle) 0.0033 (boundary), dt_bdry/dt_mid 1.0058; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.03 side +1 dist 0.001      rate 0.0045 (middle) 0.0045 (boundary), dt_bdry/dt_mid 1.0058; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.03 side +1 dist 0.003      rate 0.0078 (middle) 0.0077 (boundary), dt_bdry/dt_mid 1.0057; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.037 side -1 dist 0.001     rate 0.0024 (middle) 0.0023 (boundary), dt_bdry/dt_mid 1.0068; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.037 side +1 dist 0.001     rate 0.0029 (middle) 0.0029 (boundary), dt_bdry/dt_mid 1.0068; mismatched returns 0/6000, deviation from stored S 0.0e+00
+delta 0.01 small R                 rate 0.0656 (middle) 0.0651 (boundary), dt_bdry/dt_mid 1.0081; mismatched returns 3/511
+delta 0.014 small R                rate 0.0922 (middle) 0.0912 (boundary), dt_bdry/dt_mid 1.0113; mismatched returns 9/583
+delta 0.017 small R                rate 0.0086 (middle) 0.0085 (boundary), dt_bdry/dt_mid 1.0131; mismatched returns 0/1676
+delta 0.02 small R                 rate 0.0637 (middle) 0.0626 (boundary), dt_bdry/dt_mid 1.0174; mismatched returns 3/900
+delta 0.02 large R                 rate 0.0118 (middle) 0.0116 (boundary), dt_bdry/dt_mid 1.0160; mismatched returns 0/1650
+delta 0.03 small R                 rate 0.0494 (middle) 0.0481 (boundary), dt_bdry/dt_mid 1.0269; mismatched returns 0/1463
+delta 0.03 large R                 rate 0.0154 (middle) 0.0150 (boundary), dt_bdry/dt_mid 1.0239; mismatched returns 0/2100
+delta 0.03 control (central)       rate 0.0000 (middle) 0.0000 (boundary), dt_bdry/dt_mid 1.0068; mismatched returns 0/4165
+delta 0.03 control (near small-R end) rate 0.0001 (middle) 0.0001 (boundary), dt_bdry/dt_mid 1.0201; mismatched returns 0/2556
+wrote results/bcr_section/boundary_rates.json; 49 s

@@ -1,0 +1,6 @@
+start D: time_limit t_end 20000, 9320 crossings, 4075 section points, regularity 3.6439617465936323
+start C: time_limit t_end 20000, 9320 crossings, 4075 section points, regularity 3.699917973922425
+fixed point [0.78945303 0.01863432] elliptic rho 0.0671341628327706 resid 3.219648640726502e-15
+fixed point [0.78945303 0.01155955] elliptic rho 0.06713416291927378 resid 6.661360735257904e-16
+fixed point [0.82522871 0.01511887] hyperbolic rho None resid 1.443290974514416e-15
+done in 7s; background regularity digits: [11.6, 11.6, 6.3, 3.9, 3.1, 4.4, 5.8, 4.1, 4.2, 3.2, 3.3, 3.3, 2.9, 2.8, 3.8, 4.0, 4.1, 5.6, 3.8, 3.6, 3.7, 3.4, 5.8, 11.9, 11.9, 11.7, 5.9, 5.2, 3.4, 3.7, 4.1, 4.2, 4.0, 11.9]

@@ -1,0 +1,730 @@
+<title>Two-Shell AdS Orbits</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+<style>
+/* Layout: an instrument plate. Orbit chooser, then the two linked views (shells in the AdS disk | crossing section),
+   a control strip, then the two time charts. Single column under 860px. */
+:root {
+  --top-h: clamp(220px, calc(100vh - 530px), 480px);
+  --paper: #f2f4f6; --panel: #fbfcfd; --ink: #142130; --ink-2: #4c5b6b; --rule: #d3dae1; --grid: #e3e8ed;
+  --shell-a: #c0501a; --shell-b: #11746a; --orbit: #2c3f9c; --twin: #c21d8a; --bgpts: #b3bcc7; --overtake: #a8740a;
+  --chaotic: #a8234f; --regular: #2f6f3a; --focus: #2c3f9c;
+  --display: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0d151e; --panel: #121c27; --ink: #e2e8ef; --ink-2: #9aa8b7; --rule: #253343; --grid: #1b2632;
+    --shell-a: #f0884a; --shell-b: #3dc0b0; --orbit: #93a6ff; --twin: #ff7ad9; --bgpts: #3b4858; --overtake: #e3b04f;
+    --chaotic: #f07aa0; --regular: #7fcf8a; --focus: #93a6ff; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0d151e; --panel: #121c27; --ink: #e2e8ef; --ink-2: #9aa8b7; --rule: #253343; --grid: #1b2632;
+  --shell-a: #f0884a; --shell-b: #3dc0b0; --orbit: #93a6ff; --twin: #ff7ad9; --bgpts: #3b4858; --overtake: #e3b04f;
+  --chaotic: #f07aa0; --regular: #7fcf8a; --focus: #93a6ff; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-block: 28px 40px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 18px; }
+h1 { font-family: var(--display); font-weight: 600; font-size: clamp(26px, 3.4vw, 38px); line-height: 1.12; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+h2 { font-family: var(--display); font-weight: 600; font-size: 18px; margin: 0; }
+p { margin: 0; }
+.lede { max-width: 70ch; color: var(--ink-2); }
+.lede b { color: var(--ink); font-weight: 600; }
+.lede sup a { color: inherit; text-decoration: none; padding: 0 1px; }
+.lede sup a:hover { text-decoration: underline; }
+.tip { color: var(--orbit); cursor: help; padding: 0 1px; border-bottom: 1px dotted currentColor; }
+.tip-text { position: fixed; z-index: 10; width: min(340px, calc(100vw - 32px)); padding: 10px 12px; background: var(--panel);
+  color: var(--ink-2); border: 1px solid var(--rule); border-radius: 6px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  font-size: 13px; line-height: 1.45; }
+.top-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.theme-btn { font: 12px/1 var(--body); color: var(--ink-2); background: transparent; border: 1px solid var(--rule);
+  border-radius: 4px; padding: 5px 8px; cursor: pointer; white-space: nowrap; flex: none; }
+.theme-btn:hover { color: var(--ink); border-color: var(--ink-2); }
+.eyebrow { font: 500 12px/1.2 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); }
+header { display: grid; gap: 10px; }
+.wrap > * { min-width: 0; }
+
+.layout { display: grid; gap: 18px; }
+.side, .main { display: grid; gap: 14px; align-content: start; min-width: 0; }
+.orbits { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+@media (min-width: 640px) { .orbits { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.orbit-btn { text-align: left; font: inherit; color: inherit; background: var(--panel); border: 1px solid var(--rule);
+  border-radius: 6px; padding: 8px 10px; cursor: pointer; display: grid; gap: 6px; align-content: start; }
+.orbit-btn:hover { border-color: var(--ink-2); }
+.orbit-btn[aria-pressed="true"] { border-color: var(--orbit); box-shadow: inset 0 0 0 1px var(--orbit); }
+.orbit-btn .row { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.orbit-btn .name { font-weight: 600; }
+.orbit-desc { color: var(--ink-2); font-size: 14px; line-height: 1.45; min-height: 2.9em; }
+.orbit-desc b { color: var(--ink); font-weight: 600; }
+details.more summary, figcaption summary { cursor: pointer; color: var(--ink-2); font-size: 13px; width: fit-content; }
+details.more summary:hover, figcaption summary:hover { color: var(--ink); }
+details.more[open] summary, figcaption details[open] summary { margin-bottom: 6px; }
+details.more p { color: var(--ink-2); font-size: 14px; }
+.notes details.more p { font-size: 13px; }
+.notes .code-link, .notes .paper-ref { font-size: 15px; color: var(--ink); }
+.tag { font: 500 11px/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 6px; border-radius: 3px;
+  border: 1px solid currentColor; white-space: nowrap; }
+.tag.regular { color: var(--regular); }
+.tag.chaotic { color: var(--chaotic); }
+.tag.periodic { color: var(--regular); }
+
+/* wide screens: title, orbit list, and description in a sidebar; controls and all four panels fill one screen */
+@media (min-width: 1100px) {
+  .wrap { max-width: 1480px; }
+  .layout { grid-template-columns: 320px minmax(0, 1fr); align-items: start; }
+  .side { position: sticky; top: 16px; }
+  .orbits { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .orbit-btn { padding: 7px 10px; }
+  #shells { aspect-ratio: auto; height: var(--top-h); }
+  #section { aspect-ratio: auto; height: var(--top-h); }
+  #trace, #sep { aspect-ratio: auto; height: 150px; }
+}
+.jump { font-size: 13px; color: var(--ink-2); margin-top: -4px; }
+.jump a { color: var(--orbit); }
+@media (min-width: 1100px) { .jump { display: none; } }
+.stage { display: grid; grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr); gap: 14px; }
+.charts { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; }
+@media (max-width: 860px) { .stage, .charts { grid-template-columns: minmax(0, 1fr); } }
+figure.panel { margin: 0; background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 12px 14px 14px;
+  display: grid; gap: 8px; min-width: 0; align-content: start; }
+.panel-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+canvas { display: block; width: 100%; max-width: 100%; }
+#shells { aspect-ratio: 1 / 1; }
+#section { aspect-ratio: 4 / 3; }
+#trace, #sep { aspect-ratio: 5 / 2; }
+figcaption { color: var(--ink-2); font-size: 13px; line-height: 1.45; }
+.key { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; color: var(--ink-2); }
+.key span { display: inline-flex; align-items: center; gap: 6px; }
+.key span[hidden] { display: none; }
+.sw { width: 18px; height: 0; border-top: 3px solid; display: inline-block; }
+.sw.dash { border-top-style: dashed; border-top-width: 2px; }
+.dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
+.fp-ell { width: 9px; height: 9px; border-radius: 50%; border: 1.4px solid var(--ink); display: inline-block; }
+.fp-sad { width: 10px; height: 10px; stroke: var(--ink); stroke-width: 1.4; display: inline-block; overflow: visible; }
+.ring { width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid var(--twin); display: inline-block; }
+
+.energy { display: grid; gap: 4px; }
+.bar { display: flex; height: 10px; border-radius: 2px; overflow: hidden; background: var(--grid); }
+.bar i { display: block; height: 100%; }
+.bar .a { background: var(--shell-a); }
+.bar .b { background: var(--shell-b); }
+.energy-label { font: 13px/1.3 var(--mono); color: var(--ink-2); font-variant-numeric: tabular-nums; }
+
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; padding: 10px 14px; background: var(--panel);
+  border: 1px solid var(--rule); border-radius: 6px; }
+.btns { display: flex; gap: 8px; flex-wrap: wrap; }
+button.ctl { font: 500 14px/1 var(--body); color: var(--ink); background: transparent; border: 1px solid var(--rule);
+  border-radius: 4px; padding: 8px 12px; cursor: pointer; }
+button.ctl:hover { border-color: var(--ink-2); }
+button.ctl.primary { background: var(--ink); color: var(--paper); border-color: var(--ink); min-width: 78px; }
+.speed { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; flex: 1 1 260px; min-width: 0; }
+.speed label { font-size: 13px; color: var(--ink-2); white-space: nowrap; }
+.speed input { flex: 1; min-width: 80px; accent-color: var(--orbit); }
+.speed output { font: 13px var(--mono); color: var(--ink-2); font-variant-numeric: tabular-nums; min-width: 0; }
+.scrub { display: flex; align-items: center; gap: 8px; width: 100%; min-width: 0; }
+.scrub label { font-size: 13px; color: var(--ink-2); white-space: nowrap; }
+.scrub input { flex: 1; min-width: 0; accent-color: var(--orbit); }
+.scrub output { font: 13px var(--mono); color: var(--ink-2); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.scrub output b { color: var(--ink); font-weight: 500; }
+.readouts { display: flex; gap: 6px 16px; flex-wrap: wrap; font: 13px/1.3 var(--mono); font-variant-numeric: tabular-nums; color: var(--ink-2); width: 100%; }
+.readouts b { color: var(--ink); font-weight: 500; }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; }
+.seg button { font: 12px/1 var(--body); color: var(--ink-2); background: transparent; border: 0; padding: 6px 9px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.seg-row { display: flex; gap: 8px; flex-wrap: wrap; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+.notes { display: grid; gap: 8px; color: var(--ink-2); font-size: 13px; border-top: 1px solid var(--rule); padding-top: 14px; }
+.notes a { color: var(--orbit); }
+.note-type { color: var(--ink-2); font-size: 12.5px; }
+</style>
+
+<div class="wrap">
+  <div class="layout">
+  <aside class="side">
+  <header>
+    <div class="top-row">
+      <div class="eyebrow">Interacting shells in anti-de Sitter space revisited</div>
+      <button class="theme-btn" id="theme" type="button"></button>
+    </div>
+    <h1>Two-Shell AdS Orbits</h1>
+    <p class="lede">Two concentric thin shells, <b style="color:var(--shell-a)">A</b> and <b style="color:var(--shell-b)">B</b>, move under their own gravity inside anti-de Sitter space, pass through each other, and trade energy at every crossing. Each head-on crossing adds a point to the <b>Poincaré map</b>. A <b>twin</b>, started 5×10<sup>−5</sup> farther out, drifts slowly from a regular orbit and exponentially from a chaotic one.</p>
+    <details class="more"><summary>More about the model</summary>
+    <p>Two concentric thin shells, <b style="color:var(--shell-a)">A</b> and <b style="color:var(--shell-b)">B</b>, move under their own gravity inside anti-de Sitter space. Each shell is a fluid confined to a spherical surface, and its pressure resists contraction. In the orbits shown here,<sup><span class="tip" tabindex="0" aria-describedby="tip-orbits">1</span></sup> that pressure turns each contracting shell back out, and anti-de Sitter space turns each expanding shell back at a finite radius, before it reaches the boundary. The shells pass through each other and trade energy at every crossing. Each time they meet head on, with A moving out from the inside and B moving in from the outside, the crossing radius and A's energy just before the crossing are recorded as one point on the <b>Poincaré map</b>. A <b>twin</b>, started with both shells 5×10<sup>−5</sup> farther out, shows how a nearby orbit drifts from this one. The log–log distance chart shows how the distance between them grows: roughly in proportion to the number of returns along the regular orbits here (at the fixed point it stays near its starting size), and exponentially along the two chaotic orbits, one in the layer around the saddle and one near the map's ends, until the twin can be anywhere the chaotic orbit goes. A finite run shows these patterns but cannot by itself prove chaos or regularity.</p>
+    </details>
+  </header>
+
+  <div class="orbits" id="orbits" role="group" aria-label="Choose an orbit"></div>
+  <p class="orbit-desc" id="orbit-desc" aria-live="polite"></p>
+  </aside>
+
+  <div class="main">
+
+  <div class="controls">
+    <div class="btns">
+      <button class="ctl primary" id="play" type="button">Pause</button>
+      <button class="ctl" id="restart" type="button">Restart</button>
+      <button class="ctl" id="end" type="button">Jump to end</button>
+    </div>
+    <div class="speed">
+      <label for="speed">Speed</label>
+      <input id="speed" type="range" min="0" max="100" step="0.1" value="22.4" aria-describedby="speed-out">
+      <output id="speed-out" for="speed"></output>
+    </div>
+    <div class="scrub">
+      <label for="time">Time</label>
+      <input id="time" type="range" min="0" max="7000" step="0.1" value="0" aria-describedby="time-out">
+      <output id="time-out" for="time">t <b id="r-t">0</b> of <span id="r-tend">0</span></output>
+    </div>
+    <div class="readouts" aria-live="off">
+      <span>returns <b id="r-n">0</b></span>
+      <span>twin separation <b id="r-sep">–</b></span>
+    </div>
+  </div>
+
+  <p class="jump">Further down: <a href="#panel-trace">radii over time</a> and <a href="#panel-sep">distance to the twin</a> ↓</p>
+
+  <div class="stage">
+    <figure class="panel">
+      <div class="panel-head"><h2>Two interacting shells in AdS</h2></div>
+      <canvas id="shells" role="img" aria-label="The two shells as rings inside the anti-de Sitter disk"></canvas>
+      <div class="energy">
+        <div class="bar" aria-hidden="true"><i class="a" id="bar-a"></i><i class="b" id="bar-b"></i></div>
+        <div class="energy-label" id="energy-label"></div>
+      </div>
+      <figcaption><details><summary>How to read this panel</summary>Radius drawn as arctan R, so the boundary of AdS (R → ∞) is the outer circle. Ring thickness shows each shell's energy, its mass jump. Dashed rings: the twin. A brief halo marks each crossing, in blue when it adds a point to the Poincaré map.</details></figcaption>
+    </figure>
+    <figure class="panel">
+      <div class="panel-head">
+        <h2>Poincaré map</h2>
+        <div class="seg-row">
+          <div class="seg" role="group" aria-label="Map extent">
+            <button type="button" id="view-map" aria-pressed="true">Whole map</button>
+            <button type="button" id="view-orbit" aria-pressed="false">Zoom to orbit</button>
+          </div>
+          <div class="seg" role="group" aria-label="Crossings shown">
+            <button type="button" id="cross-sec" aria-pressed="true">Head-on crossings</button>
+            <button type="button" id="cross-all" aria-pressed="false">Include overtaking</button>
+          </div>
+        </div>
+      </div>
+      <canvas id="section" role="img" aria-label="Poincaré map: crossing radius against the middle-region mass"></canvas>
+      <div class="key">
+        <span><i class="dot" style="background:var(--orbit)"></i>orbit</span>
+        <span><i class="ring"></i>twin, latest crossing</span>
+        <span class="all-only" hidden><i class="dot" style="background:var(--overtake)"></i>overtaking</span>
+        <span><i class="sw dash" style="color:var(--bgpts)"></i>other orbits of the map</span>
+        <span><i class="sw" style="color:var(--ink-2);border-top-width:1px"></i>edge of the map</span>
+        <span><i class="fp-ell"></i>elliptic fixed point</span><span><svg class="fp-sad" viewBox="0 0 10 10" aria-hidden="true"><path d="M0 0L10 10M0 10L10 0"/></svg>saddle</span>
+      </div>
+      <figcaption><details><summary>How to read this panel</summary>Head-on crossings, with A moving out from the inside and B moving in: crossing radius R against 100 M<sub>mid</sub>, where M<sub>mid</sub> is the mass between the shells just before the crossing, which is shell A's energy; (R, 100 M<sub>mid</sub>) is also the chart in which distances are measured. Only the orbit's history is drawn. The blue disk marks the orbit's latest crossing and the large pink ring the twin's crossing at nearly the same moment, joined by a dashed line when they are apart: the pair the distance chart measures. A regular orbit's twin slides along the same closed curve, ahead of the orbit or behind it; a chaotic orbit's twin is thrown elsewhere in the region the orbit wanders through. <b>Include overtaking</b> adds, in the same chart and in yellow, the orbit's overtaking crossings with A inside, with both shells moving in or both moving out, which the map leaves out. The thin outline is the edge of the map: along its lower edge shell A crosses at a turning point, along its upper edge shell B does, and the two edges meet in pointed ends where both shells cross at turning points. <span class="note-type" id="type-note"></span></details></figcaption>
+    </figure>
+  </div>
+
+  <div class="charts">
+    <figure class="panel" id="panel-trace">
+      <h2>Radii over time</h2>
+      <canvas id="trace" role="img" aria-label="Radii of the two shells over the last 40 time units"></canvas>
+      <div class="key"><span><i class="sw" style="color:var(--shell-a)"></i>R<sub>A</sub></span><span><i class="sw" style="color:var(--shell-b)"></i>R<sub>B</sub></span><span><i class="dot" style="background:var(--orbit)"></i>head-on crossing</span><span class="all-only" hidden><i class="dot" style="background:var(--overtake)"></i>overtaking, A inside</span><span><i class="ring" style="border-color:var(--ink-2)"></i>other crossing</span></div>
+      <figcaption><details><summary>How to read this panel</summary>The last 40 time units, in the Schwarzschild time of the region between the shells. Where the curves meet, the shells cross. Blue dots mark the head-on crossings, where A moves out from the inside and B moves in, each adding a section point to the Poincaré map; gray rings mark the other crossings. With <b>Include overtaking</b>, yellow dots mark the overtaking crossings with A inside, the yellow points on the map.</details></figcaption>
+    </figure>
+    <figure class="panel" id="panel-sep">
+      <h2>Distance to the twin</h2>
+      <canvas id="sep" role="img" aria-label="Distance between the orbit and its twin on the section, against the number of returns"></canvas>
+      <figcaption><details><summary>How to read this panel</summary>Distance between the orbit's section points and its twin's, return by return, in the chart (R, 100 M<sub>mid</sub>), on log–log axes. Each of the orbit's crossings is paired with the twin's crossing nearest in time; a gap marks a return where the twin has no head-on crossing within half a return: one of them skipped a head-on crossing near a fold of the chart, where a shell crosses while turning around, or, once a chaotic twin has separated, the two make head-on crossings at unrelated times, sometimes with no twin crossing for several of the orbit's returns. A dot marks a distance with a gap on both sides. Dashed: growth in proportion to the number of returns, starting from the nudge. Regular orbits rise roughly parallel to it, a steady drift along their curve. Chaotic orbits shoot far above it within tens of returns, until the twin can be anywhere the orbit goes.</details></figcaption>
+    </figure>
+  </div>
+
+  </div>
+  </div>
+
+  <div class="tip-text" id="tip-orbits" role="tooltip" hidden>Not every start behaves this way. With other initial data the shells can collapse into a black hole instead, as the type (ii) data of Brito, Cardoso, and Rocha (BCR) do above a threshold mass. How far out a shell can go depends on w, the ratio of its pressure to its energy density. For w &lt; 1/2, as for the shells here (w = 0.2), anti-de Sitter space turns every expanding shell back at a finite radius. For w &gt; 1/2, a shell reaches the boundary in a finite time; BCR impose perfectly reflecting boundary conditions there, so it bounces back. Either way, no shell escapes.</div>
+
+  <footer class="notes">
+    <p class="paper-ref">This interactive demo is based on the paper “Interacting shells in anti-de Sitter space revisited: an invariant measure, regular orbits, and chaos” by Yusaku Sako.</p>
+    <p class="code-link">Code and data: <a href="https://github.com/u39kun/ads-two-shell-chaos" target="_blank" rel="noopener">github.com/u39kun/ads-two-shell-chaos</a>.</p>
+    <details class="more"><summary>About the data</summary>
+    <p>Each orbit and its twin were computed with the code of the paper “Interacting shells in anti-de Sitter space revisited” (DOP853, relative tolerance 10<sup>−12</sup>, crossings located exactly). The two orbits from the paper's Fig. 3, in the chaotic layer and just outside it, follow the paper's own trajectories: their section points come from the same integrator and settings as Fig. 3 and match its stored points exactly, and the crossings within each return come from a one-return run of the solver. The orbit near the map's ends starts where the paper's Fig. 7 orbit does, at (R, 100 M<sub>mid</sub>) = (0.19, 1.575), with the same settings; the edge of the map comes from the same calculation. The page stores the state after every crossing and integrates the smooth motion between crossings itself, restarting from the stored state at each crossing. Time is in units of the AdS radius.</p>
+    </details>
+  </footer>
+</div>
+
+<script type="application/json" id="orbit-data">/*DATA*/</script>
+<script>
+/*PHYSICS*/
+</script>
+<script>
+(() => {
+  const D = JSON.parse(document.getElementById("orbit-data").textContent);
+  const META = {
+    example: { tag: "regular", desc: "BCR's Fig. 5 initial data: both shells at R = 1, inner one contracting. A closed curve around both islands." },
+    layer: { tag: "chaotic", desc: "Started 10⁻⁴ from the saddle. Wanders through both lobes in a band along the separatrix." },
+    outside: { tag: "regular", desc: "Started 0.07 from the saddle, just outside the chaotic band. A closed curve." },
+    island: { tag: "regular", desc: "Started near the elliptic point where A carries about 62% of the energy. A loop around that island." },
+    fixed: { tag: "periodic", desc: "Started on that elliptic fixed point. The shells repeat the same motion every return, so the orbit is one point; its twin circles it." },
+    ends: { tag: "chaotic", desc: "Started near the small-R end of the map. Mostly overtaking crossings; its head-on crossings jump between the map's two pointed ends." },
+    typeii: { tag: "regular", desc: "BCR's type (ii) family: both shells at R = 1.5. A large closed curve far from the saddle." },
+  };
+  const SUP = { "-": "⁻", 0: "⁰", 1: "¹", 2: "²", 3: "³", 4: "⁴", 5: "⁵", 6: "⁶", 7: "⁷", 8: "⁸", 9: "⁹" };
+  const sup = (n) => String(n).split("").map((c) => SUP[c] ?? c).join("");
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // ---------- runs: flights, section points, cached flight samples
+  function prepRun(F, first, o) {
+    const n = F.length, t0 = new Float64Array(n);
+    for (let j = 0; j < n; j++) t0[j] = F[j][0];
+    const sR = [], sM = [], sT = [], xR = [], xM = [], xT = [];
+    for (let j = 0; j < n; j++) {
+      if (F[j][7] === 1) { sR.push(F[j][1]); sM.push(j === 0 ? first[1] : F[j - 1][5]); sT.push(F[j][0]); }
+      else if (F[j][8] > 0 && F[j - 1][6] === 1) {
+        // the other crossings with A inside, all overtaking, at the pre-crossing M_mid (A's energy)
+        xR.push(F[j][1]); xM.push(F[j - 1][5]); xT.push(F[j][0]);
+      }
+    }
+    const f64 = (a) => Float64Array.from(a);
+    return { F, t0, sR: f64(sR), sM: f64(sM), sT: f64(sT), xR: f64(xR), xM: f64(xM), xT: f64(xT), cache: new Map(), o };
+  }
+  function flightIndex(run, t) {
+    const a = run.t0; let lo = 0, hi = a.length - 1;
+    if (t <= a[0]) return 0;
+    while (lo < hi) { const mid = (lo + hi + 1) >> 1; if (a[mid] <= t) lo = mid; else hi = mid - 1; }
+    return lo;
+  }
+  function samples(run, k, h) {
+    const key = k + "|" + h;
+    let s = run.cache.get(key);
+    if (!s) {
+      const end = k + 1 < run.F.length ? run.t0[k + 1] : run.o.t_end;
+      s = flight(run.F[k], Math.max(end - run.t0[k], 1e-9), run.o.Mout, run.o.m, D.w, h);
+      run.cache.set(key, s);
+      if (run.cache.size > 160) run.cache.delete(run.cache.keys().next().value);
+    }
+    return s;
+  }
+  function radiiAt(run, t, h = 0.01) {
+    const k = flightIndex(run, t), s = samples(run, k, h);
+    const x = Math.min(Math.max((t - run.t0[k]) / s.dt, 0), s.n);
+    const i = Math.min(Math.floor(x), s.n - 1), f = x - i;
+    return { k, RA: s.RA[i] + f * (s.RA[i + 1] - s.RA[i]), RB: s.RB[i] + f * (s.RB[i + 1] - s.RB[i]) };
+  }
+  function countUpTo(arr, t) { let lo = 0, hi = arr.length; while (lo < hi) { const m = (lo + hi) >> 1; if (arr[m] <= t) lo = m + 1; else hi = m; } return lo; }
+
+  const orbits = D.orbits.map((o) => {
+    const main = prepRun(o.flights, o.first, o), twin = prepRun(o.twin, o.twin_first, o);
+    // radius range for the trace, from a coarse pass over the whole run
+    let lo = Infinity, hi = -Infinity;
+    for (let k = 0; k < main.F.length; k += 3) {
+      const end = k + 1 < main.F.length ? main.t0[k + 1] : o.t_end;
+      const s = flight(main.F[k], Math.max(end - main.t0[k], 1e-9), o.Mout, o.m, D.w, 0.05);
+      for (let i = 0; i <= s.n; i++) { lo = Math.min(lo, s.RA[i], s.RB[i]); hi = Math.max(hi, s.RA[i], s.RB[i]); }
+    }
+    return { o, main, twin, rlo: lo, rhi: hi };
+  });
+
+  // ---------- state
+  const st = { idx: 0, t: 0, playing: !reduce, twin: true, zoom: false, all: false, speed: 4.7, lastFlash: [] };
+  const $ = (id) => document.getElementById(id);
+
+  // ---------- footnote shown as hover/focus text next to its marker
+  for (const tip of document.querySelectorAll(".tip")) {
+    const box = $(tip.getAttribute("aria-describedby"));
+    const show = () => {
+      box.hidden = false;
+      const r = tip.getBoundingClientRect(), w = box.offsetWidth, h = box.offsetHeight, de = document.documentElement;
+      box.style.left = Math.max(16, Math.min(r.left - w / 2, de.clientWidth - w - 16)) + "px";
+      box.style.top = (r.bottom + 6 + h > de.clientHeight ? r.top - h - 6 : r.bottom + 6) + "px";
+    };
+    const hide = () => { box.hidden = true; };
+    tip.addEventListener("mouseenter", show); tip.addEventListener("mouseleave", hide);
+    tip.addEventListener("focus", show); tip.addEventListener("blur", hide);
+    tip.addEventListener("keydown", (e) => { if (e.key === "Escape") hide(); });
+    addEventListener("scroll", hide, { passive: true });
+  }
+
+  // ---------- orbit chooser
+  const box = $("orbits");
+  orbits.forEach((ob, i) => {
+    const m = META[ob.o.key];
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "orbit-btn"; b.id = "orbit-" + ob.o.key;
+    b.innerHTML = `<span class="row"><span class="name"></span><span class="tag ${m.tag}">${m.tag}</span></span>`;
+    b.querySelector(".name").textContent = ob.o.name;
+    b.title = m.desc;
+    b.addEventListener("click", () => select(i, 0));
+    box.appendChild(b);
+  });
+  function select(i, t) {
+    st.idx = i; st.t = t; st.lastFlash = [];
+    timeIn.max = String(Math.ceil(orbits[i].o.t_end * 10) / 10);
+    $("r-tend").textContent = orbits[i].o.t_end.toFixed(0);
+    [...box.children].forEach((b, j) => b.setAttribute("aria-pressed", String(j === i)));
+    const od = $("orbit-desc"); od.textContent = META[orbits[i].o.key].desc;
+    $("type-note").textContent = orbits[i].o.key === "typeii"
+      ? "This orbit has m = 0.9 × 20^−0.4 δ at δ = 0.03, which differs from the background's m only by BCR's rounding; the map is the same at the scale shown."
+      : "";
+    bgDirty = true; prevCount = -1;
+  }
+
+  // ---------- controls
+  const speedOut = $("speed-out");
+  function readSpeed() {
+    st.speed = Math.pow(10, (+$("speed").value / 100) * 3);
+    const per = st.speed / 4.7;
+    speedOut.textContent = `${st.speed < 10 ? st.speed.toFixed(1) : Math.round(st.speed)} time units/s ≈ ${per < 10 ? per.toFixed(1) : Math.round(per)} returns/s`;
+  }
+  $("speed").addEventListener("input", readSpeed);
+  const playBtn = $("play");
+  function setPlaying(p) { st.playing = p; playBtn.textContent = p ? "Pause" : "Play"; }
+  playBtn.addEventListener("click", () => {
+    if (!st.playing && st.t >= orbits[st.idx].o.t_end) st.t = 0;
+    setPlaying(!st.playing);
+  });
+  $("restart").addEventListener("click", () => { st.t = 0; st.lastFlash = []; prevCount = -1; });
+  $("end").addEventListener("click", () => { st.t = orbits[st.idx].o.t_end; setPlaying(false); });
+  const timeIn = $("time");
+  let scrubbing = false;
+  timeIn.addEventListener("pointerdown", () => { scrubbing = true; });
+  window.addEventListener("pointerup", () => { scrubbing = false; });
+  timeIn.addEventListener("input", () => { st.t = +timeIn.value; st.lastFlash = []; lastK = -1; });
+  timeIn.addEventListener("change", () => { scrubbing = false; });
+  function setZoom(z) { st.zoom = z; $("view-map").setAttribute("aria-pressed", String(!z)); $("view-orbit").setAttribute("aria-pressed", String(z)); bgDirty = true; }
+  $("view-map").addEventListener("click", () => setZoom(false));
+  $("view-orbit").addEventListener("click", () => setZoom(true));
+  function setAll(a) {
+    st.all = a; $("cross-sec").setAttribute("aria-pressed", String(!a)); $("cross-all").setAttribute("aria-pressed", String(a));
+    document.querySelectorAll(".all-only").forEach((el) => { el.hidden = !a; });
+    bgDirty = true;
+  }
+  $("cross-sec").addEventListener("click", () => setAll(false));
+  $("cross-all").addEventListener("click", () => setAll(true));
+  document.addEventListener("keydown", (e) => {
+    if (e.code === "Space" && !/INPUT|BUTTON|TEXTAREA|SELECT/.test(document.activeElement.tagName)) { e.preventDefault(); playBtn.click(); }
+  });
+
+  // ---------- theme tokens for canvas drawing
+  let C = {};
+  function readTokens() {
+    const cs = getComputedStyle(document.documentElement);
+    for (const k of ["paper", "panel", "ink", "ink-2", "rule", "grid", "shell-a", "shell-b", "orbit", "twin", "bgpts", "overtake"]) C[k] = cs.getPropertyValue("--" + k).trim();
+    bgDirty = true;
+  }
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", readTokens);
+  new MutationObserver(readTokens).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+
+  // ---------- light/dark toggle: follows the system setting until the viewer picks one, which is remembered
+  const darkMQ = window.matchMedia("(prefers-color-scheme: dark)");
+  const isDark = () => (document.documentElement.dataset.theme || (darkMQ.matches ? "dark" : "light")) === "dark";
+  function labelTheme() {
+    const d = isDark();
+    $("theme").textContent = d ? "☀ Light" : "☾ Dark";
+    $("theme").setAttribute("aria-label", d ? "Switch to light theme" : "Switch to dark theme");
+  }
+  try { const saved = localStorage.getItem("theme"); if (saved === "light" || saved === "dark") document.documentElement.dataset.theme = saved; } catch (e) {}
+  $("theme").addEventListener("click", () => {
+    const next = isDark() ? "light" : "dark";
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem("theme", next); } catch (e) {}
+    labelTheme();
+  });
+  darkMQ.addEventListener("change", labelTheme);
+  labelTheme();
+
+  // ---------- canvas sizing
+  const cv = { shells: $("shells"), section: $("section"), trace: $("trace"), sep: $("sep") };
+  const ctx = {}, size = {};
+  function resize() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    for (const [k, c] of Object.entries(cv)) {
+      const r = c.getBoundingClientRect();
+      size[k] = { w: r.width, h: r.height };
+      c.width = Math.round(r.width * dpr); c.height = Math.round(r.height * dpr);
+      ctx[k] = c.getContext("2d"); ctx[k].setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    bgDirty = true;
+  }
+  new ResizeObserver(() => resize()).observe(document.querySelector(".wrap"));
+
+  const MONO = '12px "IBM Plex Mono", ui-monospace, monospace';
+
+  // ---------- shells view
+  function drawShells(ob, A, T, flashes) {
+    const g = ctx.shells, { w, h } = size.shells, cx = w / 2, cy = h / 2, Rd = Math.min(w, h) * 0.44;
+    const rho = (R) => (2 / Math.PI) * Math.atan(R) * Rd;
+    g.clearRect(0, 0, w, h);
+    g.lineWidth = 1; g.strokeStyle = C.grid; g.setLineDash([3, 4]);
+    g.font = MONO; g.fillStyle = C["ink-2"]; g.textAlign = "left"; g.textBaseline = "middle";
+    for (const R of [0.5, 1, 2, 4]) {
+      g.beginPath(); g.arc(cx, cy, rho(R), 0, 2 * Math.PI); g.stroke();
+      const a = -Math.PI / 4;
+      g.fillText(`R=${R}`, cx + rho(R) * Math.cos(a) + 4, cy + rho(R) * Math.sin(a) - 6);
+    }
+    g.setLineDash([]); g.strokeStyle = C["ink-2"]; g.lineWidth = 1.5;
+    g.beginPath(); g.arc(cx, cy, Rd, 0, 2 * Math.PI); g.stroke();
+    g.textAlign = "center"; g.fillText("AdS boundary, R → ∞", cx, cy - Rd - 10);
+    // flashes (crossings), fading over 0.7 s of real time
+    const now = performance.now();
+    for (const f of flashes) {
+      const age = (now - f.at) / 450; if (age > 1) continue;
+      g.strokeStyle = f.section ? C.orbit : C["ink-2"]; g.globalAlpha = 0.45 * (1 - age);
+      g.lineWidth = 1 + 4 * age; g.beginPath(); g.arc(cx, cy, rho(f.R), 0, 2 * Math.PI); g.stroke();
+    }
+    g.globalAlpha = 1;
+    // energies (mass jumps) set ring thickness
+    const fl = ob.main.F[A.k], Mmid = fl[5], aIn = fl[6] === 1, Mout = ob.o.Mout;
+    const EA = aIn ? Mmid : Mout - Mmid, EB = Mout - EA;
+    if (T) {
+      g.setLineDash([5, 4]); g.lineWidth = 1.4;
+      for (const [R, col] of [[T.RA, C["shell-a"]], [T.RB, C["shell-b"]]]) { g.strokeStyle = col; g.globalAlpha = 0.75; g.beginPath(); g.arc(cx, cy, rho(R), 0, 2 * Math.PI); g.stroke(); }
+      g.setLineDash([]); g.globalAlpha = 1;
+    }
+    for (const [R, E, col, lab, ang] of [[A.RA, EA, C["shell-a"], "A", -2.3], [A.RB, EB, C["shell-b"], "B", 0.75]]) {
+      g.strokeStyle = col; g.lineWidth = 1.5 + 11 * (E / Mout);
+      g.beginPath(); g.arc(cx, cy, rho(R), 0, 2 * Math.PI); g.stroke();
+      g.fillStyle = col; g.font = '600 13px "IBM Plex Sans", system-ui, sans-serif'; g.textAlign = "center";
+      const rr = rho(R) + 14; g.fillText(lab, cx + rr * Math.cos(ang), cy + rr * Math.sin(ang));
+    }
+    g.fillStyle = C["ink-2"]; g.beginPath(); g.arc(cx, cy, 2, 0, 2 * Math.PI); g.fill();
+    // energy bar
+    const pa = (100 * EA) / Mout;
+    $("bar-a").style.width = pa + "%"; $("bar-b").style.width = 100 - pa + "%";
+    $("energy-label").textContent = `energy: A ${pa.toFixed(1)}%  ·  B ${(100 - pa).toFixed(1)}%  (A is ${aIn ? "inside" : "outside"})`;
+  }
+
+  // ---------- Poincaré map
+  let bgDirty = true, bgCanvas = null, view = null, prevCount = -1;
+  function nice(lo, hi, n) {
+    const span = hi - lo, step0 = span / n, p = Math.pow(10, Math.floor(Math.log10(step0)));
+    const step = [1, 2, 2.5, 5, 10].map((m) => m * p).find((s) => s >= step0);
+    const out = []; for (let v = Math.ceil(lo / step) * step; v <= hi + 1e-12; v += step) out.push(+v.toFixed(10));
+    return out;
+  }
+  function computeView(ob) {
+    let x0, x1, y0, y1;
+    const ext = (xs, ys) => { for (let i = 0; i < xs.length; i++) { x0 = Math.min(x0, xs[i]); x1 = Math.max(x1, xs[i]); y0 = Math.min(y0, ys[i]); y1 = Math.max(y1, ys[i]); } };
+    x0 = y0 = Infinity; x1 = y1 = -Infinity;
+    const mR = ob.main.sR, mM = Array.from(ob.main.sM, (v) => v * 1e3);
+    ext(mR, mM);
+    if (st.all) ext(ob.main.xR, Array.from(ob.main.xM, (v) => v * 1e3));
+    if (st.zoom) ext(ob.twin.sR, Array.from(ob.twin.sM, (v) => v * 1e3));
+    if (!st.zoom) ext(D.background.map((p) => p[0]), D.background.map((p) => p[1]));
+    const px = (x1 - x0) * 0.06 || 0.01, py = (y1 - y0) * 0.08 || 0.01;
+    return { x0: x0 - px, x1: x1 + px, y0: y0 - py, y1: y1 + py };
+  }
+  function sectionFrame() {
+    const { w, h } = size.section, L = 66, R = 10, T = 24, B = 34;
+    return { L, R, T, B, pw: w - L - R, ph: h - T - B };
+  }
+  function renderBackground(ob) {
+    const { w, h } = size.section, dpr = cv.section.width / Math.max(w, 1);
+    view = computeView(ob);
+    const fr = sectionFrame();
+    bgCanvas = document.createElement("canvas"); bgCanvas.width = cv.section.width; bgCanvas.height = cv.section.height;
+    const g = bgCanvas.getContext("2d"); g.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const X = (x) => fr.L + ((x - view.x0) / (view.x1 - view.x0)) * fr.pw, Y = (y) => fr.T + (1 - (y - view.y0) / (view.y1 - view.y0)) * fr.ph;
+    g.strokeStyle = C.grid; g.lineWidth = 1; g.font = MONO; g.fillStyle = C["ink-2"];
+    const dec = (tk) => { if (tk.length < 2) return 4; const st_ = tk[1] - tk[0], e = Math.floor(Math.log10(st_)); return Math.max(0, -e + (Math.abs(st_ / 10 ** e - 2.5) < 1e-6 ? 1 : 0)); };
+    const tx_ = nice(view.x0, view.x1, 6), ty_ = nice(view.y0 / 10, view.y1 / 10, 5), dx_ = dec(tx_), dy_ = dec(ty_); // y ticks in 100 M_mid; plotted values are 1000 M_mid
+    for (const x of tx_) { g.beginPath(); g.moveTo(X(x), fr.T); g.lineTo(X(x), fr.T + fr.ph); g.stroke(); g.textAlign = "center"; g.textBaseline = "top"; g.fillText(x.toFixed(dx_), X(x), fr.T + fr.ph + 6); }
+    for (const y of ty_) { g.beginPath(); g.moveTo(fr.L, Y(y * 10)); g.lineTo(fr.L + fr.pw, Y(y * 10)); g.stroke(); g.textAlign = "right"; g.textBaseline = "middle"; g.fillText(y.toFixed(dy_), fr.L - 6, Y(y * 10)); }
+    g.textAlign = "right"; g.textBaseline = "bottom"; g.fillText("R", fr.L + fr.pw, fr.T + fr.ph + 32);
+    g.textAlign = "left"; g.textBaseline = "bottom"; g.fillText("100 M_mid", 4, fr.T - 6);
+    g.save(); g.beginPath(); g.rect(fr.L, fr.T, fr.pw, fr.ph); g.clip();
+    g.fillStyle = C.bgpts;
+    for (const p of D.background) g.fillRect(X(p[0]) - 0.6, Y(p[1]) - 0.6, 1.2, 1.2);
+    // edge of the section: lower edge (A at a turning point) out to the large-R end, upper edge (B) back to the small-R end
+    const E = D.edges, ends = E.ends;
+    g.strokeStyle = C["ink-2"]; g.lineWidth = 1; g.globalAlpha = 0.6; g.beginPath(); g.moveTo(X(ends[0][0]), Y(ends[0][1]));
+    for (const r of E.rows) g.lineTo(X(r[0]), Y(r[1]));
+    g.lineTo(X(ends[1][0]), Y(ends[1][1]));
+    for (let i = E.rows.length - 1; i >= 0; i--) g.lineTo(X(E.rows[i][0]), Y(E.rows[i][2]));
+    g.closePath(); g.stroke(); g.globalAlpha = 1;
+    g.strokeStyle = C.ink; g.lineWidth = 1.4;
+    for (const fp of D.fixed_points) {
+      const x = X(fp.x[0]), y = Y(fp.x[1] * 1e3);
+      g.beginPath();
+      if (fp.kind === "elliptic") g.arc(x, y, 4, 0, 2 * Math.PI);
+      else { g.moveTo(x - 5, y - 5); g.lineTo(x + 5, y + 5); g.moveTo(x - 5, y + 5); g.lineTo(x + 5, y - 5); }
+      g.stroke();
+    }
+    g.restore();
+    g.strokeStyle = C.rule; g.strokeRect(fr.L + 0.5, fr.T + 0.5, fr.pw - 1, fr.ph - 1);
+    bgDirty = false;
+  }
+  function drawSection(ob, t) {
+    if (bgDirty || !bgCanvas) renderBackground(ob);
+    const g = ctx.section, { w, h } = size.section, fr = sectionFrame();
+    g.clearRect(0, 0, w, h); g.drawImage(bgCanvas, 0, 0, w, h);
+    const X = (x) => fr.L + ((x - view.x0) / (view.x1 - view.x0)) * fr.pw, Y = (y) => fr.T + (1 - (y - view.y0) / (view.y1 - view.y0)) * fr.ph;
+    g.save(); g.beginPath(); g.rect(fr.L, fr.T, fr.pw, fr.ph); g.clip();
+    if (st.all) {
+      const nx = countUpTo(ob.main.xT, t);
+      g.fillStyle = C.overtake;
+      for (let i = 0; i < nx; i++) g.fillRect(X(ob.main.xR[i]) - 1.2, Y(ob.main.xM[i] * 1e3) - 1.2, 2.4, 2.4);
+    }
+    const n = countUpTo(ob.main.sT, t);
+    g.fillStyle = C.orbit;
+    g.beginPath();  // one path for the whole trail, filled once
+    for (let i = 0; i < n; i++) { const x = X(ob.main.sR[i]), y = Y(ob.main.sM[i] * 1e3); g.moveTo(x + 1.8, y); g.arc(x, y, 1.8, 0, 2 * Math.PI); }
+    g.fill();
+    const nt = countUpTo(ob.twin.sT, t);
+    // highlight the latest pair of crossings at nearly the same moment (the pair the distance chart measures): each of
+    // the orbit's crossings is paired with the twin's crossing nearest in time, if there is one within half a return
+    let m = -1, j = -1;
+    for (let k = n - 1; k >= 0 && k >= n - 12; k--) { const q = ob.o.pair[k]; if (q >= 0 && q < nt) { m = k; j = q; break; } }
+    if (m < 0 && n > 0) { const P = (run, i) => [X(run.sR[i]), Y(run.sM[i] * 1e3)], [ox, oy] = P(ob.main, n - 1); g.fillStyle = C.orbit; g.beginPath(); g.arc(ox, oy, 5.5, 0, 2 * Math.PI); g.fill(); }
+    if (m >= 0) {
+      const P = (run, i) => [X(run.sR[i]), Y(run.sM[i] * 1e3)];
+      const [ox, oy] = P(ob.main, m);
+      if (st.twin) {
+        const [tx, ty] = P(ob.twin, j);
+        if (Math.hypot(tx - ox, ty - oy) > 6) {
+          g.strokeStyle = C.twin; g.lineWidth = 1.2; g.setLineDash([4, 3]);
+          g.beginPath(); g.moveTo(ox, oy); g.lineTo(tx, ty); g.stroke(); g.setLineDash([]);
+        }
+        g.strokeStyle = C.twin; g.lineWidth = 2; g.beginPath(); g.arc(tx, ty, 9, 0, 2 * Math.PI); g.stroke();
+      }
+      g.fillStyle = C.orbit; g.beginPath(); g.arc(ox, oy, 5.5, 0, 2 * Math.PI); g.fill();
+    }
+    g.restore();
+    return { n, paired: m + 1 };
+  }
+
+  // ---------- radius trace
+  function drawTrace(ob, t) {
+    const g = ctx.trace, { w, h } = size.trace, L = 40, R = 8, T = 8, B = 26, pw = w - L - R, ph = h - T - B, win = 40;
+    const t1 = Math.max(t, win), t0 = t1 - win, y0 = Math.max(0, ob.rlo - 0.05), y1 = ob.rhi + 0.05;
+    const X = (x) => L + ((x - t0) / win) * pw, Y = (y) => T + (1 - (y - y0) / (y1 - y0)) * ph;
+    g.clearRect(0, 0, w, h); g.font = MONO; g.fillStyle = C["ink-2"]; g.strokeStyle = C.grid; g.lineWidth = 1;
+    for (const y of nice(y0, y1, 4)) { g.beginPath(); g.moveTo(L, Y(y)); g.lineTo(L + pw, Y(y)); g.stroke(); g.textAlign = "right"; g.textBaseline = "middle"; g.fillText(String(y), L - 6, Y(y)); }
+    for (const x of nice(t0, t1, 5)) { g.beginPath(); g.moveTo(X(x), T); g.lineTo(X(x), T + ph); g.stroke(); g.textAlign = "center"; g.textBaseline = "top"; g.fillText(String(Math.round(x)), X(x), T + ph + 6); }
+    const step = win / Math.max(200, pw);
+    for (const [key, col] of [["RA", C["shell-a"]], ["RB", C["shell-b"]]]) {
+      g.strokeStyle = col; g.lineWidth = 1.8; g.beginPath();
+      let started = false;
+      for (let x = t0; x <= Math.min(t, t1) + 1e-9; x += step) {
+        const r = radiiAt(ob.main, Math.max(x, 0), 0.02); const px = X(x), py = Y(r[key]);
+        if (!started) { g.moveTo(px, py); started = true; } else g.lineTo(px, py);
+      }
+      g.stroke();
+    }
+    // crossings in the window: blue dots for section crossings (head on, A inside), yellow dots for overtaking crossings
+    // with A inside when the map shows them, gray rings for the others
+    const k0 = flightIndex(ob.main, t0), k1 = flightIndex(ob.main, Math.min(t, t1));
+    for (let k = k0; k <= k1; k++) {
+      const F = ob.main.F[k], tc = ob.main.t0[k];
+      if (tc < t0 || tc > t || (k === 0 && F[7] !== 1)) continue;  // an orbit given by initial data starts between crossings
+      const x = X(tc), y = Y(F[1]);
+      if (F[7] === 1) {
+        g.strokeStyle = C.orbit; g.lineWidth = 1; g.globalAlpha = 0.4; g.setLineDash([2, 3]);
+        g.beginPath(); g.moveTo(x, T); g.lineTo(x, T + ph); g.stroke(); g.setLineDash([]); g.globalAlpha = 1;
+        g.fillStyle = C.orbit; g.beginPath(); g.arc(x, y, 4, 0, 2 * Math.PI); g.fill();
+      } else if (st.all && F[8] > 1 && ob.main.F[k - 1][6] === 1) {
+        g.fillStyle = C.overtake; g.beginPath(); g.arc(x, y, 4, 0, 2 * Math.PI); g.fill();
+      } else {
+        g.strokeStyle = C["ink-2"]; g.lineWidth = 1.2; g.beginPath(); g.arc(x, y, 3.5, 0, 2 * Math.PI); g.stroke();
+      }
+    }
+    g.strokeStyle = C.rule; g.strokeRect(L + 0.5, T + 0.5, pw - 1, ph - 1);
+  }
+
+  // ---------- separation chart
+  function drawSep(ob, n) {
+    // log-log axes: growth in proportion to the number of returns is a straight line of slope 1 (dashed guide from the
+    // nudge); exponential growth bends sharply upward from it
+    const g = ctx.sep, { w, h } = size.sep, L = 46, R = 10, T = 8, B = 26, pw = w - L - R, ph = h - T - B;
+    const N = ob.o.sep.length, lo = -6, hi = 1, x1 = Math.log10(Math.max(N, 10));
+    const X = (r) => L + (Math.log10(r) / x1) * pw, Y = (v) => T + (1 - (v - lo) / (hi - lo)) * ph;
+    g.clearRect(0, 0, w, h); g.font = MONO; g.fillStyle = C["ink-2"]; g.strokeStyle = C.grid; g.lineWidth = 1;
+    for (let e = lo; e <= hi; e++) { g.beginPath(); g.moveTo(L, Y(e)); g.lineTo(L + pw, Y(e)); g.stroke(); g.textAlign = "right"; g.textBaseline = "middle"; g.fillText(`10${sup(e)}`, L - 6, Y(e)); }
+    for (let e = 0; e <= Math.floor(x1); e++) { const r = 10 ** e; g.beginPath(); g.moveTo(X(r), T); g.lineTo(X(r), T + ph); g.stroke(); g.textAlign = "center"; g.textBaseline = "top"; g.fillText(String(r), X(r), T + ph + 6); }
+    g.textAlign = "left"; g.textBaseline = "bottom"; g.fillText("returns", L + 6, T + ph - 4);
+    // guide: distance = nudge x number of returns
+    g.save(); g.beginPath(); g.rect(L, T, pw, ph); g.clip();
+    g.strokeStyle = C["ink-2"]; g.lineWidth = 1.2; g.setLineDash([5, 4]); g.beginPath();
+    g.moveTo(X(1), Y(Math.log10(D.eps))); g.lineTo(X(10 ** x1), Y(Math.log10(D.eps) + x1)); g.stroke(); g.setLineDash([]);
+    const m = Math.min(n, N);
+    if (m > 1) {
+      g.strokeStyle = C.orbit; g.lineWidth = 1.6; g.beginPath();
+      let pen = false;
+      const dots = [];  // values with a gap on both sides, which no line segment reaches
+      for (let i = 0; i < m; i++) {
+        const sv = ob.o.sep[i];
+        if (sv == null) { pen = false; continue; }  // no twin crossing within half a return: a gap
+        const y = Y(Math.min(Math.max(Math.log10(Math.max(sv, 1e-12)), lo - 1), hi + 1));
+        pen ? g.lineTo(X(i + 1), y) : g.moveTo(X(i + 1), y); pen = true;
+        if ((i === 0 || ob.o.sep[i - 1] == null) && (i + 1 >= m || ob.o.sep[i + 1] == null)) dots.push([X(i + 1), y]);
+      }
+      g.stroke();
+      g.fillStyle = C.orbit;
+      for (const [x, y] of dots) { g.beginPath(); g.arc(x, y, 2, 0, 2 * Math.PI); g.fill(); }
+    }
+    g.restore();
+    g.fillStyle = C["ink-2"]; g.textAlign = "right"; g.textBaseline = "bottom";
+    // label just below the rising guide (at the label's left end) or just above it (at its right end), so it never
+    // touches the guide; try the right end of the guide first, then further left, and take the first place with none of
+    // the orbit's points under it (counted over the whole run), or else the one with fewest
+    const lab = "∝ returns", lw = g.measureText(lab).width, th = 12;
+    const yAt = (x) => Y(Math.min(Math.log10(D.eps) + ((x - L) / pw) * x1, hi));
+    const hits = (xl, xr, top) => {
+      let c = 0;
+      for (let i = 0; i < N; i++) {
+        const sv = ob.o.sep[i], x = X(i + 1);
+        if (sv == null || x < xl - 2 || x > xr + 2) continue;
+        const y = Y(Math.min(Math.max(Math.log10(Math.max(sv, 1e-12)), lo - 1), hi + 1));
+        if (y >= top - 2 && y <= top + th + 2) c++;
+      }
+      return c;
+    };
+    let best = null;
+    for (const f of [1, 0.8, 0.6, 0.4]) {
+      const xr = L + f * pw - 4, xl = xr - lw;
+      if (xl < L + 4) continue;
+      for (const top of [yAt(xl) + 5, yAt(xr) - 5 - th]) {
+        if (top < T + 2 || top + th > T + ph - 2) continue;
+        const c = hits(xl, xr, top);
+        if (!best || c < best.c) best = { c, xr, top };
+      }
+      if (best && best.c === 0) break;
+    }
+    g.textBaseline = "top";
+    if (best) g.fillText(lab, best.xr, best.top);
+    g.strokeStyle = C.rule; g.strokeRect(L + 0.5, T + 0.5, pw - 1, ph - 1);
+  }
+
+  // ---------- main loop
+  function fmtSci(x) { if (!(x > 0)) return "–"; const e = Math.floor(Math.log10(x)); return `${(x / 10 ** e).toFixed(1)}×10${sup(e)}`; }
+  let lastFrame = performance.now(), lastK = -1;
+  function frame(now) {
+    const ob = orbits[st.idx], dt = Math.min((now - lastFrame) / 1000, 0.1); lastFrame = now;
+    if (st.playing && !scrubbing) { st.t += st.speed * dt; if (st.t >= ob.o.t_end) { st.t = ob.o.t_end; setPlaying(false); } }
+    const A = radiiAt(ob.main, st.t), T = st.twin ? radiiAt(ob.twin, st.t) : null;
+    if (st.playing && A.k !== lastK && lastK >= 0 && A.k > lastK && A.k - lastK < 4) {
+      for (let k = lastK + 1; k <= A.k; k++) st.lastFlash.push({ R: ob.main.F[k][1], section: ob.main.F[k][7] === 1, at: now });
+      st.lastFlash = st.lastFlash.slice(-6);
+    }
+    lastK = A.k;
+    drawShells(ob, A, T, st.lastFlash);
+    const { n, paired } = drawSection(ob, st.t);
+    drawTrace(ob, st.t);
+    drawSep(ob, paired);
+    $("r-t").textContent = st.t.toFixed(1);
+    if (!scrubbing) timeIn.value = String(st.t);
+    $("r-n").textContent = String(n);
+    let last = null; for (let k = Math.min(paired, ob.o.sep.length) - 1; k >= 0 && last == null; k--) last = ob.o.sep[k];
+    $("r-sep").textContent = last != null ? fmtSci(last) : "–";
+    requestAnimationFrame(frame);
+  }
+
+  readTokens(); readSpeed(); resize();
+  select(0, 600);
+  setPlaying(!reduce);
+  requestAnimationFrame((t) => { lastFrame = t; frame(t); });
+})();
+</script>

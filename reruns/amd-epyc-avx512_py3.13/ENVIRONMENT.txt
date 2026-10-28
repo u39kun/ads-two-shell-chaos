@@ -1,0 +1,28 @@
+Rerun of the whole pipeline (run_all.sh) from an empty results/ folder, with AVX-512 enabled (no restricting settings).
+
+Machine:   Amazon EC2 c8a.8xlarge: AMD EPYC 9R45 (Zen 5), 32 cores (one thread per core); AVX-512
+OS:        Ubuntu 24.04.5 LTS, x86_64
+Python:    3.13.17 (CPython, GCC 13.3.0)
+
+Packages (pip list in the virtual environment):
+contourpy       1.4.0
+cycler          0.12.1
+fonttools       4.67.0
+kiwisolver      1.5.1
+llvmlite        0.50.0
+matplotlib      3.11.2
+mpmath          1.3.0
+numba           0.68.0
+numpy           2.5.3
+packaging       26.3
+pillow          13.0.0
+pip             26.2.2
+pyparsing       3.3.3
+python-dateutil 3.0.0
+scipy           1.18.1
+six             1.17.0
+sympy           1.14.0
+tzdata          2026.5
+
+The per-case cache folders (*_parts/) written by the scans are omitted; they are rebuilt on demand.
+Compare with the i9 results:  python compare_results.py results reruns/amd-epyc-avx512_py3.13/results

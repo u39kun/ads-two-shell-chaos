@@ -1,0 +1,5 @@
+BCR Fig. 5 orbit lambda_N: [(10, '9.42e-02'), (30, '6.16e-02'), (100, '3.22e-02'), (300, '1.18e-02'), (1000, '5.22e-03'), (3000, '5.81e-03')]
+near A-heavy center lambda_N: [(10, '-7.35e-02'), (30, '1.41e-03'), (100, '4.73e-03'), (300, '-1.10e-03'), (1000, '1.46e-03'), (3000, '5.80e-04')]
+next to the saddle lambda_N: [(10, '1.43e-01'), (30, '1.15e-01'), (100, '5.85e-03'), (300, '6.10e-03'), (1000, '4.48e-03'), (3000, '5.55e-03')]
+BCR section curve: {'rotation_number_about_saddle': 0.022972, 'thickness_rms_K8': 0.056066, 'thickness_max_K8': 0.322653, 'thickness_rms_K16': 0.018365, 'thickness_max_K16': 0.118969, 'thickness_rms_K32': 0.005018, 'thickness_max_K32': 0.017922}
+done in 109s

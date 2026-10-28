@@ -1,0 +1,20 @@
+\begin{table}[!tbp]
+\centering\small
+\caption{Variational-tangent refinement (\texttt{bcr\_tangent\_refinement.py}): $\lambda_{[2000,6000]}$ in units of
+$10^{-3}$ per return at BCR-5 parameters.
+Columns identify a chaotic start, a nearby regular start, and the BCR-5 orbit; rows vary tolerance and maximum step.
+The chaotic trajectory changes with the settings, but every exponent remains well above the classification threshold
+of 3 in these units.}
+\label{tab:refinement}
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{lrrr}
+\toprule
+setting & R+, $10^{-4}$ (saddle layer) & R+, $10^{-2}$ & BCR-5 \\
+\midrule
+rtol $= 10^{-12}$, max step 0.02 (scans) & 29.9 & $-$0.226 & 0.334318 \\
+rtol $= 10^{-13}$, max step 0.02 & 40.9 & $-$0.230 & 0.334319 \\
+rtol $= 10^{-13}$, max step 0.01 & 36.9 & $-$0.224 & 0.334319 \\
+rtol $= 10^{-11}$, max step 0.02 & 35.8 & $-$0.234 & 0.334319 \\
+\bottomrule
+\end{tabular}
+\end{table}

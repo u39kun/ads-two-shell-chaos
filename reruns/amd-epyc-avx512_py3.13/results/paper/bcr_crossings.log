@@ -1,0 +1,15 @@
+wrote results/paper/bcr_crossings.json
+ordinary: return 2.162382256 to 6.487034854, 2 crossings
+  t-t0= 0.000000, R=0.674375, selected, incoming pair=['A', 'B'], dR/dt=[np.float64(0.9185815549184545), np.float64(-0.929633503293343)]
+  t-t0= 2.161971, R=1.006921, opposite_head_on, incoming pair=['B', 'A'], dR/dt=[np.float64(-1.2437855858294349), np.float64(1.3166937572678206)]
+  t-t0= 4.324653, R=0.666413, selected, incoming pair=['A', 'B'], dR/dt=[np.float64(0.8950751418605887), np.float64(-0.9354903995434314)]
+overtaking: return 45.326761157 to 61.922087937, 8 crossings
+  t-t0= 0.000000, R=0.477969, selected, incoming pair=['A', 'B'], dR/dt=[np.float64(0.01605958530686624), np.float64(-0.8891081053026879)]
+  t-t0= 2.048124, R=1.079506, overtaking, incoming pair=['B', 'A'], dR/dt=[np.float64(0.29845027823659814), np.float64(1.6568615277364351)]
+  t-t0= 4.150743, R=0.624755, overtaking, incoming pair=['A', 'B'], dR/dt=[np.float64(-0.24286239916955166), np.float64(-1.0583451493653218)]
+  t-t0= 6.120570, R=0.742333, overtaking, incoming pair=['B', 'A'], dR/dt=[np.float64(0.3389400811794115), np.float64(1.1899398739922111)]
+  t-t0= 8.207591, R=0.939712, overtaking, incoming pair=['A', 'B'], dR/dt=[np.float64(-0.360902945276682), np.float64(-1.4589214208553105)]
+  t-t0= 10.216998, R=0.519446, overtaking, incoming pair=['B', 'A'], dR/dt=[np.float64(0.1177041904691253), np.float64(0.9289908257157486)]
+  t-t0= 12.346008, R=1.224209, overtaking, incoming pair=['A', 'B'], dR/dt=[np.float64(-0.057070202401366066), np.float64(-1.8805595479276038)]
+  t-t0= 14.438266, R=0.453784, opposite_head_on, incoming pair=['B', 'A'], dR/dt=[np.float64(-0.12054303454497003), np.float64(0.8492371019283843)]
+  t-t0= 16.595327, R=1.325739, selected, incoming pair=['A', 'B'], dR/dt=[np.float64(0.4660499459283525), np.float64(-2.0133552859385526)]
