@@ -10,7 +10,7 @@ Explore orbits from the paper in the [interactive demo](https://u39kun.github.io
 
 ## Citation
 
-Version v1.0 of this repository, the one the paper's figures, tables, and quoted numbers come from, is archived at Zenodo: [10.5281/zenodo.23724493](https://doi.org/10.5281/zenodo.23724493). The DOI [10.5281/zenodo.23724492](https://doi.org/10.5281/zenodo.23724492) covers all archived versions and resolves to the latest. `CITATION.cff` has the metadata; cite the paper for the results and the archived version for the code and data.
+Version v1.0 of this repository, the one the paper's figures, tables, and quoted numbers come from, is archived at Zenodo: [10.5281/zenodo.23724493](https://doi.org/10.5281/zenodo.23724493). The DOI [10.5281/zenodo.23724492](https://doi.org/10.5281/zenodo.23724492) covers all archived versions and resolves to the latest. The paper is archived as a preprint at [10.5281/zenodo.23726358](https://doi.org/10.5281/zenodo.23726358). `CITATION.cff` has the metadata; cite the paper for the results and the archived version for the code and data.
 
 ## Code and data
 
