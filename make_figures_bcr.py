@@ -2,7 +2,7 @@
 Writes vector PDFs fig1.pdf through fig9.pdf, Tables 1-3 (table_edge.tex, table_refinement.tex,
 table_convergence.tex),
 and the numbers quoted with them (figure_numbers.json) to OUTDIR (default: figs). Set RESULTS_DIR to read another
-results folder (compare_results.py).
+results folder (compare_results.py). Fig. 4a reads addendum/results/bcr_fig6.npz (addendum/bcr_fig6.py) in either case.
 usage: python make_figures_bcr.py [OUTDIR]"""
 
 import sys, os, json, re
@@ -245,102 +245,44 @@ def _crossing_panel(ax, data, index):
     ax.text(0.5, 1.22, title, transform=ax.transAxes, ha="center", va="bottom", fontsize=8)
 
 
-# ------------------------------------------------------------------ Fig. 4: nudged runs, as in BCR Fig. 6
+# ------------------------------------------------------------------ Fig. 4: nearby-orbit separation, as in BCR Fig. 6
+# Panel (a) uses addendum/bcr_fig6.py outputs in the paper's units.
+FIG6 = os.path.join(HERE, "addendum", "results", "bcr_fig6.npz")
+
+
 def fig_bcr_lyapunov():
     D = json.load(open(os.path.join(RES, "paper", "bcr_lyapunov.json")))
-    fig, (a, b) = plt.subplots(1, 2, figsize=(DW, 2.4), gridspec_kw=dict(wspace=0.32))
-    shades = {5e-5: SEQ[3], 5e-6: SEQ[2], 5e-7: SEQ[1]}
-    # BCR's Fig. 6 observable: the outermost radius R_1 = max(R_A, R_B), which changes shell at each crossing
-    bs = D["clocks"]["between_shells"]["runs"]
-    bd = D["clocks"]["boundary"]["runs"]
-    r0 = [r for r in bs if abs(r["eps"] - 5e-5) < 1e-12][0]
-    t = np.array(r0["t"])
-    d = np.array(r0["dR_outermost"])
-    a.semilogy(t, np.maximum(d, 1e-9), color=SEQ[3], lw=0.5, label=r"$|\Delta R_1|$, clock between shells")
-    rb = [r for r in bd if abs(r["eps"] - 5e-5) < 1e-12][0]
-    a.semilogy(
-        rb["t"],
-        np.maximum(np.array(rb["envelope_outermost"]), 1e-9),
-        color=C2,
-        lw=0.9,
-        ls=(0, (3, 2)),
-        label="envelope, boundary clock",
-    )
-    tt = np.linspace(0, 250, 50)
-    a.semilogy(tt, 5e-5 * np.exp(0.04 * tt), color=INK, lw=0.9, label=r"$5\times10^{-5}e^{0.04t}$ (rate 0.04)")
-    # approximate readings of BCR's Fig. 6 (by eye, not digitized): first times their separation reaches 1e-3, 1e-2,
-    # 1e-1, and order unity, and two intermediate peaks
-    a.semilogy([80, 125, 450, 500], [1e-3, 1e-2, 1e-1, 1], "D", color=C3, ms=3.5, mew=0, label="BCR Fig. 6: first reaches")
-    a.semilogy([170, 280], [0.03, 0.08], "^", mfc=C3, mec=C3, ms=4.5, mew=0.9, label="BCR Fig. 6: peaks")
-    a.set_ylim(1e-6, 1e2)
-    a.set_xlim(0, 2000)
-    a.set_xlabel("time $t$")
-    a.set_ylabel(r"$|\Delta R_1|$, outermost radius")
-    legend = a.legend(loc="upper right", bbox_to_anchor=(1.04, 1.0), fontsize=6, handlelength=1.5)
-    # Separate the legend symbols from the BCR read-off points to their left.
-    fig.canvas.draw()
-    legend_box = legend.get_window_extent().transformed(a.transAxes.inverted())
-    a.plot(
-        [legend_box.x0, legend_box.x0],
-        [legend_box.y0, legend_box.y1],
-        transform=a.transAxes,
-        color=INK2,
-        lw=0.6,
-        clip_on=False,
-    )
-    for run in bs:
-        e = run["eps"]
-        tt2 = np.array(run["t"])
-        env = np.array(run["envelope_outermost"])
-        k = tt2 > 0
-        b.loglog(
-            tt2[k],
-            env[k] / e,
-            color=shades.get(e, MUTED),
-            lw=1.0,
-            label=rf"$\epsilon = {e/10**np.floor(np.log10(e)):.0f}\times10^{{{int(np.floor(np.log10(e)))}}}$",
-        )
-    for run in bd:
-        e = run["eps"]
-        tt2 = np.array(run["t"])
-        env = np.array(run["envelope_outermost"])
-        k = tt2 > 0
-        b.loglog(tt2[k], env[k] / e, color=shades.get(e, MUTED), lw=0.7, ls=(0, (2, 2)))
     pc = os.path.join(RES, "paper", "bcr_lyapunov_C.json")
     C = json.load(open(pc)) if os.path.exists(pc) else None
-    if C:
-        rc = [r for r in C["clocks"]["between_shells"]["runs"] if abs(r["eps"] - 5e-5) < 1e-12][0]
-        tc = np.array(rc["t"])
-        k = tc > 0
-        b.loglog(
-            tc[k],
-            np.array(rc["envelope_outermost"])[k] / rc["eps"],
-            color=MUTED,
-            lw=0.8,
-            label=r"$\epsilon = 5\times10^{-5}$ (opposite)",
-        )
-    x = np.geomspace(10, 2000, 20)
-    b.loglog(x, 0.15 * x, color=INK2, lw=0.8, ls=(0, (1, 1.5)), label=r"$\propto t$, boundary clock")
-    xe = np.linspace(10, 200, 50)
-    b.loglog(xe, np.exp(0.04 * xe), color=INK, lw=0.9, label=r"$e^{0.04t}$")
-    b.set_xlim(1, 2000)
-    b.set_ylim(0.5, 1e4)
-    b.set_xlabel("time $t$")
-    b.set_ylabel(r"envelope of $|\Delta R_1|$ / $\epsilon$")
-    b.legend(loc="upper left", fontsize=6)
-    b.text(
-        0.97,
-        0.04,
-        "the three blue $\\epsilon$ coincide\n$\\epsilon$: clock between shells",
-        transform=b.transAxes,
-        ha="right",
-        va="bottom",
-        fontsize=6,
-        color=INK2,
-    )
-    panel(a, "a")
-    panel(b, "b")
-    save(fig, "fig4.pdf")
+    S = np.load(FIG6)
+    # maxima in successive unit-time windows (n - 1, n], each holding exactly 200 samples spaced by 0.005
+    assert len(S["t"]) == 128000 and np.allclose(S["t"], 0.005 * np.arange(1, 128001), rtol=0, atol=1e-10)
+    windows = np.arange(1, 641)
+    maxima = {k: S[k].reshape(640, 200).max(axis=1) for k in ("archived", "corrected")}
+    style = {"axes.labelcolor": "black", "xtick.color": "black", "ytick.color": "black", "savefig.pad_inches": 0.03}
+    with plt.rc_context(style):
+        fig, (a, b) = plt.subplots(1, 2, figsize=(DW, 2.6), gridspec_kw=dict(wspace=0.34))
+        a.semilogy(windows, maxima["archived"], color="#a14d26", lw=0.7, label="BCR archived data", zorder=3)
+        a.semilogy(windows, maxima["corrected"], color=C1, lw=0.7, label="Corrected code", zorder=2)
+        a.set(xlim=(0, 640), ylim=(1e-5, 4), xlabel="time $t$", ylabel=r"unit-window maximum of $|\Delta R_1|$")
+        a.legend(loc="upper left")
+        a.text(0.97, 0.04, r"$m = 0.0081461381\ldots$", transform=a.transAxes, ha="right", fontsize=7)
+        # Panel (b) uses the printed mass m = 0.00815.
+        for run, color, ls in zip(D["clocks"]["between_shells"]["runs"], (SEQ[3], SEQ[2], SEQ[1]), ("-", "--", ":")):
+            e = run["eps"]
+            tt = np.asarray(run["t"])
+            k = tt > 0
+            b.loglog(tt[k], np.asarray(run["envelope_outermost"])[k] / e, color=color, ls=ls, lw=1.15,
+                     label=rf"$\epsilon = 5\times10^{{{int(np.floor(np.log10(e)))}}}$")
+        x = np.geomspace(30, 2000, 40)
+        b.loglog(x, 0.15 * x, color=INK2, lw=0.9, ls=(0, (1, 2)), label=r"$\propto t$")
+        b.set(xlim=(1, 2000), ylim=(0.5, 600), xlabel="time $t$",
+              ylabel=r"running maximum of $|\Delta R_1|\,/\,\epsilon$")
+        b.legend(loc="upper left")
+        b.text(0.97, 0.04, r"$m = 0.00815$", transform=b.transAxes, ha="right", fontsize=7)
+        for ax, s in ((a, "a"), (b, "b")):
+            ax.text(-0.02, 1.04, s, transform=ax.transAxes, fontsize=9, fontweight="bold", va="bottom", ha="right")
+        save(fig, "fig4.pdf")
     # numbers quoted in Sec. 3.3 and App. B, computed at full sampling by bcr_lyapunov.py: log-log slopes, threshold
     # times, and exponential-rate fits of the envelope over growing windows 0 < t <= T, for both observables
     nums = {}
@@ -549,7 +491,7 @@ def fig_bcr_delta():
 
 
 # ------------------------------------------------------------------ Fig. 3: chaotic orbits at the example's parameters
-THR = 3e-3  # late-block exponent per return above which an orbit counts as strongly chaotic (Sec. 3.2)
+THR = 3e-3  # late-block exponent per return above which an orbit is classified as chaotic over the tested interval (Sec. 3.2)
 
 
 def late_block(run, n1=2000, n2=6000):
@@ -649,7 +591,7 @@ def fig_bcr_layer():
     b.set_yscale("symlog", linthresh=1e-3, linscale=0.4)
     b.axhline(THR, color=INK2, lw=0.6, ls=":")
     b.annotate(
-        '“strongly chaotic” above',
+        'above threshold',
         xy=(0.03, THR),
         xycoords=b.get_yaxis_transform(),
         xytext=(0, 2),
@@ -775,14 +717,15 @@ def fig_bcr_layer_delta():
     D = json.load(open(os.path.join(RES, "bcr_section", "layer_delta.json")))
     T = json.load(open(os.path.join(RES, "bcr_section", "layer_tangent_delta.json")))["runs"]
     fig, axs = plt.subplots(1, 2, figsize=(DW, 2.3), sharey=True, gridspec_kw=dict(wspace=0.08))
-    shades = ["#c6dbf4", "#8fb8ea", "#4f8fdc", "#2a78d6", "#174a8c"]
+    shades = ["#8fb8ea", "#6fa3e3", "#4f8fdc", "#2a78d6", "#174a8c"]
+    markers = ["o", "s", "^", "D", "v"]
     out = {}
     for ax, side, name in (
         (axs[0], -1, "inner side ($R < R_{\\rm saddle}$)"),
         (axs[1], 1, "outer side ($R > R_{\\rm saddle}$)"),
     ):
         od = []
-        for s_, col in zip(D["summary"], shades):
+        for s_, col, marker in zip(D["summary"], shades, markers):
             dl = s_["delta"]
             rows = sorted(
                 [r for r in T if abs(r["case"]["delta"] - dl) < 1e-12 and r["case"]["side"] == side],
@@ -790,7 +733,7 @@ def fig_bcr_layer_delta():
             )
             x = [r["case"]["dist"] for r in rows]
             y = [late_block(r) for r in rows]
-            ax.semilogx(x, y, "o-", ms=2.6, lw=0.9, color=col, label=rf"$\delta = {dl:g}$")
+            ax.semilogx(x, y, marker=marker, ls="-", ms=3.1, lw=0.9, color=col, label=rf"$\delta = {dl:g}$")
             od.append(s_["orbit_distance"][str(side)])
             ext = None
             for xx, yy in zip(x, y):
@@ -799,8 +742,9 @@ def fig_bcr_layer_delta():
                 else:
                     break
             nxt = [xx for xx in x if ext is None or xx > ext]
-            if ext is not None and nxt:  # the first sampled start beyond the strongly chaotic ones
-                ax.plot(nxt[0], y[x.index(nxt[0])], "o", ms=5.0, mfc="none", mew=0.8, color=col, zorder=4)
+            if ext is not None and nxt:  # the first sampled start beyond the above-threshold ones
+                ax.plot(nxt[0], y[x.index(nxt[0])], marker=marker, ls="none", ms=5.0, mfc="white", mew=0.8,
+                        color=col, zorder=4)
             out.setdefault(f"{dl:g}", {})[side] = dict(
                 dist=x,
                 late=y,
@@ -817,7 +761,8 @@ def fig_bcr_layer_delta():
         ax.set_xlabel("start distance from the saddle along $R$")
         ax.set_title(name, fontsize=7)
     axs[0].set_ylabel(r"$\lambda_{[2000,6000]}$ per return")
-    axs[0].legend(loc="lower right", fontsize=5.6, ncol=2, handlelength=1.6, columnspacing=0.8, frameon=False)
+    axs[0].legend(loc="lower right", fontsize=6.8, ncol=3, handlelength=1.2, columnspacing=0.6,
+                  labelspacing=0.3, frameon=False)
     panel(axs[0], "a")
     panel(axs[1], "b")
     save(fig, "fig6.pdf")
@@ -986,7 +931,7 @@ of 3 in these units.}
     return vals
 
 
-# ------------------------------------------------------------------ section components and clocks (Secs. 2, 4.3, App. B)
+# ------------------------------------------------------------------ section components and clocks (Secs. 2, 4.3, Apps. B, C)
 def domain_clock_numbers():
     """The section's components (bcr_section_domain.py), the collapse criterion (bcr_collapse_criterion.py), and rates
     in boundary time (bcr_boundary_rates.py); no figure."""
@@ -1080,7 +1025,7 @@ def family_long_numbers():
 
 def chart_check_numbers():
     """Table 1 rates in the chart and in a norm regular at the folds, and the fixed points' periods
-    (bcr_chart_check.py; Secs. 3.1 and 4.3, App. C); no figure."""
+    (bcr_chart_check.py; Sec. 4.3, Apps. B and C); no figure."""
     path = os.path.join(RES, "bcr_section", "chart_check.json")
     if not os.path.exists(path):
         print("no chart_check.json: its numbers skipped")
@@ -1101,7 +1046,7 @@ def chart_check_numbers():
 
 def ends_followup_numbers():
     """The strongest starts of the finer end grids that detect nothing, followed to T = 2e4 (bcr_ends_followup.py),
-    and the rate that linear tangent growth gives over each classification window (Sec. 4.3, App. C); no figure."""
+    and the rate that linear tangent growth gives over each classification window (Sec. 4.3, Apps. B and C); no figure."""
     path = os.path.join(RES, "bcr_section", "ends_followup.json")
     if not os.path.exists(path):
         print("no ends_followup.json: its numbers skipped")
@@ -1177,21 +1122,21 @@ def wba_numbers():
 
 # ------------------------------------------------------------------ Figs. 7-8 and Table 1: chaos away from the saddle
 C4 = "#b5267a"  # chaos at the section's ends; orange (C2) stays chaos near the saddle, as in Fig. 3a
-TIP_THR = 1e-2  # rate per unit time that marks a strongly chaotic start on the short runs of the finer end grids
+TIP_THR = 1e-2  # detection threshold per unit time on the short runs of the finer end grids
 SURVEY_THR = 1e-3  # rate per unit time over [T/4, T] that flags a survey start (T = 20000)
 FEW = 3.0  # mean crossings per return separating the two kinds of flagged survey start
 
 
 def cut_band():
-    """Late-block rates per unit time of the strongly chaotic starts along the cuts (Fig. 6, late >= 1e-2 per
-    return), excluding the weaker starts at the edge of the chaotic region: the band near the saddle in Fig. 8f."""
+    """Late-block rates per unit time of selected above-threshold starts along the cuts (Fig. 6, late >= 1e-2 per
+    return), excluding starts with smaller exponents at the edge of the detected layer: the band near the saddle in Fig. 8f."""
     T = json.load(open(os.path.join(RES, "bcr_section", "layer_tangent_delta.json")))["runs"]
     r = [late_block(x) / x["return_time"] for x in T if late_block(x) >= 1e-2]
     return min(r), max(r)
 
 
 def fig_bcr_overview():
-    """Fig. 7: the whole head-on section at BCR's Fig. 5 parameters, in the chart of Fig. 2a."""
+    """Fig. 7: the main component of the head-on section at BCR's Fig. 5 parameters, in the chart of Fig. 2a."""
     d = os.path.join(RES, "bcr_section")
     O = json.load(open(os.path.join(d, "section_overview.json")))
     Sx = json.load(open(os.path.join(d, "bcr_section.json")))
@@ -1377,7 +1322,7 @@ def fig_bcr_survey():
 
 
 def table_edge():
-    """Table 1: strongly chaotic starts near the section's ends, and two controls (bcr_survey_checks.py)."""
+    """Table 1: chaotic starts near the section's ends, and two controls (bcr_survey_checks.py)."""
     Ck = json.load(open(os.path.join(RES, "bcr_section", "survey_checks.json")))
     f3 = lambda x: f"{x:.3f}"
     lines, vals = {False: [], True: []}, {}
@@ -1418,7 +1363,7 @@ def table_edge():
     tex = (
         r"""\begin{table}[!hbp]
 \centering\small
-\caption{Strongly chaotic starts near the ends of the section, and two controls.}
+\caption{Chaotic starts near the ends of the section, and two controls.}
 \label{tab:edge}
 \setlength{\tabcolsep}{4pt}
 \begin{tabular}{llllcc}

@@ -1,4 +1,4 @@
-"""Delayed collapse near the edge of a collapse band at delta = 0.037 (Sec. 4.3 of the paper).
+"""Delayed collapse near the edge of a collapse band at delta = 0.037 (Sec. 4.3 and App. B.1 of the paper).
 
 At delta = 0.037 part of the head-on section collapses (bcr_survey.py section). Along a short line across the edge of
 the outer band that faces the saddle, at M_mid/delta = 0.5, starts spaced 1.25e-6 apart in R are followed with the

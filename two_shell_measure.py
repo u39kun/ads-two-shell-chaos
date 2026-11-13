@@ -3,7 +3,8 @@
 Two identical shells A and B (m = 0.9*20^(-0.4)*0.03, w = 0.2, region masses 0, M_mid, and 0.03).
 Section: states just before a head-on crossing with A inside (A moving out, B moving in), in the chart
 x = (R, M_mid), R the crossing radius. On this branch the junction conditions fix both velocities, so x fixes the
-state. F: the return map (flights and crossings up to the next head-on crossing with A inside).
+state. F: the return map, restricted to two-crossing returns (one crossing with B inside, then the next head-on crossing
+with A inside); other returns raise.
 Claim: F preserves g dR dM_mid with g = |1/X_B - 1/X_A|, X = dR/dt = f v/beta in the middle region's static time,
 so det DF(x) = g(x)/g(F(x)) and the cumulative sum of log det DF along an orbit telescopes to log g(x_0) - log g(x_N).
 The algebraic identities behind the claim are checked symbolically by sympy_crossing_proof.py.

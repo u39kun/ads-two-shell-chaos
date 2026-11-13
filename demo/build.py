@@ -27,7 +27,7 @@ if "--standalone" in sys.argv:
         )
         + '">\n'
         '<meta name="description" content="Animated orbits of two thin shells in anti-de Sitter space, with their '
-        'Poincaré map and a nudged twin that shows regular versus chaotic separation.">\n'
+        'head-on crossing section and a nearby twin illustrating finite-time regular and chaotic motion.">\n'
         "<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}"
         "body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>\n"
         + head

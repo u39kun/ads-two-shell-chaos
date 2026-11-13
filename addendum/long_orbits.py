@@ -1,8 +1,8 @@
-"""Addendum: the t = 2e5 runs quoted in Sec. 4.3, App. C, and the Fig. 7 caption, at BCR's Fig. 5
+"""Addendum: the t = 2e5 runs quoted in App. C.4 ("Long-run crossing coverage"), at BCR's Fig. 5
 parameters, with the event-located solver and the settings of ../bcr_section_overview.py (anchor 1, rtol 1e-12,
 atol 1e-14, steps up to 0.02).
 
-  end orbit    the strongly chaotic orbit of Fig. 7, started at (R, 100 M_mid) = (0.19, 1.575): every crossing,
+  end orbit    the chaotic orbit of Fig. 7, started at (R, 100 M_mid) = (0.19, 1.575): every crossing,
                classified by radius (R < 0.4, 0.4-2.0, R > 2.0), by which shell is inside, and as head-on (shells
                moving in opposite directions) or overtaking. The paper quotes that its ~40000 crossings at
                0.4 < R < 2.0 are all overtaking, so none is on the head-on section.

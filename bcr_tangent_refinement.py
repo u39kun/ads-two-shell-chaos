@@ -1,8 +1,8 @@
 """Refinement check of the variational tangent (App. C of the paper).
 
 At BCR's Fig. 5 parameters, three orbits are followed for 6000 returns with the variational tangent
-(bcr_layer_tangent.run) at the settings of the scans (rtol = 1e-12, max_step = 0.02) and with a tighter tolerance
-and a smaller maximum step: an orbit in the chaotic layer (R+ at 1e-4 from the saddle), a regular orbit near the
+(bcr_layer_tangent.run) at the settings of the scans (rtol = 1e-12, max_step = 0.02) and at three others
+(rtol = 1e-13; rtol = 1e-13 with max_step = 0.01; rtol = 1e-11): an orbit in the chaotic layer (R+ at 1e-4 from the saddle), a regular orbit near the
 saddle (R+ at 1e-2), and BCR's example. The chart is (R, 100 M_mid) and the tangent vector starts along (1, 1), as
 in the scans. For the chaotic orbit the computed trajectory changes with the settings, so the check is that its
 late-block exponent stays clearly positive and its classification is unchanged, not that the values agree.

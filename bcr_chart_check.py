@@ -7,8 +7,8 @@ the norm at the block's two ends; it cannot accumulate along the block. To show 
 (bcr_survey_checks.ROWS, default setting, T = 2e4) with a second tangent vector normalized in the embedding of the
 section in (R, Rdot_A, Rdot_B, 3 M_mid/delta), where Rdot_i = dR_i/dtau_i are fixed by (R, M_mid) through the junction
 conditions. The section is a smooth surface in these coordinates up to its folds, so this norm stays regular there.
-Stored per row: block rates in both norms, the largest ratio of the two norms along the orbit, and its values at the
-block ends. Also stored: the return time, multipliers, and linearized rotation number at the fixed points of BCR's
+Stored per row: block rates in both norms, the largest |log| of the ratio of the two norms along the orbit, and its
+log at the block ends. Also stored: the return time, multipliers, and linearized rotation number at the fixed points of BCR's
 Fig. 5 parameters (SECTION, bcr_section.py).
 usage: python bcr_chart_check.py SECTION.json OUT.json [--workers N]"""
 

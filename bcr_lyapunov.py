@@ -8,7 +8,7 @@ contracting and one expanding. BCR do not say which shell does which, so the ass
   --start C (converging): A expanding, B contracting; they cross at t = 0, and the run starts just after that
             crossing (B inside, A outside, middle mass from Eq. (3.18) of Ida & Nakao).
 V is each shell's effective potential with its own region masses. Fig. 6 compares two runs whose R_i differ by 5e-5
-through the radius of the outer shell, and BCR quote a Lyapunov exponent of about 0.04.
+through the outermost radius, and BCR quote a Lyapunov exponent of about 0.04.
 
 Here: a reference run and nudged runs with R_i + eps (eps in --eps), in two clocks: anchor 1 = static time of the
 region between the shells (BCR's evolution variable) and anchor 2 = boundary time (ours). Both shells' radii are
@@ -45,8 +45,8 @@ def trajectory(args):
     ri, anchor, tmax, dt, start = args
     masses, y0, order = initial(ri, start)
     # The saved results use the reference tolerances below. A separate rerun
-    # of --start D --tmax 2000 with rtol=1e-8 and atol=1e-10 gave the same
-    # reported diagnostics to the precision quoted in the paper.
+    # of --start D --tmax 2000 with rtol=1e-8, atol=1e-10 and max_step=0.5
+    # (addendum/nudge_lowprec.py) also gave approximately linear growth.
     r = N.simulate(
         [A, B],
         masses,

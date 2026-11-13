@@ -1,7 +1,7 @@
 """Why the finite-difference Jacobian product disagrees with the two-orbit exponent on BCR's example (App. C).
 
 Section map F of BCR's Fig. 5 parameters (bcr_section.py), chart (R, 100 M_mid) for norms. Three ways to follow a
-tangent vector along the example's orbit:
+tangent vector along the example's orbit (the third is not run here; the figures compare it with the first two):
   * variational tangent: DF from the variational equations with crossing saltation (tangent_map.py), no finite
     differences;
   * finite-difference Jacobians, central differences with step h in the scaled chart (bcr_section_lyapunov.py used

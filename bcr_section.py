@@ -3,10 +3,11 @@
 Two identical shells, m = 0.00815, w = 0.2, region masses 0, 0.015, 0.03, both starting at R = 1 (the two velocity
 assignments D and C of bcr_lyapunov.py). Section: head-on crossings with shell A inside, A moving out and B moving
 in (the section of the two-shell map in Sec. 2 of the paper), in the chart (R, M_mid) with M_mid the middle-region
-mass just before the crossing. Background: orbits of the same map started along a line through its fixed points.
+mass just before the crossing. Background: orbits of the same map started along a line through its elliptic fixed
+points, plus 9 starts at the BCR orbit's median R across its M_mid range.
 Fixed points of the return map are located by Newton iteration.
 Regularity: digits of agreement between weighted Birkhoff averages of M_mid over the two halves of the section points.
-usage: python bcr_section.py OUT.json [--tmax 20000] [--background 25] [--bg-returns 1500]"""
+usage: python bcr_section.py OUT.json [--tmax 20000] [--background 25] [--bg-returns 1500] [--workers N]"""
 
 import os, sys, json, time, argparse
 

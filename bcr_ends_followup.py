@@ -1,10 +1,10 @@
 """Follow-up of the finer grids at the section's ends where they detect nothing (Sec. 4.3 and App. C of the paper).
 
-The finer grids (bcr_survey.py ends, T = 2000) count a start as strongly chaotic when its rate over [T/4, T] exceeds
+The finer grids (bcr_survey.py ends, T = 2000) detect a start when its rate over [T/4, T] exceeds
 1e-2 per unit time. Where no start does, the NTOP starts with the largest rates are rerun exactly as in
 bcr_survey.py but to T = 2e4, giving the rate over [T/4, T] and over four 5000-unit blocks, with the mean number of
-crossings per return and the distance from the saddle (LAYER_DELTA, bcr_layer_delta.py) in the chart
-(R, 3 M_mid/delta).
+crossings per return and, at the delta values in LAYER_DELTA (bcr_layer_delta.py), the distance from the saddle in
+the chart (R, 3 M_mid/delta).
 usage: python bcr_ends_followup.py SURVEY_ENDS.json LAYER_DELTA.json OUT.json [--workers N]"""
 
 import os, sys, json, time, argparse

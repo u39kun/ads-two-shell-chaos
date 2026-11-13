@@ -3,7 +3,7 @@
 The rates of Secs. 4.2-4.3 are per unit middle-region time; boundary time is the static time of the exterior, whose
 mass never changes. Each orbit is rerun with exactly the calls of its production script, so its tangent growth S is
 the stored one:
-  cuts   the strongly chaotic starts along the cuts (TANGENT_DELTA, bcr_layer_tangent.py delta: late-block exponent
+  cuts   the selected above-threshold starts along the cuts (TANGENT_DELTA, bcr_layer_tangent.py delta: late-block exponent
          >= 1e-2 per return), 6000 returns, late block = returns 2000-6000;
   table  the rows of Table 1 (bcr_survey_checks.ROWS), default setting, 2e4 middle-region time units, four
          5000-unit blocks and [T/4, T].

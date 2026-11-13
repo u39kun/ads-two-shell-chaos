@@ -85,7 +85,7 @@ step reversal      $S/bcr_reversal.json        $S/bcr_reversal.log        $PY bc
 step wba           $S/bcr_wba.json             $S/bcr_wba.log             $PY bcr_wba.py $S/bcr_section.json $S/bcr_wba.json --workers $W
 step measure       $P/two_shell_measure.json   $P/two_shell_measure.log   $PY two_shell_measure.py $P/two_shell_measure.json
 step sympy_proof   -                           $P/sympy_crossing_proof.log $PY sympy_crossing_proof.py
-# superseded by the variational tangent, kept for App. C and Table 3's comparison
+# superseded by the variational tangent, kept for App. C
 if [ -z "${SKIP_SUPERSEDED:-}" ]; then
 step layer_scan    $S/layer_scan.json          $S/layer_scan.log          $PY bcr_layer_scan.py $S/bcr_section.json $S/layer_scan.json --workers $W
 step layer_refine  $S/layer_refine.json        $S/layer_refine.log        $PY bcr_layer_scan.py $S/bcr_section.json $S/layer_refine.json --returns 6000 --dists 1e-4,1e-2,2e-2,3e-2,5e-2,7e-2 --workers $W

@@ -5,7 +5,7 @@ bcr_delta_scan.py: identical shells with m = 0.9*20^(-0.4)*delta, w = 0.2, inner
   1. Fixed points by Newton iteration from a grid of seeds; the saddle and the two elliptic points are kept.
   2. Orbits are started at distances dist from the saddle along R (both sides, M_mid fixed at the saddle's value),
      and a renormalized two-orbit exponent is measured (blocks of 10 returns, companion d0 = 1e-10).
-     Distances are in the chart (R, 3 M_mid/delta), which reduces to (R, 100 M_mid) at delta = 0.03.
+     Exponent norms use the chart (R, 3 M_mid/delta), which reduces to (R, 100 M_mid) at delta = 0.03.
   3. The type (ii) orbit's distance from the saddle along the same line is read from its section points
      (results of bcr_delta_scan.py, start D): the crossings of the curve with M_mid = M_saddle, interpolated.
 SCAN is the scan's result file (delta_scan.json) or its per-delta directory (delta_scan_parts, which must then hold

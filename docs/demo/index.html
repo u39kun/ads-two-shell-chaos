@@ -4,10 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cstyle%3E.b%7Bstroke:%2311746a%7D.a%7Bstroke:%23c0501a%7D%40media %28prefers-color-scheme: dark%29%7B.b%7Bstroke:%233dc0b0%7D.a%7Bstroke:%23f0884a%7D%7D%3C/style%3E%3Ccircle class='b' cx='16' cy='16' r='13' fill='none' stroke-width='4'/%3E%3Ccircle class='a' cx='16' cy='16' r='6.5' fill='none' stroke-width='4'/%3E%3C/svg%3E">
-<meta name="description" content="Animated orbits of two thin shells in anti-de Sitter space, with their Poincaré map and a nudged twin that shows regular versus chaotic separation.">
+<meta name="description" content="Animated orbits of two thin shells in anti-de Sitter space, with their head-on crossing section and a nearby twin illustrating finite-time regular and chaotic motion.">
 <style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Two-Shell AdS Orbits</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
@@ -165,9 +164,9 @@ button.ctl.primary { background: var(--ink); color: var(--paper); border-color: 
       <button class="theme-btn" id="theme" type="button"></button>
     </div>
     <h1>Two-Shell AdS Orbits</h1>
-    <p class="lede">Two concentric thin shells, <b style="color:var(--shell-a)">A</b> and <b style="color:var(--shell-b)">B</b>, move under their own gravity inside anti-de Sitter space, pass through each other, and trade energy at every crossing. Each head-on crossing adds a point to the <b>Poincaré map</b>. A <b>twin</b>, started 5×10<sup>−5</sup> farther out, drifts slowly from a regular orbit and exponentially from a chaotic one.</p>
+    <p class="lede">Two concentric thin shells, <b style="color:var(--shell-a)">A</b> and <b style="color:var(--shell-b)">B</b>, move under their own gravity inside anti-de Sitter space, pass through each other, and trade energy at every crossing. Head-on crossings with A inside add points to the <b>Poincaré map</b>. A <b>twin</b>, started 5×10<sup>−5</sup> farther out, illustrates slow drift near regular orbits and rapid separation near chaotic ones.</p>
     <details class="more"><summary>More about the model</summary>
-    <p>Two concentric thin shells, <b style="color:var(--shell-a)">A</b> and <b style="color:var(--shell-b)">B</b>, move under their own gravity inside anti-de Sitter space. Each shell is a fluid confined to a spherical surface, and its pressure resists contraction. In the orbits shown here,<sup><span class="tip" tabindex="0" aria-describedby="tip-orbits">1</span></sup> that pressure turns each contracting shell back out, and anti-de Sitter space turns each expanding shell back at a finite radius, before it reaches the boundary. The shells pass through each other and trade energy at every crossing. Each time they meet head on, with A moving out from the inside and B moving in from the outside, the crossing radius and A's energy just before the crossing are recorded as one point on the <b>Poincaré map</b>. A <b>twin</b>, started with both shells 5×10<sup>−5</sup> farther out, shows how a nearby orbit drifts from this one. The log–log distance chart shows how the distance between them grows: roughly in proportion to the number of returns along the regular orbits here (at the fixed point it stays near its starting size), and exponentially along the two chaotic orbits, one in the layer around the saddle and one near the map's ends, until the twin can be anywhere the chaotic orbit goes. A finite run shows these patterns but cannot by itself prove chaos or regularity.</p>
+    <p>Two concentric thin shells, <b style="color:var(--shell-a)">A</b> and <b style="color:var(--shell-b)">B</b>, move under their own gravity inside anti-de Sitter space. Each shell is a fluid confined to a spherical surface, and its pressure resists contraction. In the orbits shown here,<sup><span class="tip" tabindex="0" aria-describedby="tip-orbits">1</span></sup> that pressure turns each contracting shell back out, and anti-de Sitter space turns each expanding shell back at a finite radius, before it reaches the boundary. The shells pass through each other and trade energy at every crossing. Each time they meet head on, with A moving out from the inside and B moving in from the outside, the crossing radius and A's energy just before the crossing are recorded as one point on the <b>Poincaré map</b>. A <b>twin</b>, started with both shells 5×10<sup>−5</sup> farther out and velocities recomputed from the junction conditions, shows how a nearby orbit separates from this one. The log–log distance chart shows roughly linear drift for the regular examples here, nearly bounded separation near the fixed point, and much faster separation for the two chaotic examples. A finite run shows these patterns but cannot by itself prove chaos or regularity.</p>
     </details>
   </header>
 
@@ -194,7 +193,7 @@ button.ctl.primary { background: var(--ink); color: var(--paper); border-color: 
       <output id="time-out" for="time">t <b id="r-t">0</b> of <span id="r-tend">0</span></output>
     </div>
     <div class="readouts" aria-live="off">
-      <span>returns <b id="r-n">0</b></span>
+      <span>section points <b id="r-n">0</b></span>
       <span>twin separation <b id="r-sep">–</b></span>
     </div>
   </div>
@@ -209,14 +208,14 @@ button.ctl.primary { background: var(--ink); color: var(--paper); border-color: 
         <div class="bar" aria-hidden="true"><i class="a" id="bar-a"></i><i class="b" id="bar-b"></i></div>
         <div class="energy-label" id="energy-label"></div>
       </div>
-      <figcaption><details><summary>How to read this panel</summary>Radius drawn as arctan R, so the boundary of AdS (R → ∞) is the outer circle. Ring thickness shows each shell's energy, its mass jump. Dashed rings: the twin. A brief halo marks each crossing, in blue when it adds a point to the Poincaré map.</details></figcaption>
+      <figcaption><details><summary>How to read this panel</summary>Radius drawn as arctan R, so the boundary of AdS (R → ∞) is the outer circle. Ring thickness shows each shell's energy, its mass jump. Dashed rings: the twin. Brief halos mark crossings during playback, in blue when they add a point to the Poincaré map.</details></figcaption>
     </figure>
     <figure class="panel">
       <div class="panel-head">
         <h2>Poincaré map</h2>
         <div class="seg-row">
           <div class="seg" role="group" aria-label="Map extent">
-            <button type="button" id="view-map" aria-pressed="true">Whole map</button>
+            <button type="button" id="view-map" aria-pressed="true">Wider view</button>
             <button type="button" id="view-orbit" aria-pressed="false">Zoom to orbit</button>
           </div>
           <div class="seg" role="group" aria-label="Crossings shown">
@@ -228,40 +227,40 @@ button.ctl.primary { background: var(--ink); color: var(--paper); border-color: 
       <canvas id="section" role="img" aria-label="Poincaré map: crossing radius against the middle-region mass"></canvas>
       <div class="key">
         <span><i class="dot" style="background:var(--orbit)"></i>orbit</span>
-        <span><i class="ring"></i>twin, latest crossing</span>
+        <span><i class="ring"></i>twin, matched crossing</span>
         <span class="all-only" hidden><i class="dot" style="background:var(--overtake)"></i>overtaking</span>
         <span><i class="sw dash" style="color:var(--bgpts)"></i>other orbits of the map</span>
         <span><i class="sw" style="color:var(--ink-2);border-top-width:1px"></i>edge of the map</span>
         <span><i class="fp-ell"></i>elliptic fixed point</span><span><svg class="fp-sad" viewBox="0 0 10 10" aria-hidden="true"><path d="M0 0L10 10M0 10L10 0"/></svg>saddle</span>
       </div>
-      <figcaption><details><summary>How to read this panel</summary>Head-on crossings, with A moving out from the inside and B moving in: crossing radius R against 100 M<sub>mid</sub>, where M<sub>mid</sub> is the mass between the shells just before the crossing, which is shell A's energy; (R, 100 M<sub>mid</sub>) is also the chart in which distances are measured. Only the orbit's history is drawn. The blue disk marks the orbit's latest crossing and the large pink ring the twin's crossing at nearly the same moment, joined by a dashed line when they are apart: the pair the distance chart measures. A regular orbit's twin slides along the same closed curve, ahead of the orbit or behind it; a chaotic orbit's twin is thrown elsewhere in the region the orbit wanders through. <b>Include overtaking</b> adds, in the same chart and in yellow, the orbit's overtaking crossings with A inside, with both shells moving in or both moving out, which the map leaves out. The thin outline is the edge of the map: along its lower edge shell A crosses at a turning point, along its upper edge shell B does, and the two edges meet in pointed ends where both shells cross at turning points. <span class="note-type" id="type-note"></span></details></figcaption>
+      <figcaption><details><summary>How to read this panel</summary>Head-on crossings, with A moving out from the inside and B moving in: crossing radius R against 100 M<sub>mid</sub>, where M<sub>mid</sub> is the mass between the shells just before the crossing, which is shell A's energy; (R, 100 M<sub>mid</sub>) is also the chart in which distances are measured. Blue points show the orbit's past crossings; gray points show reference orbits. The blue disk and large pink ring highlight a recent matched pair of orbit and twin crossings, joined by a dashed line when they are apart. If no recent pair is available, only the orbit's latest crossing is highlighted. A regular orbit's twin drifts along a nearby closed curve; a chaotic orbit's twin can separate across the region visited in the run. <b>Include overtaking</b> adds, in the same chart and in yellow, the orbit's overtaking crossings with A inside, with both shells moving in or both moving out, which the map leaves out. The thin outline bounds the section's main admissible component: shell A is at a turning point on the lower edge, shell B on the upper edge. The pointed ends are limiting states with both shells at turning points. Other allowed components are not shown. <span class="note-type" id="type-note"></span></details></figcaption>
     </figure>
   </div>
 
   <div class="charts">
     <figure class="panel" id="panel-trace">
       <h2>Radii over time</h2>
-      <canvas id="trace" role="img" aria-label="Radii of the two shells over the last 40 time units"></canvas>
+      <canvas id="trace" role="img" aria-label="Radii of the two shells over up to the last 40 time units"></canvas>
       <div class="key"><span><i class="sw" style="color:var(--shell-a)"></i>R<sub>A</sub></span><span><i class="sw" style="color:var(--shell-b)"></i>R<sub>B</sub></span><span><i class="dot" style="background:var(--orbit)"></i>head-on crossing</span><span class="all-only" hidden><i class="dot" style="background:var(--overtake)"></i>overtaking, A inside</span><span><i class="ring" style="border-color:var(--ink-2)"></i>other crossing</span></div>
       <figcaption><details><summary>How to read this panel</summary>The last 40 time units, in the Schwarzschild time of the region between the shells. Where the curves meet, the shells cross. Blue dots mark the head-on crossings, where A moves out from the inside and B moves in, each adding a section point to the Poincaré map; gray rings mark the other crossings. With <b>Include overtaking</b>, yellow dots mark the overtaking crossings with A inside, the yellow points on the map.</details></figcaption>
     </figure>
     <figure class="panel" id="panel-sep">
       <h2>Distance to the twin</h2>
-      <canvas id="sep" role="img" aria-label="Distance between the orbit and its twin on the section, against the number of returns"></canvas>
-      <figcaption><details><summary>How to read this panel</summary>Distance between the orbit's section points and its twin's, return by return, in the chart (R, 100 M<sub>mid</sub>), on log–log axes. Each of the orbit's crossings is paired with the twin's crossing nearest in time; a gap marks a return where the twin has no head-on crossing within half a return: one of them skipped a head-on crossing near a fold of the chart, where a shell crosses while turning around, or, once a chaotic twin has separated, the two make head-on crossings at unrelated times, sometimes with no twin crossing for several of the orbit's returns. A dot marks a distance with a gap on both sides. Dashed: growth in proportion to the number of returns, starting from the nudge. Regular orbits rise roughly parallel to it, a steady drift along their curve. Chaotic orbits shoot far above it within tens of returns, until the twin can be anywhere the orbit goes.</details></figcaption>
+      <canvas id="sep" role="img" aria-label="Distance between the orbit and its twin on the section, against return index"></canvas>
+      <figcaption><details><summary>How to read this panel</summary>Distance between paired section points in the chart (R, 100 M<sub>mid</sub>), against return index on log–log axes. For runs started on the section, the initial point is shown at index 1. Each orbit crossing is paired with the twin crossing nearest in time; a gap means there is none within half the orbit's median return time. Gaps can occur when the sequences skip a head-on crossing near a chart fold, or when chaotic separation leaves the two crossing sequences at unrelated times. A dot marks an isolated distance sample. Dashed: the reference distance 5×10<sup>−5</sup> times return index, a guide to linear growth rather than a fitted law. Regular examples generally drift slowly; the fixed-point example stays near its initial separation. The chaotic examples separate much faster before the distance saturates or fluctuates across the visited region. This finite-distance plot is not a Lyapunov-exponent measurement.</details></figcaption>
     </figure>
   </div>
 
   </div>
   </div>
 
-  <div class="tip-text" id="tip-orbits" role="tooltip" hidden>Not every start behaves this way. With other initial data the shells can collapse into a black hole instead, as the type (ii) data of Brito, Cardoso, and Rocha (BCR) do above a threshold mass. How far out a shell can go depends on w, the ratio of its pressure to its energy density. For w &lt; 1/2, as for the shells here (w = 0.2), anti-de Sitter space turns every expanding shell back at a finite radius. For w &gt; 1/2, a shell reaches the boundary in a finite time; BCR impose perfectly reflecting boundary conditions there, so it bounces back. Either way, no shell escapes.</div>
+  <div class="tip-text" id="tip-orbits" role="tooltip" hidden>Other initial data can collapse into a black hole. BCR's type (ii) family includes both collapsing and long-lived oscillating runs; a threshold measured over a finite time is not an asymptotic stability boundary. How far out a shell can go depends on w, the ratio of its pressure to its energy density. For w &lt; 1/2, as here (w = 0.2), the potential prevents a shell from reaching the AdS boundary, so its reflecting condition is never used in this demo. For w &gt; 1/2, an expanding shell can reach the boundary in finite middle-region time; BCR impose a reflecting condition there.</div>
 
   <footer class="notes">
-    <p class="paper-ref">This interactive demo is based on the paper <a href="https://doi.org/10.5281/zenodo.23726358" target="_blank" rel="noopener">“Interacting shells in anti-de Sitter space revisited: an invariant measure, regular orbits, and chaos”</a> by Yusaku Sako.</p>
+    <p class="paper-ref">This interactive demo is based on the paper <a href="https://doi.org/10.5281/zenodo.23726357" target="_blank" rel="noopener">“Interacting shells in anti-de Sitter space revisited: an invariant measure, regular orbits, and chaos”</a> by Yusaku Sako.</p>
     <p class="code-link">Code and data: <a href="https://github.com/u39kun/ads-two-shell-chaos" target="_blank" rel="noopener">github.com/u39kun/ads-two-shell-chaos</a>.</p>
     <details class="more"><summary>About the data</summary>
-    <p>Each orbit and its twin were computed with the code of the paper “Interacting shells in anti-de Sitter space revisited” (DOP853, relative tolerance 10<sup>−12</sup>, crossings located exactly). The two orbits from the paper's Fig. 3, in the chaotic layer and just outside it, follow the paper's own trajectories: their section points come from the same integrator and settings as Fig. 3 and match its stored points exactly, and the crossings within each return come from a one-return run of the solver. The orbit near the map's ends starts where the paper's Fig. 7 orbit does, at (R, 100 M<sub>mid</sub>) = (0.19, 1.575), with the same settings; the edge of the map comes from the same calculation. The page stores the state after every crossing and integrates the smooth motion between crossings itself, restarting from the stored state at each crossing. Time is in units of the AdS radius.</p>
+    <p>The trajectories were computed with the paper's DOP853 implementations at relative tolerance 10<sup>−12</sup>, with crossings located numerically. The two orbits from Fig. 3 use the same variational-tangent integrator and settings; their unrounded section points are checked against the saved paper trajectories. Crossings within each return come from a one-return solver run. The orbit near the section's ends uses the Fig. 7 start, (R, 100 M<sub>mid</sub>) = (0.19, 1.575), and solver settings; the section outline comes from that calculation. The browser animates each flight from rounded crossing states using RK4; the distance chart instead uses separations computed offline from unrounded section points and stored to three significant figures. All seven orbits use w = 0.2 and total mass 0.03. Six use BCR's printed m = 0.00815; BCR-T2 uses m = 0.9 × 20<sup>−0.4</sup> × 0.03. The BCR-5 example follows the printed-mass convention of the long-run tests, rather than the formula-mass comparison in Fig. 4a. The labels summarize the paper's finite-time diagnostics. R and middle-region Schwarzschild time t are in units of the AdS radius, with G = c = 1.</p>
     </details>
   </footer>
 </div>
@@ -286,7 +285,8 @@ function rhs(y, Mmid, Mout, aInside, m, w, out) {
     out[2 * s + 1] = -0.5 * dV(R, lo, hi, m, w) * k;
   }
 }
-// Integrate one flight with classical RK4 and return sampled radii; h is the target step in t.
+// Integrate one flight from its stored rounded state with classical RK4; h is the maximum step in t.
+// These sampled radii are for animation. Section-point separations are computed offline, not from this integrator.
 function flight(fl, duration, Mout, m, w, h) {
   const n = Math.max(1, Math.ceil(duration / h)), dt = duration / n;
   const Mmid = fl[5], aIn = fl[6] === 1;
@@ -314,11 +314,11 @@ if (typeof module !== "undefined") module.exports = { flight, fM, dV, rhs };
 (() => {
   const D = JSON.parse(document.getElementById("orbit-data").textContent);
   const META = {
-    example: { tag: "regular", desc: "BCR's Fig. 5 initial data: both shells at R = 1, inner one contracting. A closed curve around both islands." },
+    example: { tag: "regular", desc: "Correctly evolved BCR-5 data at the printed mass m = 0.00815: both shells at R = 1, inner one contracting. A closed section curve around both islands." },
     layer: { tag: "chaotic", desc: "Started 10⁻⁴ from the saddle. Wanders through both lobes in a band along the separatrix." },
     outside: { tag: "regular", desc: "Started 0.07 from the saddle, just outside the chaotic band. A closed curve." },
     island: { tag: "regular", desc: "Started near the elliptic point where A carries about 62% of the energy. A loop around that island." },
-    fixed: { tag: "periodic", desc: "Started on that elliptic fixed point. The shells repeat the same motion every return, so the orbit is one point; its twin circles it." },
+    fixed: { tag: "periodic", desc: "Started at the numerically located elliptic fixed point. The shells repeat their motion each return, so their section points nearly coincide; the twin traces a small loop nearby." },
     ends: { tag: "chaotic", desc: "Started near the small-R end of the map. Mostly overtaking crossings; its head-on crossings jump between the map's two pointed ends." },
     typeii: { tag: "regular", desc: "BCR's type (ii) family: both shells at R = 1.5. A large closed curve far from the saddle." },
   };
@@ -368,7 +368,7 @@ if (typeof module !== "undefined") module.exports = { flight, fM, dV, rhs };
 
   const orbits = D.orbits.map((o) => {
     const main = prepRun(o.flights, o.first, o), twin = prepRun(o.twin, o.twin_first, o);
-    // radius range for the trace, from a coarse pass over the whole run
+    // Approximate radius range for the trace, sampling every third flight across the run.
     let lo = Infinity, hi = -Infinity;
     for (let k = 0; k < main.F.length; k += 3) {
       const end = k + 1 < main.F.length ? main.t0[k + 1] : o.t_end;
@@ -426,8 +426,7 @@ if (typeof module !== "undefined") module.exports = { flight, fM, dV, rhs };
   const speedOut = $("speed-out");
   function readSpeed() {
     st.speed = Math.pow(10, (+$("speed").value / 100) * 3);
-    const per = st.speed / 4.7;
-    speedOut.textContent = `${st.speed < 10 ? st.speed.toFixed(1) : Math.round(st.speed)} time units/s ≈ ${per < 10 ? per.toFixed(1) : Math.round(per)} returns/s`;
+    speedOut.textContent = `${st.speed < 10 ? st.speed.toFixed(1) : Math.round(st.speed)} time units/s`;
   }
   $("speed").addEventListener("input", readSpeed);
   const playBtn = $("play");
@@ -518,7 +517,7 @@ if (typeof module !== "undefined") module.exports = { flight, fM, dV, rhs };
     g.setLineDash([]); g.strokeStyle = C["ink-2"]; g.lineWidth = 1.5;
     g.beginPath(); g.arc(cx, cy, Rd, 0, 2 * Math.PI); g.stroke();
     g.textAlign = "center"; g.fillText("AdS boundary, R → ∞", cx, cy - Rd - 10);
-    // flashes (crossings), fading over 0.7 s of real time
+    // Crossing flashes fade over 0.45 s of wall time; rapid playback may skip events between frames.
     const now = performance.now();
     for (const f of flashes) {
       const age = (now - f.at) / 450; if (age > 1) continue;
@@ -625,7 +624,7 @@ if (typeof module !== "undefined") module.exports = { flight, fM, dV, rhs };
     g.fill();
     const nt = countUpTo(ob.twin.sT, t);
     // highlight the latest pair of crossings at nearly the same moment (the pair the distance chart measures): each of
-    // the orbit's crossings is paired with the twin's crossing nearest in time, if there is one within half a return
+    // the orbit's crossings is paired with the twin's nearest crossing within half the orbit's median return time
     let m = -1, j = -1;
     for (let k = n - 1; k >= 0 && k >= n - 12; k--) { const q = ob.o.pair[k]; if (q >= 0 && q < nt) { m = k; j = q; break; } }
     if (m < 0 && n > 0) { const P = (run, i) => [X(run.sR[i]), Y(run.sM[i] * 1e3)], [ox, oy] = P(ob.main, n - 1); g.fillStyle = C.orbit; g.beginPath(); g.arc(ox, oy, 5.5, 0, 2 * Math.PI); g.fill(); }
@@ -669,7 +668,7 @@ if (typeof module !== "undefined") module.exports = { flight, fM, dV, rhs };
     const k0 = flightIndex(ob.main, t0), k1 = flightIndex(ob.main, Math.min(t, t1));
     for (let k = k0; k <= k1; k++) {
       const F = ob.main.F[k], tc = ob.main.t0[k];
-      if (tc < t0 || tc > t || (k === 0 && F[7] !== 1)) continue;  // an orbit given by initial data starts between crossings
+      if (tc < t0 || tc > t || (k === 0 && F[7] !== 1)) continue;  // The initial separating state is not a recorded crossing.
       const x = X(tc), y = Y(F[1]);
       if (F[7] === 1) {
         g.strokeStyle = C.orbit; g.lineWidth = 1; g.globalAlpha = 0.4; g.setLineDash([2, 3]);
@@ -686,7 +685,7 @@ if (typeof module !== "undefined") module.exports = { flight, fM, dV, rhs };
 
   // ---------- separation chart
   function drawSep(ob, n) {
-    // log-log axes: growth in proportion to the number of returns is a straight line of slope 1 (dashed guide from the
+    // Log-log axes: growth in proportion to return index is a straight line of slope 1 (guide from the
     // nudge); exponential growth bends sharply upward from it
     const g = ctx.sep, { w, h } = size.sep, L = 46, R = 10, T = 8, B = 26, pw = w - L - R, ph = h - T - B;
     const N = ob.o.sep.length, lo = -6, hi = 1, x1 = Math.log10(Math.max(N, 10));
@@ -695,7 +694,7 @@ if (typeof module !== "undefined") module.exports = { flight, fM, dV, rhs };
     for (let e = lo; e <= hi; e++) { g.beginPath(); g.moveTo(L, Y(e)); g.lineTo(L + pw, Y(e)); g.stroke(); g.textAlign = "right"; g.textBaseline = "middle"; g.fillText(`10${sup(e)}`, L - 6, Y(e)); }
     for (let e = 0; e <= Math.floor(x1); e++) { const r = 10 ** e; g.beginPath(); g.moveTo(X(r), T); g.lineTo(X(r), T + ph); g.stroke(); g.textAlign = "center"; g.textBaseline = "top"; g.fillText(String(r), X(r), T + ph + 6); }
     g.textAlign = "left"; g.textBaseline = "bottom"; g.fillText("returns", L + 6, T + ph - 4);
-    // guide: distance = nudge x number of returns
+    // Guide: distance = radial nudge x return index; an initial section point is plotted at index 1.
     g.save(); g.beginPath(); g.rect(L, T, pw, ph); g.clip();
     g.strokeStyle = C["ink-2"]; g.lineWidth = 1.2; g.setLineDash([5, 4]); g.beginPath();
     g.moveTo(X(1), Y(Math.log10(D.eps))); g.lineTo(X(10 ** x1), Y(Math.log10(D.eps) + x1)); g.stroke(); g.setLineDash([]);
@@ -706,7 +705,7 @@ if (typeof module !== "undefined") module.exports = { flight, fM, dV, rhs };
       const dots = [];  // values with a gap on both sides, which no line segment reaches
       for (let i = 0; i < m; i++) {
         const sv = ob.o.sep[i];
-        if (sv == null) { pen = false; continue; }  // no twin crossing within half a return: a gap
+        if (sv == null) { pen = false; continue; }  // No twin crossing within half the median return time: a gap.
         const y = Y(Math.min(Math.max(Math.log10(Math.max(sv, 1e-12)), lo - 1), hi + 1));
         pen ? g.lineTo(X(i + 1), y) : g.moveTo(X(i + 1), y); pen = true;
         if ((i === 0 || ob.o.sep[i - 1] == null) && (i + 1 >= m || ob.o.sep[i + 1] == null)) dots.push([X(i + 1), y]);

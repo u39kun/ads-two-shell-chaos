@@ -10,7 +10,7 @@ What is shared and what is not:
              copied from the hand-written potential derivative;
              the crossing: built geometrically, by composing the jumps of grad R across each shell in a light-cone
              frame (the model of sympy_crossing_proof.py) and reading off the new middle mass and velocities, instead
-             of the closed-form update of Eq. (3);
+             of the closed-form update of Eq. (4);
              event location: SciPy's root finding on the dense output, as in n_shells.py, not the regula falsi on
              re-integrated steps of the compiled solver fastshells.py.
 The comparison runs both codes from the same initial data and compares the crossing sequences (time, radius, and
@@ -126,7 +126,7 @@ def evolve(m, w, masses, state, order, tmax, rtol=1e-13, atol=1e-15, max_events=
 
 
 def initial_independent(m, w, total, ri):
-    """BCR start D: both shells at R_i, inner (A) contracting, outer (B) expanding; region masses 0, total/2, total."""
+    """Start D (the initially separating assignment): both shells at R_i, inner (A) contracting, outer (B) expanding; region masses 0, total/2, total."""
     Mm = total / 2
     RdA = -np.sqrt(Rdot2(ri, 0.0, Mm, m, w))
     RdB = np.sqrt(Rdot2(ri, Mm, total, m, w))
