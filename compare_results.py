@@ -69,7 +69,7 @@ def result_files(top):
     return out
 
 
-THR = 3e-3  # late-block exponent per return above which an orbit counts as strongly chaotic (Sec. 3.2 of the paper)
+THR = 3e-3  # late-block exponent per return above which an orbit is classified as chaotic over the tested interval (Sec. 3.2 of the paper)
 KINDS = [
     ("chaotic", "exponents, reach, and return times of chaotic orbits (expected to differ)"),
     ("diff", "two-orbit and finite-difference estimates on regular orbits (noise floor)"),
@@ -161,8 +161,8 @@ def describe(p, R, N):
             )
             m = re.fullmatch(r"extent\[([01])\]", key)
             if m:
-                what = "farthest strongly chaotic start" if m.group(1) == "0" else "next start outward"
-                return f"{side_txt}: {what} (reach of strong chaos)", "chaotic", 1, ""
+                what = "farthest above-threshold start" if m.group(1) == "0" else "next start outward"
+                return f"{side_txt}: {what} (extent of above-threshold starts)", "chaotic", 1, ""
             m = re.fullmatch(r"return_time\[(\d+)\]", key)
             if m:
                 i, A, B = int(m.group(1)), R[sec][dl][side], N[sec][dl][side]
@@ -246,7 +246,7 @@ def classification_changes(R, N):
         b = {(r[0], r[1]) for r in N["fig_bcr_layer"]["chaotic"]}
         for k in sorted(a ^ b):
             out.append(
-                f"Fig. 3c, start {k[0]} {k[1]:g}: strongly chaotic only in the {'reference' if k in a else 'rerun'}"
+                f"Fig. 3c, start {k[0]} {k[1]:g}: above threshold only in the {'reference' if k in a else 'rerun'}"
             )
         for dl, sides in R["fig_bcr_layer_delta"].items():
             for side, A in sides.items():

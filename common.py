@@ -1,6 +1,7 @@
 """Shared setup for the scripts: the reference solver n_shells.py, whose simulate() is replaced by the
-compiled drop-in fastshells.simulate unless SOLVER=reference, and the two identical shells of BCR's Fig. 5 example
-(w = 0.2, m = 0.9*20^(-0.4)*0.03, total mass 0.03)."""
+compiled drop-in fastshells.simulate unless SOLVER=reference, and two identical shells A, B with the formula mass
+m = 0.9*20^(-0.4)*0.03, w = 0.2, total mass 0.03 (used by two_shell_measure.py; the BCR-5 scripts set BCR's printed
+m = 0.00815 themselves)."""
 
 import sys, os
 

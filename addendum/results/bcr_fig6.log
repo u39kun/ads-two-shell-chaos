@@ -1,0 +1,39 @@
+Python 3.13.18, numpy 2.5.3, scipy 1.18.1
+inferred from the archived initial velocities: M = 0.600000000000, m = 0.540000000000; used: M = 0.6, m = 0.54, M_mid = 0.3, w = 0.2, L = 20
+paper's units: m = 0.0081461381; R_i = 1, 1.00005
+copied: 298 and 297 crossings to t = 640
+corrected: 298 and 298 crossings to t = 640
+max_separation {
+ "archived": 2.0365490949909186,
+ "copied": 2.037202211432761,
+ "corrected": 0.004108707804326528
+}
+rms_copied_vs_archived {
+ "50": 9.652643645104804e-11,
+ "100": 2.0618472629019247e-10,
+ "200": 3.4734196540663468e-09,
+ "400": 1.4859906362423486e-06,
+ "640": 0.0003043791241381863
+}
+first_sign_difference {
+ "crossing": 21,
+ "t": 45.32496030816153,
+ "R": 0.47722801279771476,
+ "incoming_proper_velocities": [
+  -1.2486054382644813,
+  0.01646412941735983
+ ],
+ "outgoing_proper_velocities_corrected": [
+  -0.010475318742884848,
+  -1.275544886424726
+ ],
+ "outgoing_proper_velocities_copied": [
+  0.010475318742884848,
+  -1.275544886424726
+ ],
+ "gamma_before": 1.5421354136350705,
+ "gamma_after_corrected": 1.5421354136350678,
+ "gamma_after_copied": 1.5653585041081377
+}
+crossings in the copied-sign run where the rules differ: [21, 199, 244, 276]
+wrote addendum/results/bcr_fig6.npz and addendum/results/bcr_fig6.json; integration 6 s, total 6 s

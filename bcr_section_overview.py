@@ -5,7 +5,7 @@
            located by bisection;
   ends     the section's two pointed ends, where the interval closes: the smallest and largest R at which
            max over M_mid of min(-V_A, -V_B) is still positive (bisection in R, bounded maximization in M_mid);
-  orbits   a strongly chaotic orbit started near the small-R end, (R, 100 M_mid) = (0.19, 1.575), and a start nearby
+  orbits   a chaotic orbit started near the small-R end, (R, 100 M_mid) = (0.19, 1.575), and a start nearby
            that stays at that end, (0.185, 1.570): their head-on crossings to t = 20000 (event-located solver), how
            many fall near each end (R < 0.4, R > 2.0) or in between, the number of switches between the ends, and
            the growth rate per unit time of the variational tangent (chart (R, 100 M_mid)) over [5000, 20000].

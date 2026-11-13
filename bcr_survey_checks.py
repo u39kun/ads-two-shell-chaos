@@ -1,7 +1,7 @@
-"""Checks of the strongly chaotic starts near the section's ends (Table 1 and Fig. 8f of the paper, App. C).
+"""Checks of the chaotic starts near the section's ends (Table 1 and Fig. 8f of the paper, App. C).
 
 Rows: the strongest start of the finer grids at the section's ends (bcr_survey.py ends) at each delta where they first
-detect strong chaos, and the strongly chaotic survey cells at delta = 0.03, with two controls at delta = 0.03 that stay
+detect above-threshold growth, and two chaotic starts near the ends at delta = 0.03, with two controls at delta = 0.03 that stay
 below the threshold (one central, one near the small-R end with many overtaking crossings). For each row:
   tangent       rates per unit time from the variational tangent over four successive 5000-unit blocks of T = 20000,
                 at the default setting (rtol 1e-12, max step 0.02) and a tighter one (rtol 1e-13, max step 0.005);

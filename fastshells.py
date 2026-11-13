@@ -7,12 +7,13 @@ Same physics, slicing, and event rules as the reference solver n_shells.py:
     min f over all shell sides falls through horizon_cutoff;
   * crossings use the same transparent-crossing update; triple collisions, non-positive mass jumps, and
     horizon approach are reported the same way;
-  * returns the same dictionary (parameters, status, t_end, state_end, masses_end, order_end, events, ...).
+  * returns the same dictionary (parameters, status, t_end, state_end, masses_end, order_end, events, ...), except
+    that collect is ignored and segments is always empty (use SOLVER=reference for dense output).
 Differences: the integrator is a numba DOP853 (same coefficients and step control as scipy's DOP853),
 events are located by re-integrating single steps from the start of the step (no dense interpolant),
 and a trial stage that would evaluate a lapse at f <= 0 shrinks the step instead of raising.
-If the step size collapses below 1e-14, the call raises the ValueError that n_shells raises when a lapse
-evaluation reaches f <= 0.
+If the step size collapses below 1e-14, or f <= 0 at the start of a step or in the middle region at a crossing, the
+call raises ValueError("A lapse evaluation reached f<=0 ...").
 """
 
 from dataclasses import asdict, is_dataclass

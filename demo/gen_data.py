@@ -7,11 +7,13 @@ the section's ends starts where the paper's Fig. 7 orbit does (bcr_section_overv
 the page also gets the edges of the section from that script's results.
 
 For every run the page gets one record per flight (the stretch between two crossings):
-    t_start, R_A, R_B, dR_A/dtau, dR_B/dtau, M_mid, A inside (1/0), starts with a section crossing (1/0), kind
+    t_start, R_A, R_B, dR_A/dtau, dR_B/dtau, M_mid, A inside after crossing (1/0), section event (1/0), kind
 where kind is the crossing that starts the flight, from the shells' velocities just before it: 1 head on (inner shell
 moving out, outer moving in), 2 overtaking with both moving in, 3 overtaking with both moving out, 0 none (the start of
-initial data). A section crossing is a head-on crossing with A inside. The page integrates each flight itself from that state, so it stores no dense trajectory. Separations between an orbit and
-its twin are computed here at full precision, in the chart (R, 100 M_mid), section point by section point.
+initial data). A section event is a head-on crossing with A inside just before it; immediately after it A is outside.
+The page integrates each flight itself from the stored rounded state, so it stores no dense trajectory. Separations
+are computed from unrounded section points in (R, 100 M_mid), pairing each orbit crossing with the twin crossing
+nearest in time within half the orbit's median return time, then stored to three significant figures.
 usage (from the repository root): python demo/gen_data.py . demo/orbits.json"""
 
 import sys, os, json
@@ -227,7 +229,7 @@ def main():
         w=W,
         fixed_points=[dict(x=fp["x"], kind=fp["kind"]) for fp in S["fixed_points"]],
         background=[[round(p[0], 5), round(p[1] * 1e3, 5)] for b in S["background"] for p in b["points"][::2]],
-        # the section's allowed region: at each R, the interval of 1000 M_mid between the two turning-point edges,
+        # The section's main admissible component: at each R, the interval of 1000 M_mid between turning-point edges,
         # closed by the two pointed ends
         edges=dict(
             rows=[[round(r[0], 5), round(r[1] * 1e3, 5), round(r[2] * 1e3, 5)] for r in V["edges"]],
@@ -250,7 +252,8 @@ def main():
         else:
             a, b = run(o["start"], o["m"]), run(o["twin"], o["m"])
         # pair each of the orbit's section crossings with the twin's crossing nearest in time; where the twin has no
-        # crossing within half a return (one of them skipped a section crossing near a fold of the chart), leave a gap
+        # crossing within half the orbit's median return time, leave a gap. This can happen near a chart fold or
+        # after chaotic separation when the two section sequences no longer have similar crossing times.
         ta = np.array([f[0] for f in a["flights"] if f[7] == 1])
         tb = np.array([f[0] for f in b["flights"] if f[7] == 1])
         assert len(ta) == len(a["points"]) and len(tb) == len(b["points"])

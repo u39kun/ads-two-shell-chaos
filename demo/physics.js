@@ -16,7 +16,8 @@ function rhs(y, Mmid, Mout, aInside, m, w, out) {
     out[2 * s + 1] = -0.5 * dV(R, lo, hi, m, w) * k;
   }
 }
-// Integrate one flight with classical RK4 and return sampled radii; h is the target step in t.
+// Integrate one flight from its stored rounded state with classical RK4; h is the maximum step in t.
+// These sampled radii are for animation. Section-point separations are computed offline, not from this integrator.
 function flight(fl, duration, Mout, m, w, h) {
   const n = Math.max(1, Math.ceil(duration / h)), dt = duration / n;
   const Mmid = fl[5], aIn = fl[6] === 1;

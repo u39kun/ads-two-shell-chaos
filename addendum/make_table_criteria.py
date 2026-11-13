@@ -29,7 +29,7 @@ def table_criteria(numbers):
     regular_threshold, end_threshold = 1e-3, 1e-2
     rows = [
         (
-            r"Radial cuts, strongly chaotic (Secs.~\ref{sec:layer},~\ref{sec:layerdelta})",
+            r"Radial cuts, chaos test (Secs.~\ref{sec:layer},~\ref{sec:layerdelta})",
             "exponent per return, returns 2000--6000",
             rf"$> {radial_threshold}$",
             rf"${radial_growth}$",
@@ -47,7 +47,7 @@ def table_criteria(numbers):
             rf"${scientific(growth['survey_T4_T'])}$",
         ),
         (
-            r"Fine grids at the ends, strongly chaotic (Sec.~\ref{sec:survey})",
+            r"Fine grids at the ends, chaos detection (Sec.~\ref{sec:survey})",
             r"rate per unit time, $[500, 2000]$",
             rf"$> {scientific(end_threshold)}$",
             rf"${scientific(growth['ends_T4_T'])}$",

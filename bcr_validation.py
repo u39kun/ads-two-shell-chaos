@@ -3,7 +3,8 @@ two identical shells, w = 0.2, rest-mass parameter m = 0.9*20^(-2w)*delta = 0.27
 0 (inside), M2 = delta/2 (between), M1 = delta (outside), both at R_i = 1.5 at t = 0, inner contracting and outer
 expanding (convention D: the shells separate at t = 0). Exterior (boundary) time, runs to t = 1000.
 Outputs per delta: collapse or not, crossings before collapse, black-hole mass (mass just outside the trapped shell).
-Then the 1 -> 3 transition: bisection for delta*, and M_BH(delta) near it on both sides for the critical exponent.
+Then the 1 -> 3 transition: bisection for delta*, and M_BH(delta) near it on both sides for a rough critical exponent (the quoted one is
+from bcr_critical.py).
 BCR: no collapse for delta <~ 0.0370; ladder 1, 3, 5, ..., 13 from right to left; gamma = 0.95 +- 0.05 at 1 -> 3.
 usage: python bcr_validation.py OUT.json [--n 301]"""
 

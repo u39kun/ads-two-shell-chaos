@@ -10,7 +10,7 @@ crossing, the flights, and any further crossings, to the next such state. Here D
     tangent is the derivative of the computed flow for the step sequence taken. The Jacobian of the right-hand side
     is evaluated by complex-step differentiation, which is accurate to rounding level (no subtraction, no step-size
     choice);
-  * crossings: the crossing update of Eq. (3) is differentiated by complex step, and the dependence of the crossing
+  * crossings: the crossing update of Eq. (4) is differentiated by complex step, and the dependence of the crossing
     time on the data enters through the saltation matrix
         T+ = DG (T- + f- dt) - f+ dt,    dt = -(grad h . T-)/(grad h . f-),    h = R_inner - R_outer;
   * the section: the same time correction projects the tangent onto the crossing surface.
@@ -112,7 +112,7 @@ def _jac_rhs(y, M, order, m, w, Min, Mt, J, yc, oc):
 
 @njit(cache=True)
 def _cross_c(y, M, ia, ib, m, w, Min, Mt, yo):
-    """Transparent crossing of the inner shell ia and the outer shell ib (Eq. (3)); complex-safe. Returns M'."""
+    """Transparent crossing of the inner shell ia and the outer shell ib (Eq. (4)); complex-safe. Returns M'."""
     R = 0.5 * (y[2 * ia] + y[2 * ib])
     va = y[2 * ia + 1]
     vb = y[2 * ib + 1]

@@ -8,11 +8,11 @@ static time t of the region between the shells (BCR's evolution variable), to t 
 independent_check.py. As in BCR's figure, R1 and R2 are the outermost and innermost radius by position, not by
 material shell.
 (a) (R1, R2). (b) (dR/dt, R) for both, with BCR's two inset windows of the outermost shell, drawn as lines.
-The opposite assignment is this run backward in time and gives the same point set (Sec. 3.3 and App. B), so it is
-not run here.
+The opposite assignment is this run backward in time and gives the same broad projected structure (Sec. 3.3 and the
+Fig. 10 caption), so it is not run here.
 
-Prints the numbers quoted in App. B.
-TMAX (default 1000) sets the run length; App. B also quotes a run to 5000, by which the points fill the region.
+Prints the ranges of the plotted variables.
+TMAX (default 1000) sets the run length; by 5000 the points fill the region (not used in the paper).
 usage (from code/): python addendum/bcr_fig5.py OUT.pdf [TMAX]"""
 
 import os, sys, time, platform, logging

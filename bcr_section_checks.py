@@ -1,6 +1,6 @@
-"""Checks of the BCR-orbit section result: (1) long flow run and local thickness (zoom), (2) two-orbit (Benettin)
-exponent on the section map without Jacobians, for the BCR orbit and a regular orbit near the center,
-at two initial separations and two integration tolerances.
+"""Checks of the BCR-orbit section result: (1) a long flow run to t = 1e5 (crossings saved for Fig. 2 and
+bcr_curve_smoothness.py), (2) two-orbit (Benettin) exponent on the section map without Jacobians, for the BCR orbit
+at two initial separations and two integration tolerances, and for two regular orbits near the heavier center.
 usage: python bcr_section_checks.py SECTION.json OUT.json"""
 
 import os, sys, json, time

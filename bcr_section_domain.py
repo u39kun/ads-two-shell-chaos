@@ -1,4 +1,4 @@
-"""Connected components of the admissible head-on section (Sec. 4.3 of the paper).
+"""Connected components of the admissible head-on section (Sec. 4.3 and App. C.4 of the paper).
 
 A head-on crossing with A inside at radius R and middle mass M is admissible when both shells are allowed there
 (V_A(R; 0, M) < 0, V_B(R; M, delta) < 0), every region is untrapped at R (f(R; M) > 0, f(R; delta) > 0), and both
@@ -10,7 +10,8 @@ junctions are on the ordinary branch (beta_out = (hi - lo)/mu - mu/(2R) > 0 for 
   survey      on the survey's grid (bcr_survey.py section), the starts allowed by bcr_survey.allowed() (which omits
               the f(R; delta) and branch tests) and whether any of them fails the full test;
   fate        a grid over the near-horizon component at delta = 0.02, 0.03 (Fig. 5 parameters), 0.037, followed with
-              the event-located solver at the survey's settings: outcome, time, crossings after the start.
+              the event-located solver at the survey's tolerances to t = 500: outcome, time, crossings after the
+              start.
 usage: python bcr_section_domain.py OUT.json [--workers N]"""
 
 import os, sys, json, time, argparse

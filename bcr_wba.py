@@ -16,8 +16,8 @@ Orbits (each with both samplings):
   example   BCR's Fig. 5 example, m = 0.00815, both velocity assignments (D, C of bcr_section.py);
   tolerance start D again at other integration settings (relative tolerance, step-size limit), to see whether the
             level at which the agreement stops improving moves with integration accuracy;
-  control   starts on the head-on section at the example's parameters: 1e-4 from the saddle along R+ (strongly
-            chaotic in Sec. 3.2), 1e-2 and 0.07 from it along R+ (regular), and 1e-3 from an elliptic point along R;
+  control   starts on the head-on section at the example's parameters: 1e-4 from the saddle along R+
+            (chaotic in Sec. 3.2), 1e-2 and 0.07 from it along R+ (regular), and 1e-3 from an elliptic point along R;
   family    the type (ii) data of bcr_delta_scan.py (m = 0.9*20^(-0.4)*delta, R_i = 1.5) on its delta grid, both
             velocity assignments.
 usage: python bcr_wba.py SECTION.json OUT.json [--n 8000] [--workers N]"""
